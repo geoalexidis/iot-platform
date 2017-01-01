@@ -1,0 +1,10 @@
+c:
+cd C:\Program Files\MongoDB\Server\3.2\bin
+--dbpath "C:\data\db"
+localhost/batest "C:\Users\geo-m\Documents\hsr.plmlab.edu.iot_plattform\MongoDB\src\default.js"
+
+// Keep Lines in following order 
+1) Hard Disk Drive of DB 
+2) MongoDB \bin Folder 
+3) mongodbpath of the data
+4) mongodbip/dbname AND location of the *.js File to run

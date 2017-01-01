@@ -1,0 +1,161 @@
+[
+  {
+    "Item": {
+      "classification": "Component",
+      "color": "Transparent",
+      "description": "",
+      "has_change_pending": "0",
+      "id": {
+        "$": {
+          "keyed_name": "L-3005740",
+          "type": "Part"
+        },
+        "_": "9C3904D2C96A4AF68FA079A6E6F17969"
+      },
+      "item_number": "L-3005740",
+      "itemtype": "4F1AC04A2B484F3ABA4E20DB63808A88",
+      "keyed_name": "L-3005740",
+      "major_rev": "A",
+      "make_buy": "Buy",
+      "name": "Round Plate 1X1 - Tr.",
+      "state": "Released",
+      "team_id": {
+        "$": {
+          "keyed_name": "T Student 1",
+          "type": "Team"
+        },
+        "_": "43049881C4FF432DB312701FAF224AB1"
+      },
+      "unit": "EA"
+    }
+  },
+  {
+    "item_number": "P-0200000",
+    "major_rev": "A",
+    "make_buy": "Buy",
+    "type": "Part",
+    "BOM": true
+  },
+  //-----------------------------
+
+  {
+    "Item": [
+      {
+        "bernisarraynr": 0,
+        "classification": "Component",
+        "color": "--  Transparent",
+        "id": {
+          "$": {
+            "keyed_name": "L-3005740",
+            "type": "Part"
+          },
+          "_": "9C3904D2C96A4AF68FA079A6E6F17969"
+        },
+        "item_number": "L-3005740",
+        "keyed_name": "L-3005740",
+        "major_rev": "A",
+        "name": "Round Plate 1X1 - Tr."
+      },
+      {
+        "bernisarraynr": 1,
+        "classification": "Component",
+        "color": "--  Transparent Red",
+        "id": {
+          "$": {
+            "keyed_name": "L-3005741",
+            "type": "Part"
+          },
+          "_": "83ECDF30AD994283B2EE472E0D21EDD2"
+        },
+        "item_number": "L-3005741",
+        "keyed_name": "L-3005741",
+        "major_rev": "A",
+        "name": "Round Plate 1X1 - Tr."
+      },
+      {
+        "bernisarraynr": 2,
+        "classification": "Component",
+        "color": "Black",
+        "id": {
+          "$": {
+            "keyed_name": "L-370526",
+            "type": "Part"
+          },
+          "_": "9122E8D097154B93A8D2FDE9A422F130"
+        },
+        "item_number": "L-370526",
+        "keyed_name": "L-370526",
+        "major_rev": "A",
+        "name": "Cross Axle 4M"
+      },
+      {
+        "bernisarraynr": 3,
+        "classification": "Component",
+        "color": "Black",
+        "id": {
+          "$": {
+            "keyed_name": "L-370626",
+            "type": "Part"
+          },
+          "_": "98DF145E905142EFB19A20EDB2D5AC1F"
+        },
+        "item_number": "L-370626",
+        "keyed_name": "L-370626",
+        "major_rev": "A",
+        "name": "Cross Axle 6M"
+      },
+      {
+        "bernisarraynr": 4,
+        "classification": "Component",
+        "color": "Black",
+        "id": {
+          "$": {
+            "keyed_name": "L-4107783",
+            "type": "Part"
+          },
+          "_": "49DAFC99FC1D473B891BD8936B5B8F77"
+        },
+        "item_number": "L-4107783",
+        "keyed_name": "L-4107783",
+        "major_rev": "A",
+        "name": "Angle Element, 180 Degrees [2]"
+      }
+    ]
+  },
+  //-----------------------------
+
+  {
+    "Item": {
+      "classification": "Component",
+      "color": "Black",
+      "config_id": "782B47F844AD4437BC85B776CD924CFB",
+      "created_by_id": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+      "created_on": "2016-04-21T09:26:21",
+      "current_state": "42BB3B183A7748C3B4AA9D33F7BF70AC",
+      "description": "",
+      "effective_date": "2016-04-21T13:51:50",
+      "external_type": "component",
+      "generation": "5",
+      "has_change_pending": "0",
+      "id": "9122E8D097154B93A8D2FDE9A422F130",
+      "is_current": "1",
+      "is_released": "1",
+      "item_number": "L-370526",
+      "itemtype": "4F1AC04A2B484F3ABA4E20DB63808A88",
+      "keyed_name": "L-370526",
+      "major_rev": "A",
+      "make_buy": "Buy",
+      "modified_by_id": "8363E4919B6C4D74BD653DB78678F86D",
+      "modified_on": "2016-04-21T13:51:50",
+      "name": "Cross Axle 4M",
+      "new_version": "0",
+      "not_lockable": "0",
+      "permission_id": "95475AE006E7415794BDC93808DC04D2",
+      "release_date": "2016-04-21T13:51:50",
+      "state": "Released",
+      "team_id": "43049881C4FF432DB312701FAF224AB1",
+      "unit": "EA"
+    }
+  }
+]
+//-----------------------------

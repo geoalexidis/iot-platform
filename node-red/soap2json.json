@@ -1,0 +1,515 @@
+[
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "30B991F927274FA3829655F50C99472E"
+		},
+		"config_id": {
+			"_": "30B991F927274FA3829655F50C99472E",
+			"$": {
+				"keyed_name": "Innovator Admin",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2002-04-24T15:46:12",
+		"current_state": {
+			"_": "C363ABDADF8D485393BB89877DBDCFD0",
+			"$": {
+				"keyed_name": "Released",
+				"type": "Life Cycle State",
+				"name": "Released"
+			}
+		},
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"generation": "1",
+		"id": {
+			"_": "30B991F927274FA3829655F50C99472E",
+			"$": {
+				"keyed_name": "Innovator Admin",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Innovator Admin",
+		"last_login_date": "2016-05-31T15:04:34",
+		"login_name": "admin",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2004-01-16T21:18:31",
+		"new_version": "0",
+		"not_lockable": "0",
+		"owned_by_id": {
+			"_": "DBA5D86402BF43D5976854B8B48FCDD1",
+			"$": {
+				"keyed_name": "Innovator Admin",
+				"type": "Identity"
+			}
+		},
+		"permission_id": {
+			"_": "AA4BFC34E3E64128ADA3FB01042464C4",
+			"$": {
+				"keyed_name": "User",
+				"type": "Permission"
+			}
+		},
+		"state": "Released",
+		"working_directory": "C:",
+		"first_name": "Innovator",
+		"last_name": "Admin"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "AD30A6D8D3B642F5A2AFED1A4B02BEFA"
+		},
+		"config_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2002-04-24T15:46:11",
+		"current_state": {
+			"_": "C363ABDADF8D485393BB89877DBDCFD0",
+			"$": {
+				"keyed_name": "Released",
+				"type": "Life Cycle State",
+				"name": "Released"
+			}
+		},
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"generation": "1",
+		"id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Super User",
+		"last_login_date": "2016-05-31T09:55:31",
+		"login_name": "root",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2004-01-16T21:18:37",
+		"new_version": "0",
+		"not_lockable": "0",
+		"permission_id": {
+			"_": "E228B4F6105E4220A5342B5F26DDE35D",
+			"$": {
+				"keyed_name": "E228B4F6105E4220A5342B5F26DDE35D",
+				"type": "Permission"
+			}
+		},
+		"state": "Released",
+		"working_directory": "C:",
+		"first_name": "Super",
+		"last_name": "User"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "8363E4919B6C4D74BD653DB78678F86D"
+		},
+		"config_id": {
+			"_": "8363E4919B6C4D74BD653DB78678F86D",
+			"$": {
+				"keyed_name": "Student Eins",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2016-04-18T14:05:46",
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"email": "plm-cax@hsr.ch",
+		"generation": "1",
+		"id": {
+			"_": "8363E4919B6C4D74BD653DB78678F86D",
+			"$": {
+				"keyed_name": "Student Eins",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Student Eins",
+		"last_login_date": "2016-04-25T09:32:32",
+		"login_name": "student1",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2016-04-18T14:05:46",
+		"new_version": "1",
+		"not_lockable": "0",
+		"owned_by_id": {
+			"_": "13891F3F38F6471DB0955F7ED4282EBD",
+			"$": {
+				"keyed_name": "Student Eins",
+				"type": "Identity"
+			}
+		},
+		"permission_id": {
+			"_": "AA4BFC34E3E64128ADA3FB01042464C4",
+			"$": {
+				"keyed_name": "User",
+				"type": "Permission"
+			}
+		},
+		"working_directory": "U:\\ArasCheckout",
+		"first_name": "Student",
+		"last_name": "Eins"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "3F50081FD6CC4D64948615E7327B4E2C"
+		},
+		"config_id": {
+			"_": "3F50081FD6CC4D64948615E7327B4E2C",
+			"$": {
+				"keyed_name": "Student Zwei",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2016-04-18T14:05:46",
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"email": "plm-cax@hsr.ch",
+		"generation": "1",
+		"id": {
+			"_": "3F50081FD6CC4D64948615E7327B4E2C",
+			"$": {
+				"keyed_name": "Student Zwei",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Student Zwei",
+		"last_login_date": "2016-04-25T09:07:45",
+		"login_name": "student2",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2016-04-18T14:05:46",
+		"new_version": "1",
+		"not_lockable": "0",
+		"owned_by_id": {
+			"_": "37F9CC80D5B54D21BBCF008DE419EE76",
+			"$": {
+				"keyed_name": "Student Zwei",
+				"type": "Identity"
+			}
+		},
+		"permission_id": {
+			"_": "AA4BFC34E3E64128ADA3FB01042464C4",
+			"$": {
+				"keyed_name": "User",
+				"type": "Permission"
+			}
+		},
+		"working_directory": "U:\\ArasCheckout",
+		"first_name": "Student",
+		"last_name": "Zwei"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "12382A20A4DD46A8AB47D49028411001"
+		},
+		"config_id": {
+			"_": "12382A20A4DD46A8AB47D49028411001",
+			"$": {
+				"keyed_name": "Student Drei",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2016-04-18T14:05:46",
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"email": "plm-cax@hsr.ch",
+		"generation": "1",
+		"id": {
+			"_": "12382A20A4DD46A8AB47D49028411001",
+			"$": {
+				"keyed_name": "Student Drei",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Student Drei",
+		"last_login_date": "2016-04-20T13:46:38",
+		"login_name": "student3",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2016-04-18T14:05:46",
+		"new_version": "1",
+		"not_lockable": "0",
+		"owned_by_id": {
+			"_": "5D279BED5E6148749C85D1BF6C895D90",
+			"$": {
+				"keyed_name": "Student Drei",
+				"type": "Identity"
+			}
+		},
+		"permission_id": {
+			"_": "AA4BFC34E3E64128ADA3FB01042464C4",
+			"$": {
+				"keyed_name": "User",
+				"type": "Permission"
+			}
+		},
+		"working_directory": "U:\\ArasCheckout",
+		"first_name": "Student",
+		"last_name": "Drei"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "341F9EB63A12484F9B25B09808F60DCB"
+		},
+		"config_id": {
+			"_": "341F9EB63A12484F9B25B09808F60DCB",
+			"$": {
+				"keyed_name": "Student Vier",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2016-04-18T14:05:46",
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"email": "plm-cax@hsr.ch",
+		"generation": "1",
+		"id": {
+			"_": "341F9EB63A12484F9B25B09808F60DCB",
+			"$": {
+				"keyed_name": "Student Vier",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Student Vier",
+		"last_login_date": "2016-05-26T15:06:22",
+		"login_name": "student4",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2016-04-18T14:05:46",
+		"new_version": "1",
+		"not_lockable": "0",
+		"owned_by_id": {
+			"_": "9519D95EDB9E4F819A9F920416C69168",
+			"$": {
+				"keyed_name": "Student Vier",
+				"type": "Identity"
+			}
+		},
+		"permission_id": {
+			"_": "AA4BFC34E3E64128ADA3FB01042464C4",
+			"$": {
+				"keyed_name": "User",
+				"type": "Permission"
+			}
+		},
+		"working_directory": "U:\\ArasCheckout",
+		"first_name": "Student",
+		"last_name": "Vier"
+	},
+	{
+		"$": {
+			"type": "User",
+			"typeId": "45E899CD2859442982EB22BB2DF683E5",
+			"id": "EB2D5AA617FB41A28F081345B8B5FECB"
+		},
+		"config_id": {
+			"_": "EB2D5AA617FB41A28F081345B8B5FECB",
+			"$": {
+				"keyed_name": "Vault Admin",
+				"type": "User"
+			}
+		},
+		"created_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"created_on": "2002-08-19T17:57:25",
+		"current_state": {
+			"_": "C363ABDADF8D485393BB89877DBDCFD0",
+			"$": {
+				"keyed_name": "Released",
+				"type": "Life Cycle State",
+				"name": "Released"
+			}
+		},
+		"default_vault": {
+			"_": "67BBB9204FE84A8981ED8313049BA06C",
+			"$": {
+				"keyed_name": "Default",
+				"type": "Vault"
+			}
+		},
+		"generation": "1",
+		"id": {
+			"_": "EB2D5AA617FB41A28F081345B8B5FECB",
+			"$": {
+				"keyed_name": "Vault Admin",
+				"type": "User"
+			}
+		},
+		"is_current": "1",
+		"is_released": "0",
+		"keyed_name": "Vault Admin",
+		"last_login_date": "2016-05-23T13:58:32",
+		"login_name": "vadmin",
+		"logon_enabled": "1",
+		"major_rev": "A",
+		"modified_by_id": {
+			"_": "AD30A6D8D3B642F5A2AFED1A4B02BEFA",
+			"$": {
+				"keyed_name": "Super User",
+				"type": "User"
+			}
+		},
+		"modified_on": "2004-01-16T21:18:44",
+		"new_version": "0",
+		"not_lockable": "0",
+		"permission_id": {
+			"_": "3A1671E145D34D01B934ED33EAA6D698",
+			"$": {
+				"keyed_name": "3A1671E145D34D01B934ED33EAA6D698",
+				"type": "Permission"
+			}
+		},
+		"state": "Released",
+		"first_name": "Vault",
+		"last_name": "Admin"
+	}
+]

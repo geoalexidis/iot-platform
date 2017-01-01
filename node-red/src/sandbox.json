@@ -1,0 +1,3322 @@
+[
+    {
+        "type": "tab",
+        "id": "998a20d8.29e7b",
+        "label": "MongoDB"
+    },
+    {
+        "type": "tab",
+        "id": "91ed2633.b1ca88",
+        "label": "UI HTML"
+    },
+    {
+        "type": "tab",
+        "id": "151ad1e2.707ebe",
+        "label": "UI Contrib"
+    },
+    {
+        "type": "tab",
+        "id": "6116e21.a38b21c",
+        "label": "Webservice"
+    },
+    {
+        "type": "tab",
+        "id": "c03f2f97.e900d",
+        "label": "Chat"
+    },
+    {
+        "type": "tab",
+        "id": "bfa44fb4.20fce",
+        "label": "Flow 1"
+    },
+    {
+        "type": "tab",
+        "id": "342f5ecb.af3e42",
+        "label": "Flow 2"
+    },
+    {
+        "id": "274a5836.6dcbe8",
+        "type": "subflow",
+        "name": "Submarine",
+        "info": "Info here",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "70585390.b2349c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 500,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "10759926.12f047",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "43090ef1.e760f",
+        "type": "subflow",
+        "name": "ServiceInstructions Webservice",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "9ce9d0c7.6658f",
+        "type": "subflow",
+        "name": "Tool Webservice",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "1d8b81e.9f7ee7e",
+        "type": "mongodb2",
+        "z": "998a20d8.29e7b",
+        "uri": "mongodb://localhost:27017/test",
+        "name": "test",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "27816068.068b2",
+        "type": "ui_tab",
+        "z": "151ad1e2.707ebe",
+        "name": "Home2",
+        "icon": "dashboard",
+        "order": "2"
+    },
+    {
+        "id": "2fed4c4.88a2db4",
+        "type": "mongodb2",
+        "z": "998a20d8.29e7b",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "3d56f9f5.8ee6e6",
+        "type": "mongodb2",
+        "z": "43090ef1.e760f",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "b1c76b41.2f6198",
+        "type": "mongodb2",
+        "z": "9ce9d0c7.6658f",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "e0015a7b.fa1da8",
+        "type": "mongodb2",
+        "z": "151ad1e2.707ebe",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "38b0dc80.25dbb4",
+        "type": "ui_tab",
+        "z": "151ad1e2.707ebe",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "9d0d6b4a.418bd8",
+        "type": "websocket-listener",
+        "z": "91ed2633.b1ca88",
+        "path": "/ws/simple",
+        "wholemsg": "false"
+    },
+    {
+        "id": "d1193ffc.f1197",
+        "type": "mongodb2",
+        "z": "6116e21.a38b21c",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "ab338f1d.070e4",
+        "type": "mongodb2",
+        "z": "998a20d8.29e7b",
+        "uri": "mongodb://localhost:27017/random",
+        "name": "random",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "4dbf280b.393038",
+        "type": "bigmongo",
+        "z": "6116e21.a38b21c",
+        "uri": "mongodb://localhost:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "7ce04416.e01fdc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "336ca3f5.8b39dc",
+        "type": "websocket-listener",
+        "path": "/ws/worldmap",
+        "wholemsg": "false"
+    },
+    {
+        "id": "2a9c8d79.3f5012",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "1d8b81e.9f7ee7e",
+        "name": "",
+        "collection": "tool",
+        "operation": "save",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "564c91bb.a535c"
+            ]
+        ]
+    },
+    {
+        "id": "3d17dde5.14b6e2",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "631a34aa.2e617c"
+            ]
+        ]
+    },
+    {
+        "id": "564c91bb.a535c",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 190,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "631a34aa.2e617c",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "prepare msg.payload",
+        "func": "msg.payload = { \n    \"_id\" : \"57290542dc9a403426fe4015\", \n                \"talent\": \"here\",\n                \"blub\":\"there\",\n                \"opacity\":\"waynes\"};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "2a9c8d79.3f5012",
+                "2e28e364.02232c"
+            ]
+        ]
+    },
+    {
+        "id": "2e28e364.02232c",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d36c0dc6.18b18",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "build operation parameters: filter, update",
+        "func": "var filter = msg.payload;\nif (\"string\" == typeof filter) {\n  filter = JSON.parse(filter);\n}\n\nmsg.payload = [\n  filter,\n  {\n    \"$inc\": {\n      \"counter\": 1\n    }\n  }\n];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "d6694b26.940368"
+            ]
+        ]
+    },
+    {
+        "id": "d6694b26.940368",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "2fed4c4.88a2db4",
+        "name": "",
+        "collection": "mycollection",
+        "operation": "findOneAndUpdate",
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [
+                "7d60dc0e.2a4544"
+            ]
+        ]
+    },
+    {
+        "id": "e35f883a.ef0d78",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Inject filter",
+        "topic": "",
+        "payload": "{\"_id\":\"mydocument\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "d36c0dc6.18b18"
+            ]
+        ]
+    },
+    {
+        "id": "7d60dc0e.2a4544",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1110,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "853672ff.b2139",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 1110,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "ec7e3a37.c21d98",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "2) Output Separately for each Record",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 290,
+        "y": 1420,
+        "wires": [
+            [
+                "6d6a0303.298f4c"
+            ]
+        ]
+    },
+    {
+        "id": "6d6a0303.298f4c",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "find.forEach",
+        "func": "var newMsg = {};\nnewMsg.collection = 'names';\nnewMsg.operation  = 'find.forEach';\n//newMsg.payload    = { 'name' : 'Pete1' , 'names' : 'Pete2' };\nnewMsg.payload    = { 'name' : 'Pete1' };\nnewMsg.projection = { 'name' : 1 , '_id' : 0 };\nreturn newMsg;",
+        "outputs": 1,
+        "x": 592,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "134911b4.901bfe",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "Just get name",
+        "func": "var newMsg = {};\nnewMsg.payload    = msg.payload.name;\nreturn newMsg;",
+        "outputs": 1,
+        "x": 920,
+        "y": 1420,
+        "wires": [
+            [
+                "853672ff.b2139"
+            ]
+        ]
+    },
+    {
+        "id": "2685be98.fcbe42",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "4) Output once only as a list",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 240,
+        "y": 1720,
+        "wires": [
+            [
+                "2b008444.c72b4c"
+            ]
+        ]
+    },
+    {
+        "id": "2b008444.c72b4c",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "find.toArray",
+        "func": "var newMsg = {};\nnewMsg.collection = 'names';\nnewMsg.operation  = 'find.toArray';\n//newMsg.payload    = { 'name' : 'Pete1' , 'names' : 'Pete2' };\nnewMsg.payload    = { 'name' : 'Pete1' };\nnewMsg.projection = { 'name' : 1 , '_id' : 0 };\nreturn newMsg;",
+        "outputs": 1,
+        "x": 488,
+        "y": 1721,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fac99580.b51488",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "get names as a list",
+        "func": "// Outputs separate messages !!\n//var newMsg =[];\n//for (var i = 0; i < msg.payload.length; i++) { \n//newMsg.push({name: msg.payload[i].name}) };\n//return [ newMsg ];\n\n// Combines into a single list (or array)\nvar newMsg =[];\nfor (var i = 0; i < msg.payload.length; i++) {\n//newMsg.push({name:  msg.payload[i].name } ) };\nnewMsg.push(msg.payload[i].name) };\nmsg.payload = newMsg;\nreturn  msg;\n",
+        "outputs": 1,
+        "x": 890,
+        "y": 1580,
+        "wires": [
+            [
+                "853672ff.b2139"
+            ]
+        ]
+    },
+    {
+        "id": "b7881c22.efc82",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "3) Enter data",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 200,
+        "y": 1561,
+        "wires": [
+            [
+                "77d85e8b.e759d"
+            ]
+        ]
+    },
+    {
+        "id": "77d85e8b.e759d",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "insert (or delete)",
+        "func": "var newMsg = {};\nnewMsg.collection = 'names';\n//newMsg.operation  = 'deleteOne';\nnewMsg.operation  = 'insert';\nnewMsg.payload    = { 'name' : 'Pete1' , 'names' : 'Smith4' };\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb0d3474.f10e68",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Inject filter",
+        "topic": "",
+        "payload": "{\"_id\" : \"ObjectId(\\\"57290542dc9a403426fe4015\\\")\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 640,
+        "y": 80,
+        "wires": [
+            [
+                "92d79362.c0eeb"
+            ]
+        ]
+    },
+    {
+        "id": "92d79362.c0eeb",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "build operation parameters: filter, update",
+        "func": "var filter = msg.payload;\nif (\"string\" == typeof filter) {\n  filter = JSON.parse(filter);\n}\n\nmsg.payload = [\n  filter,\n  {\n    \"$inc\": {\n      \"counter\": 1\n    }\n  }\n];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "9ba6792e.a510a8",
+                "51e2f836.c19fc8"
+            ]
+        ]
+    },
+    {
+        "id": "9ba6792e.a510a8",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 990,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "51e2f836.c19fc8",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "1d8b81e.9f7ee7e",
+        "name": "",
+        "collection": "tool",
+        "operation": "findOneAndUpdate",
+        "x": 680,
+        "y": 200,
+        "wires": [
+            [
+                "8b1f55fe.cbe458"
+            ]
+        ]
+    },
+    {
+        "id": "8b1f55fe.cbe458",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "336785ea.c7b66a",
+        "type": "http in",
+        "z": "91ed2633.b1ca88",
+        "name": "Home_Page",
+        "url": "/Home_Page",
+        "method": "get",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "ae02c95d.7ea328"
+            ]
+        ]
+    },
+    {
+        "id": "ae02c95d.7ea328",
+        "type": "template",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html> \n<html>\n<head>\n\t<title>Page Title</title>\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<link rel=\"stylesheet\" href=\"http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css\" />\n<script src=\"http://code.jquery.com/jquery-1.9.1.min.js\"></script>\n<script src=\"http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js\"></script>\n</head>\n\n<body>\n<!-- Start of first page: #one -->\n<div data-role=\"page\" id=\"one\">\n\n\t<div data-role=\"header\">\n\t\t<h1>Multi-page</h1>\n\t</div><!-- /header -->\n\n\t<div role=\"main\" class=\"ui-content\" >\n\t\t<h2>One</h2>\n\n\t\t<p>I have an <code>id</code> of \"one\" on my page container. I'm first in the source order so I'm shown when the page loads.</p>\n\n\t\t<p>This is a multi-page boilerplate template that you can copy to build your first jQuery Mobile page. This template contains multiple \"page\" containers inside, unlike a single page template that has just one page within it.</p>\n\t\t<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>\n\t\t<p>You link to internal pages by referring to the <code>id</code> of the page you want to show. For example, to <a href=\"#two\" >link</a> to the page with an <code>id</code> of \"two\", my link would have a <code>href=\"#two\"</code> in the code.</p>\n\n\t\t<h3>Show internal pages:</h3>\n\t\t<p><a href=\"#two\" class=\"ui-btn ui-shadow ui-corner-all\">Show page \"two\"</a></p>\n\t\t<p><a href=\"#popup\" class=\"ui-btn ui-shadow ui-corner-all\" data-rel=\"dialog\" data-transition=\"pop\">Show page \"popup\" (as a dialog)</a></p>\n\t</div><!-- /content -->\n\n\t<div data-role=\"footer\" data-theme=\"a\">\n\t\t<h4>Page Footer</h4>\n\t</div><!-- /footer -->\n</div><!-- /page one -->\n\n<!-- Start of second page: #two -->\n<div data-role=\"page\" id=\"two\" data-theme=\"a\">\n\n\t<div data-role=\"header\">\n\t\t<h1>Two</h1>\n\t</div><!-- /header -->\n\n\t<div role=\"main\" class=\"ui-content\">\n\t\t<h2>Two</h2>\n\t\t<p>I have an id of \"two\" on my page container. I'm the second page container in this multi-page template.</p>\n\t\t<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>\n\t\t<p><a href=\"#one\" data-direction=\"reverse\" class=\"ui-btn ui-shadow ui-corner-all ui-btn-b\">Back to page \"one\"</a></p>\n\n\t</div><!-- /content -->\n\n\t<div data-role=\"footer\">\n\t\t<h4>Page Footer</h4>\n\t</div><!-- /footer -->\n</div><!-- /page two -->\n\n<!-- Start of third page: #popup -->\n<div data-role=\"page\" id=\"popup\">\n\n\t<div data-role=\"header\" data-theme=\"b\">\n\t\t<h1>Dialog</h1>\n\t</div><!-- /header -->\n\n\t<div role=\"main\" class=\"ui-content\">\n\t\t<h2>Popup</h2>\n\t\t<p>I have an id of \"popup\" on my page container and only look like a dialog because the link to me had a <code>data-rel=\"dialog\"</code> attribute which gives me this inset look and a <code>data-transition=\"pop\"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>\n\t\t<p><a href=\"#one\" data-rel=\"back\" class=\"ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left\">Back to page \"one\"</a></p>\n\t</div><!-- /content -->\n\n\t<div data-role=\"footer\">\n\t\t<h4>Page Footer</h4>\n\t</div><!-- /footer -->\n</div><!-- /page popup -->\n</body>\n\n\n\n\n\n</html>",
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "7269b06f.527b9"
+            ]
+        ]
+    },
+    {
+        "id": "7269b06f.527b9",
+        "type": "http response",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cfc4556.8b036a8",
+        "type": "http in",
+        "z": "91ed2633.b1ca88",
+        "name": "http request: mobiui",
+        "url": "/mobiui",
+        "method": "get",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "9b3ffcc0.df664"
+            ]
+        ]
+    },
+    {
+        "id": "2ca1872a.a93828",
+        "type": "http response",
+        "z": "91ed2633.b1ca88",
+        "name": "http responce: mobiui",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "cc8dba9c.e81528",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "ui handler",
+        "func": "/* \tUI dispatcher v0.1b 08/10/2014\n\tRecives changes from UI and actions them \n\tNow uses context.global.dataPionts to hold state */\nvar obj = JSON.parse(msg.payload);\ndelete msg.payload;\ndelete msg._session;\n\n// toggle switch tsw-1\t- output 1 \nif(obj.id==\"tsw-1\"){\n\tcontext.global.dataPionts[\"tsw-1\"].v=obj.v;\n\tmsg.payload = {\"id\": obj.id, \"v\": obj.v};\t\n\treturn [msg, null, null, null, null];\n\n// toggle switch tsw-2\t- output 2 \n} else if(obj.id==\"tsw-2\"){\n    context.global.dataPionts[\"tsw-2\"].v=obj.v;\n\tmsg.payload = {\"id\": obj.id, \"v\": obj.v};\t\n\treturn [null, msg, null, null, null];\n\t\n// slider  sld-1 \t\t- output 3 \t\n} else if(obj.id==\"sld-1\"){\n\tcontext.global.dataPionts[\"sld-1\"].v=obj.v;\n\tmsg.payload = {\"id\": obj.id, \"v\": obj.v};\t\n\treturn [null, null, msg, null, null, null];\n\n// txt popup txt-1 \t\t- output 4 \t\n} else if(obj.id==\"txt-1\"){\n\tcontext.global.dataPionts[\"txt-1\"].v=obj.v;\n\tmsg.payload = {\"id\": obj.id, \"v\": obj.v};\t\n\treturn [null, null, null, msg, null, null];\n\n// init request \t\t- output 5 \n} else if(obj.id==\"init\"){\t\n\tcontext.global.dataPionts[\"shd\"].v = JSON.stringify(context.global.schedule);\n\tmsg.payload = {id:\"init\", v: context.global.dataPionts}; \n\treturn [null, null, null, null, msg, null];\n\t\n// save shedule \t\t- output 6 \n} else if(obj.id==\"shd-save\"){\n\tcontext.global.schedule = null;\n\t//context.global.schedule = JSON.stringify(obj.v);\n\tcontext.global.schedule = obj.v;\n\tmsg.payload = obj.v;\n\treturn [null, null, null, null, null, msg];\n\n//  do nothing\n} else {\n\treturn [null, null, null, null, null, null];\n}",
+        "outputs": "6",
+        "x": 367.4444351196289,
+        "y": 791.666633605957,
+        "wires": [
+            [
+                "fac16678.5c5718"
+            ],
+            [
+                "a32a3770.32a928"
+            ],
+            [
+                "da9b5e81.d44eb"
+            ],
+            [
+                "208bcba1.b29564"
+            ],
+            [
+                "b28c302b.278e8"
+            ],
+            [
+                "de7f7a6d.458f38"
+            ]
+        ]
+    },
+    {
+        "id": "2e7d41ea.06f92e",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "pulse",
+        "topic": "10",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "14400",
+        "crontab": "",
+        "once": false,
+        "x": 148,
+        "y": 460.99999713897705,
+        "wires": [
+            [
+                "f419b925.b0e458"
+            ]
+        ]
+    },
+    {
+        "id": "f419b925.b0e458",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "move slider ui: sld-1",
+        "func": "context.count = context.count || parseInt(context.global.dataPionts[\"sld-1\"].v); \ncontext.count = parseInt(context.count) + parseInt(msg.topic);\nif(context.count>100){context.count=0;}\ncontext.global.dataPionts[\"sld-1\"].v=context.count; // used by ui init\nmsg.payload = {id:\"sld-1\", v: context.count}; \nreturn msg;",
+        "outputs": 1,
+        "x": 390,
+        "y": 461.99999713897705,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf288910.fa7518",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "toggle  swithch ui: tsw-1",
+        "func": "if(context.global.dataPionts[\"tsw-1\"].v==1){\n\tcontext.global.dataPionts[\"tsw-1\"].v=0;\n} else {\n\tcontext.global.dataPionts[\"tsw-1\"].v=1;\n}\nmsg.payload = {id:\"tsw-1\", v: context.global.dataPionts[\"tsw-1\"].v}; \nreturn msg;",
+        "outputs": 1,
+        "x": 397,
+        "y": 377.99999713897705,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34e84a3f.ee06e6",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "toggle",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 148,
+        "y": 378.99999713897705,
+        "wires": [
+            [
+                "bf288910.fa7518"
+            ]
+        ]
+    },
+    {
+        "id": "fac16678.5c5718",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "ui: tsw-1 toggle switch",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 658.4444351196289,
+        "y": 758.666633605957,
+        "wires": []
+    },
+    {
+        "id": "a32a3770.32a928",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "ui: tsw-2 toggle switch",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 659.4444351196289,
+        "y": 794.666633605957,
+        "wires": []
+    },
+    {
+        "id": "da9b5e81.d44eb",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "u1: sld-1 slider",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 640.4444351196289,
+        "y": 830.666633605957,
+        "wires": []
+    },
+    {
+        "id": "78f4410e.5520a",
+        "type": "comment",
+        "z": "91ed2633.b1ca88",
+        "name": "Update mobilw web app via web scokets ",
+        "info": "",
+        "x": 240,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5fb9d083.01e62",
+        "type": "comment",
+        "z": "91ed2633.b1ca88",
+        "name": "Handler mobile web app UI commands via web sockets",
+        "info": "",
+        "x": 268.11109924316406,
+        "y": 722.3332862854004,
+        "wires": []
+    },
+    {
+        "id": "d29c1a49.7e4ae8",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "set ui value val-1",
+        "func": "msg.payload = {id:\"val-1\", v: parseFloat(msg.topic).toFixed(1)+\"C\"};\ncontext.global.dataPionts[\"val-1\"].v=parseFloat(msg.topic).toFixed(1)+\"C\"; // used by ui init\nreturn msg;",
+        "outputs": 1,
+        "x": 382,
+        "y": 497.99999713897705,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f57eb6f.3c8d74",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "set",
+        "topic": "22.12",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 498.99999713897705,
+        "wires": [
+            [
+                "d29c1a49.7e4ae8"
+            ]
+        ]
+    },
+    {
+        "id": "cfb6f823.b87538",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "toggle",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 149,
+        "y": 420.99999713897705,
+        "wires": [
+            [
+                "2f8f8dca.10d0f2"
+            ]
+        ]
+    },
+    {
+        "id": "2f8f8dca.10d0f2",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "toggle  swithch ui: tsw-2",
+        "func": "if(context.global.dataPionts[\"tsw-2\"].v==1){\n\tcontext.global.dataPionts[\"tsw-2\"].v=0;\n} else {\n\tcontext.global.dataPionts[\"tsw-2\"].v=1;\n}\nmsg.payload = {id:\"tsw-2\", v: context.global.dataPionts[\"tsw-2\"].v}; \nreturn msg;",
+        "outputs": 1,
+        "x": 396,
+        "y": 419.99999713897705,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bda7ebf.c6408",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "set",
+        "topic": "Flow to plant High!!",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 148,
+        "y": 534.999997138977,
+        "wires": [
+            [
+                "9a97be07.9cd5d"
+            ]
+        ]
+    },
+    {
+        "id": "9a97be07.9cd5d",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "set ui status msg",
+        "func": "var statusMsg = {stMsg: msg.topic, dur:0, pri:1};\nmsg.payload = {id:\"sta-1\", v:statusMsg};\nreturn msg;",
+        "outputs": 1,
+        "x": 379,
+        "y": 534.999997138977,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9eb658ff.189178",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "set",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 148,
+        "y": 571.999997138977,
+        "wires": [
+            [
+                "3ba9788e.3122e8"
+            ]
+        ]
+    },
+    {
+        "id": "3ba9788e.3122e8",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "show a chart",
+        "func": "var chart = {\n  \"values\": [\n    \"[[1404954324794,22.7],[1404955378037,22.7],[1404956431240,22.7],[1404957484513,22.6],[1404958537898,22.6],[1404959591350,22.6],[1404960644836,22.4],[1404961698366,22.4],[1404962752021,22.4],[1404963805731,22.4],[1404965913194,22.3],[1404966967038,22.1],[1404968020953,22.1],[1404969074807,22.1],[1404970128704,22.1],[1404971182719,22.1],[1404972236829,22.1],[1404973290883,22.1],[1404974345054,22.0]]\",\n    \"[[1404954324794,40.0],[1404955378037,40.0],[1404956431240,40.0],[1404957484513,40.0],[1404958537898,40.0],[1404959591350,40.0],[1404960644836,40.0],[1404961698366,40.0],[1404962752021,40.0],[1404963805731,40.0],[1404965913194,40.0],[1404966967038,40.0],[1404968020953,40.0],[1404969074807,40.0],[1404970128704,40.0],[1404971182719,40.0],[1404972236829,40.0],[1404973290883,40.0],[1404974345054,40.0]]\"\n  ],\n   \"engs\": [\n    \"C\",\n    \"C\"\n  ],\n    \"colors\": [\n    \"#615B5B\",\n    \"#EE4900\"\n  ],\n  \"names\": [\n    \"EnOcean: office temp\",\n    \"EnOcean: office SP\"\n  ],\n  \"tags\": [\n    \"v3\",\n    \"v4\"\n  ],\n   \"nos\": 2,\n   \"title\": \"Office temp & SP\",\n   \"xtitle\": \"Time\",\n   \"ytitle\": \"C\"\n}\nmsg.payload = {id:\"chart-1\", v: chart}; \nreturn msg; ",
+        "outputs": 1,
+        "x": 369,
+        "y": 572.999997138977,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "208bcba1.b29564",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "txt-1 popup large text",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 660.4444351196289,
+        "y": 866.666633605957,
+        "wires": []
+    },
+    {
+        "id": "a30f0f3d.6137e",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 356.44441986083984,
+        "y": 858.6666460037231,
+        "wires": []
+    },
+    {
+        "id": "f3cd3764.5392b8",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "DataPionts Object init ",
+        "func": "context.global.dataPionts = {\n\"tsw-1\": {\"v\": 1},\n\"tsw-2\": {\"v\": 0},\n\"sld-1\": {\"v\": 10},\n\"val-1\": {\"v\": 20.0},\n\"txt-1\": {\"v\": null},\n\"sta-1\": {\"v\": \"init message\"},\n\"shd\" : {\"v\": null},\n};\nreturn msg;",
+        "outputs": 1,
+        "x": 399.00001525878906,
+        "y": 613.9999847412109,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5d55bb9.4e95f8",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "init on start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "f3cd3764.5392b8"
+            ]
+        ]
+    },
+    {
+        "id": "b28c302b.278e8",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "init responce to client",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 662.4444351196289,
+        "y": 901.666633605957,
+        "wires": []
+    },
+    {
+        "id": "214c15af.96df3a",
+        "type": "comment",
+        "z": "91ed2633.b1ca88",
+        "name": "mobile web app:  mobiui ",
+        "info": "",
+        "x": 180,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9b3ffcc0.df664",
+        "type": "template",
+        "z": "91ed2633.b1ca88",
+        "name": "Mobile web-App v1.2 ",
+        "field": "",
+        "template": "<!DOCTYPE HTML>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> \n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n  <title>Node-RED mobi ui</title>\n  <link rel=\"stylesheet\" href=\"//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css\" />\n  <script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n  <script src=\"//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/highcharts/4.0.3/highcharts.js\"></script>\n  <script>//Node-Red mobi ui - LHG industrialinternet.co.uk\n\tconsole.log(\"NR mobi UI 1.1.a : Controls, Chart & Schedule\");\n\tvar  schedule = null;\t\t\t\t// schedule Obj \n\tvar itemLookup = null;  \t\t\t// pointer to current schedule event\n\tvar statusMsgDisplayed= false;\t// flag to stop msg disco effect\n\tvar prioritySet =false;\t\t  \t// flag showing if high prio msg being displayed\n\tvar  daiableWidgets = false;  \n\tvar connected = false;\n \tif(location.protocol==\"https:\"){\n\t\tvar wsUri=\"wss://\"+window.location.hostname+\":1880/ws/mobiui\";\n\t} else {\n\t\tvar wsUri=\"ws://\"+window.location.hostname+\":1880/ws/mobiui\";\n\t}\n\tvar ws=null;\n\tfunction appInit(){\n\t\tif  ( schedule == null && localStorage[\"schedule\"]) {\n\t\t\tschedule = localStorage[\"schedule\"];\n\t\t\tconsole.log(\"loaded schedule from local.\");\n\t\t}  \n\t}\n\tappInit();\n\tfunction wsConn() {\n\t\tws = new WebSocket(wsUri);\n\t\tws.onmessage = function(m) {\n\t\t\tconsole.log('< from-node-red:',m.data);\n\t\t\tif (typeof(m.data) === \"string\" && m. data !== null){\n\t\t\t\tvar msg =JSON.parse(m.data);\n\t\t\t\tvar ftc = msg.id.substring(0, 3);\n\t\t\t\t//console.log(\"id:\"+msg.id+\" fct:\"+ftc);\n\t\t\t\tif(ftc== \"ini\") {uiInit(msg.v);}\n\t\t\t\tif(ftc==\"tsw\"){setFlip(msg.id,msg.v);}\n\t\t\t\tif(ftc==\"sld\"){setSlider(msg.id,msg.v);}\n\t\t\t\tif(ftc==\"val\"){setValue(msg.id,msg.v);}\n\t\t\t\t//if(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,.msg.v.yTitle)};\n\t\t\t\tif(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,msg.v.xtitle,msg.v.ytitle)};\n\t\t\t\tif(ftc==\"shd\"){setSchedule(msg.v);}\n\t\t\t\tif(ftc==\"sta\"){statusMsgDisplayed= false;setStatus(msg.v.stMsg,msg.v.dur,msg.v.pri);}\n\t\t\t\tif(ftc==\"ack\"){clearReq();}\n\t\t\t}\n\t\t}\n\t\tws.onopen = function() { \n\t\t\tstatusMsgDisplayed=false;\n\t\t\tif(daiableWidgets==true){enablePage();}\n\t\t\tsetStatus(\"Connected\",5,0); \n\t\t\tconnected = true;\n\t\t\tvar obj = {\"id\":\"init\",\"v\":document.cookie};\n\t\t\tgetRequest = JSON.stringify(obj); \t\n\t\t\tws.send(getRequest);\t\t\t// Request ui status from NR\n\t\t\tconsole.log(\"sent init requeset\");\n\t\t}\n\t\tws.onclose   = function()  {\n\t\t\tconsole.log('Node-RED connection closed: '+new Date().toUTCString()); \n\t\t\tconnected = false; \n\t\t\tws = null;\n\t\t\tsetStatus(\"No connection to server!\",0,1);\n\t\t\tif(daiableWidgets==false){disablePage();}\n\t\t\tsetTimeout(wsConn, 10000);\n\t\t}\t\n\t\tws.onerror  = function(){\n\t\t\tconsole.log(\"connection error\");\n\t\t}\n\t}\n\twsConn(); \t\t\t\t\t// connect to Node-RED server\n\t\n\tfunction uiInit(values){ \t\t// initialise UI controls\n\t\tvar ui = values; // JSON.parse(values);\n\t\t for (var item in ui) {\n\t\t\tconsole.log(\"id:\"+item.toString() +\" v:\"+ui[item].v);\n\t\t\tvar  m = {\"id\" : item.toString(), \"v\": ui[item].v};\n\t\t\t//console.log(\"m: \"+m);\n\t\t\tinitSetters(m);\n\t\t}\n\t}\n\tfunction initSetters(msg){  \t// update UI widgets on connect \n\t\tconsole.log(\"init item id:\"+msg.id+\" value:\"+ msg.v);\n\t\tvar ftc = msg.id.substring(0, 3);\n\t\tif(ftc==\"tsw\"){setFlip(msg.id,msg.v);}\n\t\tif(ftc==\"sld\"){setSlider(msg.id,msg.v);}\n\t\tif(ftc==\"val\"){setValue(msg.id,msg.v);}\n\t\tif(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,msg.v.xTitle.msg.v.yTitle)};\n\t\tif(ftc==\"shd\"){setSchedule(msg.v);}\n\t\tif(ftc==\"sta\"){setStatus(msg.v);}\n\t}\n\tfunction setFlip(_id,_v){ \t// update flip \n\t\tmyselect = $(\"#\"+_id);\n\t\t//console.log(\"flip id:\"+_id+\" value:\"+_v+\" tyepof:\"+ typeof _v +\" state:\"+myselect.data('state')+\" req:\"+myselect.data('req'));\n\t\t//if(myselect.data('req')==1) return; // request on progress stops flip UI chatter \n\t\tif(myselect.data('state')!=_v){\n\t\t\tif(_v== true || _v=='true'){\n\t\t\t\tmyselect[0].selectedIndex=1; \n\t\t\t\tmyselect.data('state',1)\n\t\t\t} \n\t\t\telse { \n\t\t\t\tmyselect[0].selectedIndex=0;\n\t\t\t\tmyselect.data('state',0);\n\t\t\t}\n\t\t\tmyselect.flipswitch(\"refresh\");\n\t\t\t//myselect.stopImmediatePropagation();\n\t\t\t//console.log(\"jq:\"+myselect[0].selectedIndex+\" flip id:\"+_id+\" v:\"+value+\" data-state:\"+myselect.data('state'));\n\t\t}\n\t}\n\tfunction setSlider(_id,_v){\t// update slider\n\t\tmyselect = $(\"#\"+_id);\n\t\t myselect.val(_v);\n\t\t myselect.slider('refresh');\n\t}\n\tfunction setValue(_id,_v){\t// update value display\n\t\tmyselect = $(\"#\"+_id);\n\t\tmyselect.val(_v);\n\t}\n\tfunction showCharts(_data,colors,engs,tags,names,nos,cTitle,xTitle,yTitle){ // render chart\n\t\tvar seriesNo = [];\n\t\tfor (i=0; i<nos; i++){\n\t\t\tseriesNo.push({});  \n\t\t}\n\t\tconsole.log(\"seriesNo:\"+seriesNo);\n\t\tvar options = {\n\t\t\tchart: {\n\t\t\t\tmarginRight: 30,\n\t\t\t\trenderTo: 'container',\n\t\t\t\ttype: 'spline',\n\t\t\t\t},\n\t\t\t\t  title: {\n\t\t\t\t\t\ttext: cTitle\n\t\t\t\t},\n\t\t\t\t  xAxis: {\n\t\t\t\t\t type: 'datetime',\n\t\t\t\t\tdateTimeLabelFormats: {\n\t\t\t\t\t\thour: '%H',\n\t\t\t\t\t\tday: '%H <br/>%a %d %b'            \n\t\t\t\t\t},\n\t\t\t\t\tgridLineColor: '#C0C0C0',\n\t\t\t\t\ttickInterval: 1 * 3600 * 1000,\n\t\t\t\t\ttitle: {\n\t\t\t\t\t\ttext: xTitle\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t\t yAxis: {\n\t\t\t\t\ttitle: {\n\t\t\t\t\t\ttext: yTitle\n\t\t\t\t\t},\n\t\t\t\t\tmin: 0,\n\t\t\t\t\tgridLineWidth: 0.5\t\t\t\n\t\t\t\t},\n\t\t\t\ttooltip: {\n\t\t\t\t\tformatter: function() {\n\t\t\t\t\t\teng=engs[this.series.options.id];\n\t\t\t\t\t\ttag=tags[this.series.options.id]; \n\t\t\t\t\t\treturn \"<strong>\"+ Highcharts.numberFormat(this.y, 1) +\"</strong>\"+eng+\" \"+tag+\"<br/>\"+ Highcharts.dateFormat('%a %d %b %H:%M:%S', this.x) +'<br/>';\t\t\t   \n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\tseries: seriesNo\n\t\t};\n\t\tfor (i=0; i<nos; i++){\n\t\t\toptions.series[i].id=i;\n\t\t\toptions.series[i].color=colors[i];\n\t\t\toptions.series[i].lineWidth=1;\n\t\t\toptions.series[i].name= names[i];\n\t\t\toptions.series[i].data =  JSON.parse(_data[i]);\n\t\t}\n\t\tvar chart = new Highcharts.Chart(options);\n\t}\n\tfunction setSchedule(_v){\t// update schedule \n\t\tconsole.log(\"shed:\"+typeof _v);\n\t\tif(typeof _v == \"string\") {  // update from NR\n\t\t\tschedule  = JSON.parse(_v);\n\t\t\tlocalStorage[\"schedule\"] = schedule;\n\t\t}\n\t\tconsole.log(\"shed:\"+schedule.items[0].id);\n\t\t$(\"#shd-1\").prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\titemLookup = 0;\n\t\t$('#shd-tag').val(schedule.items[0].tag);\n\t\t$('#shd-st').val(schedule.items[0].startTime);\n\t\t$('#shd-st-v').val(schedule.items[0].startValue);\n\t\t$('#shd-et').val(schedule.items[0].endTime);\n\t\t$('#shd-et-v').val(schedule.items[0].endValue);\n\t\t$(\"checkbox\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\tif (schedule.items[0].dofWeek[dow]==1){\n\t\t\t\t$(dowUI).prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\t} else {\n\t\t\t\t$(dowUI).prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t\t}\n\t\t}\t\n\t}\n\tfunction setStatus(msg,dur,pri){\t // show msg on status bar\n\t\tconsole.log(\"statusMsgDisplayed:\"+statusMsgDisplayed);\n\t\tif(statusMsgDisplayed== true){return};\n\t\tstatusMsgDisplayed=true;\n\t\tif(pri>0 && prioritySet == false  ){\n\t\t\tprioritySet = true;\t\t\t\n\t\t\t$(\"#statusView\").toggleClass(\"statusViewAlert\"); // toggle ON\n\t\t}  else if ( pri==0 && prioritySet == true) {\n\t\t\tprioritySet  = false;\n\t\t\t$(\"#statusView\").toggleClass(\"statusViewAlert\"); // toggle Off\n\t\t}\n\t\t$(\"#statusView\").show();\n\t\t$(\"#statusView\").html(msg);\n\t\tdur = dur*1000;\n\t\tif(dur >0){\n\t\t\tsetTimeout(function(){$(\"#statusView\").hide(200);$(\"#statusView\").html(\"\"); statusMsgDisplayed= false;prioritySet=false;},dur)\n\t\t}\n\t}\n\tfunction disablePage(){\t\t\n\t\t$(\"[data-role=flipswitch]\").flipswitch( \"disable\" );\n\t\t//$(\"[data-role=range]\").disabled = true;\n\t\t$(\"[data-role=range]\").slider( \"option\", \"disabled\", true );\n\t\t$(\"[data-rel=popup]\").toggleClass(\"ui-disabled\");\n\t\tdaiableWidgets = true;\n\t}\n\tfunction enablePage(){\n\t\t$(\"[data-role=flipswitch]\").flipswitch( \"enable\" );\n\t\t$(\"[data-role=range]\").slider( \"option\", \"enabled\", true );\n\t\t$(\"[data-role=range]\").slider( \"enable\" );\n\t\t$(\"[data-rel=popup]\").toggleClass(\"ui-disabled\");\n\t\tdaiableWidgets = false;\n\t}\t\n\t$(function() { \t\t\t\t// UI event handlers           \n\t\t// Flip-switch change\n\t\t$(\"[data-role=flipswitch]\").bind( \"change\", function(event, ui) {\n\t\t\t//console.log(\"id:\"+this.id+\" val:\"+$(this).flipswitch().val()+\" state:\"+$(this).data('state')+\" req:\"+$(this).data('reqstate'));\n\t\t\tvar _value =  $(this).flipswitch().val();\n\t\t\tif($(this).data('state') != _value){\n\t\t\t\t$(this).data('state',_value);        \n\t\t\t\tvar obj = {\"id\":\"\"+this.id+\"\",\"v\":_value};\n\t\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\t\tws.send(setActions);\n\t\t\t}\n\t\t});\n\t\t// Slider end\n\t\t$(\".ui-slider\").bind( \"slidestop\", function(event, ui) {\n\t\t\tvar obj = {\"id\":\"\"+event.target.id+\"\",\"v\":event.target.value};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t// Popup send\n\t\t$(\"[data-ui-type=pop-save]\").bind( \"click\", function(event, ui) {\n\t\t\tbid = this.id.split(\"_\");\n\t\t\twid =\"#\"+bid[0]+\"-pop\";\n\t\t\t$(wid ).popup( \"close\" );\n\t\t\ttid=\"#\"+bid[0];\n\t\t\tvar obj = {\"id\":\"\"+bid[0]+\"\",\"v\":$(tid ).val()};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t$( document ).on( \"vmouseout\", \"textarea\", function() {\n\t\t\tconsole.log(\"text id: \"+this.id+\" v:\"+$(this ).val());\n\t\t\tvar obj = {\"id\":\"\"+this.id+\"\",\"v\":$(this ).val()};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t// Grouped Radio buttons click\n\t\t$(\"[data-ui-type=shd-sel]\").bind( \"click\", function(event, ui) {\n\t\t\t$(\"[data-ui-type=shd-sel]\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t\t$(this ).prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\tvar  item = this.id.split(\"-\");\n\t\t\tif( itemLookup == null){\n\t\t\t\t itemLookup =  item[1]-1;\n\t\t\t } else { // Copy item edits back obj\n\t\t\t\tschedule.items[itemLookup].tag\t\t =  $('#shd-tag').val();\n\t\t\t\tschedule.items[itemLookup].startTime =   $('#shd-st').val();\n\t\t\t\tschedule.items[itemLookup].startValue = $('#shd-st-v').val();\n\t\t\t\tschedule.items[itemLookup].endTime\t    = $('#shd-et').val();\n\t\t\t\tschedule.items[itemLookup].endValue\t    = $('#shd-et-v').val();\n\t\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\t\tif( $(dowUI).prop( \"checked\")){\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 1 ;\n\t\t\t\t\t} else {\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 0 ;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t\titemLookup =  item[1]-1;\n\t\t\t }\n\t\t\tconsole.log(\"shed item\"+item[1]+\" lookup tag:\"+schedule.items[itemLookup].tag);\n\t\t\t$('#shd-tag').val(schedule.items[itemLookup].tag);\n\t\t\t$('#shd-st').val(schedule.items[itemLookup].startTime);\n\t\t\t$('#shd-st-v').val(schedule.items[itemLookup].startValue);\n\t\t\t$('#shd-et').val(schedule.items[itemLookup].endTime);\n\t\t\t$('#shd-et-v').val(schedule.items[itemLookup].endValue);\n\t\t\t//console.log(\"group radio - id:\"+ this.id+\" val:\"+$(this).val());\n\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\tif (schedule.items[itemLookup].dofWeek[dow]==1){\n\t\t\t\t\t$(dowUI).prop( \"checked\", true ).checkboxradio( \"refresh\" )\n\t\t\t\t} else {\n\t\t\t\t\t$(dowUI).prop( \"checked\", false ).checkboxradio( \"refresh\" )\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t\t// Schedule save\n\t\t$( \"#shd-save\" ).bind( \"click\", function(event, ui) {\n\t\t\tconsole.log(\"shd-save\");\n\t\t\tif( itemLookup != null){\n\t\t\t\tschedule.items[itemLookup].tag\t\t =  $('#shd-tag').val();\n\t\t\t\tschedule.items[itemLookup].startTime =   $('#shd-st').val();\n\t\t\t\tschedule.items[itemLookup].startValue = $('#shd-st-v').val();\n\t\t\t\tschedule.items[itemLookup].endTime\t    = $('#shd-et').val();\n\t\t\t\tschedule.items[itemLookup].endValue\t    = $('#shd-et-v').val();\n\t\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\t\tif( $(dowUI).prop( \"checked\")){\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 1 ;\n\t\t\t\t\t} else {\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 0 ;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t\tlocalStorage[\"schedule\"] = schedule;\n\t\t\t\tvar obj = {\"id\":\"shd-save\",\"v\":schedule};\n\t\t\t\tgetRequest = JSON.stringify(obj); \t\n\t\t\t\tws.send(getRequest);\n\t\t\t}\n\t\t});\n\t\t// Utills\n\t\tvar showHide=0;\n\t\t$(window).keydown(function(event) {\n\t\t\tif(event.shiftKey && event.keyCode == 68 ) { \n\t\t\t\t//console.log(event.keyCode);\n\t\t\t\tif(showHide==0){$(\"#foo\").show('slow');showHide=1;}else{$(\"#foo\").hide();showHide=0;}\n\t\t\t\tevent.preventDefault(); \n\t\t\t}\n\t\t});  \n\t\t$( document ).on( \"vclick\", \"#b1\", function() {\n\t\t\tlocation.reload();\n\t\t\tconsole.log(\"reload button\");\n\t\t});\t\n\t});\n      </script>\n  <style>\n\t\t#c1, #c2 {background-color: #FFF !important;}\n  \t\tdiv .ui-input-text {padding:0 .4em;} \n\t\t.valLable {float: left !important; min-width: 85px !important; margin-top:4px !important; padding: 0;}\n\t\t.valSmall {width:70px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valMedium {width:156px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valLarge {width:220px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valHour {width:100px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.flipLable {float: left !important; min-width: 140px !important;}\n\t\t@media only screen and (min-width: 521px){\n\t\t\t#header1 {width: 507px !important;  margin:auto auto !important; position: relative !important; border:1px solid #cccccc;}\n\t\t\t#c1 {width: 475px !important; min-height:500px !important; margin:auto auto !important; position: relative !important; border:1px solid #cccccc; border-top:0px;}\n\t\t\t#c2 {width: 475px !important; min-height:500px !important; margin:auto auto !important; position: relative !important; border:1px solid #cccccc; border-top:0px;}\n\t\t\t.t1 {width: 506px !important; margin:auto auto !important; position: relative !important; padding-right: 4px !important;}\n\t\t\t.flipLable {float: left !important; min-width: 320px !important;}\n\t\t\t.valMedium {width:330px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t\t.sep {display: none !important;}\n\t\t}\t\n\t\t.alert {font-weight: bold; color: #FF6C01;}\n\t\t.smallin .ui-input-text {width: 200px !important; color:red;}\n\t\tlegend.h1lb {padding:0 0 0 0;}\n\t\t.statusView {width: 100% !important;  margin:0px; position: relative !important; height:28px; padding:10px 0 0 0; background-color:#E9E9E9; font-weight:bold; -webkit-border-radius: 0.7em !important; border-radius: 0.7em; text-align:center; }\n\t\t.statusViewAlert {width: 100% !important;  margin:0px; position: relative !important; height:28px; padding:10px 0 0 0; background-color:#F8B584 !important; font-weight:bold; -webkit-border-radius: 0.7em !important; border-radius: 0.7em; display:none; text-align:center; }\n\t\t.ui-flipswitch {\"border-radius: 2em !important; -webkit-border-radius: 2em !important; -moz-border-radius: 2em !important;}\n\t\t/* Active button */\n\t\t.ui-page-theme-a .ui-btn.ui-btn-active,html .ui-bar-a .ui-btn.ui-btn-active,html .ui-body-a .ui-btn.ui-btn-active,html body .ui-group-theme-a .ui-btn.ui-btn-active,html head + body .ui-btn.ui-btn-a.ui-btn-active,\n\t\t/* Active checkbox icon */\n\t\t.ui-page-theme-a .ui-checkbox-on:after,html .ui-bar-a .ui-checkbox-on:after,html .ui-body-a .ui-checkbox-on:after,html body .ui-group-theme-a .ui-checkbox-on:after,.ui-btn.ui-checkbox-on.ui-btn-a:after,\n\t\t/* Active flipswitch background */.ui-page-theme-a .ui-flipswitch-active,html .ui-bar-a .ui-flipswitch-active,html .ui-body-a .ui-flipswitch-active,html body .ui-group-theme-a .ui-flipswitch-active,\n\t\thtml body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,\n\t\t/* Active slider track */\n\t\t.ui-page-theme-a .ui-slider-track .ui-btn-active,html .ui-bar-a .ui-slider-track .ui-btn-active,html .ui-body-a .ui-slider-track .ui-btn-active,html body .ui-group-theme-a .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-a .ui-btn-active {\n\t\t\tbackground-color: \t\t#FF6C01 !important;\n\t\t\tborder-color:\t \t\t#FF6C01 !important;\n\t\t\tcolor: \t\t\t\t\t#fff /*{a-active-color}*/;\n\t\t\ttext-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;\n\t\t}\n   </style>\n</head>\n<body>\n  <!-- Home -->\n  <div data-role=\"page\" id=\"noderedmobiui\">\n    <div id=\"header1\" data-role=\"header\">\n        <h3 style=\"color:#FF6C01\">mobi ui v1.1</h3>\n\t\t<a href=\"#\" title=\"reload\" class=\"ui-btn ui-shadow ui-corner-all ui-icon-refresh ui-btn-icon-notext ui-btn-inline\" id=\"b1\" >Reload</a>\t\n\t</div>\n\t\t<div id=\"c1\" class=\"ui-content\">\n\t\t\t<div id=\"statusView\" class=\"statusView\" style=\"display:none;\"></div>\t\t\n\t\t\t<ul data-role=\"listview\" data-inset=\"true\">\n\t\t\t\t<li class=\"ui-field-contain\" >\n\t\t\t\t\t<label for=\"tsw-1\" class=\"flipLable\">flip sw1</label>\n\t\t\t\t\t<select id=\"tsw-1\" data-role=\"flipswitch\" data-state=\"0\" data-req=\"\">\n\t\t\t\t\t  <option value=\"0\">Off</option>\n\t\t\t\t\t  <option value=\"1\">On</option>\n\t\t\t\t\t</select>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"tsw-2\" class=\"flipLable\">flip sw2</label>\n\t\t\t\t\t<select id=\"tsw-2\" data-role=\"flipswitch\" data-state=\"0\" data-req=\"\">\n\t\t\t\t\t  <option value=\"0\">Off</option>\n\t\t\t\t\t  <option value=\"1\">On</option>\n\t\t\t\t\t</select>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"sld-1\">slider 1</label>\n\t\t\t\t\t<input id=\"sld-1\" type=\"range\" data-role=\"range\" value=\"0\" min=\"0\" max=\"100\" step=\"1\" data-highlight=\"true\" />\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"val-1\" class=\"valLable\">value 1</label>\n\t\t\t\t\t<div class=\"valSmall\"><input type=\"text\" id=\"val-1\" placeholder=\"\" value=\"\" readonly=\"readonly\"></div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">   \n\t\t\t\t\t<label for=\"txt-1\">txt 1</label>\t\n\t\t\t\t   <textarea id=\"txt-1\" cols=\"30\" rows=\"60\" maxlength=\"140\"></textarea>\n\t\t\t\t</li>\n\t\t\t </ul>\n\t\t\t<div id=\"container\" style=\"width: 100%; margin-left:-5px;\"></div>\t\t\n\t\t</div>\n\t</div><!-- eof page -->\n  </body>\n</html>",
+        "x": 412.00001525878906,
+        "y": 280,
+        "wires": [
+            [
+                "2ca1872a.a93828"
+            ]
+        ]
+    },
+    {
+        "id": "d187a877.0c6f98",
+        "type": "http in",
+        "z": "91ed2633.b1ca88",
+        "name": "/mobiuiShed",
+        "url": "/mobiuiShed",
+        "method": "get",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "5787b8a7.bd9308"
+            ]
+        ]
+    },
+    {
+        "id": "95bd1840.5111f8",
+        "type": "http response",
+        "z": "91ed2633.b1ca88",
+        "name": "mobiuiShed",
+        "x": 734.1428375244141,
+        "y": 240.42857360839844,
+        "wires": []
+    },
+    {
+        "id": "ddf15aa7.a1d9b8",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "init context.global.schedule",
+        "func": "context.global.schedule = JSON.parse(msg.payload);\n//context.global.schedule = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "x": 679.1428375244141,
+        "y": 651.4285736083984,
+        "wires": [
+            [
+                "b68c1fe.be1d5e"
+            ]
+        ]
+    },
+    {
+        "id": "de7f7a6d.458f38",
+        "type": "file",
+        "z": "91ed2633.b1ca88",
+        "name": "schedule.json",
+        "filename": "/home/pi/node-red/data/schedule.json",
+        "appendNewline": false,
+        "overwriteFile": true,
+        "x": 639.5872573852539,
+        "y": 937.0952224731445,
+        "wires": []
+    },
+    {
+        "id": "f8e98526.20fb88",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "20 Sec",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 432.5872573852539,
+        "y": 972.0952224731445,
+        "wires": [
+            [
+                "b68c1fe.be1d5e",
+                "ee177f76.ac249"
+            ]
+        ]
+    },
+    {
+        "id": "edb601f3.bfbac",
+        "type": "switch",
+        "z": "91ed2633.b1ca88",
+        "name": "Actions",
+        "property": "payload.id",
+        "rules": [
+            {
+                "t": "eq",
+                "v": 1,
+                "v2": null
+            },
+            {
+                "t": "eq",
+                "v": 2,
+                "v2": null
+            },
+            {
+                "t": "eq",
+                "v": 3,
+                "v2": null
+            },
+            {
+                "t": "eq",
+                "v": 4,
+                "v2": null
+            },
+            {
+                "t": "eq",
+                "v": 5,
+                "v2": null
+            }
+        ],
+        "checkall": "true",
+        "outputs": 5,
+        "x": 826.5872344970703,
+        "y": 974.0951995849609,
+        "wires": [
+            [
+                "8146d9cf.621088"
+            ],
+            [
+                "8146d9cf.621088"
+            ],
+            [
+                "8146d9cf.621088"
+            ],
+            [
+                "8146d9cf.621088"
+            ],
+            [
+                "8146d9cf.621088"
+            ]
+        ]
+    },
+    {
+        "id": "8146d9cf.621088",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1009.5872344970703,
+        "y": 974.0951995849609,
+        "wires": []
+    },
+    {
+        "id": "94932412.44d0e8",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 706.1428375244141,
+        "y": 581.4285736083984,
+        "wires": []
+    },
+    {
+        "id": "b68c1fe.be1d5e",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "Web UI Scheduler ",
+        "func": " // Web User created Scheduler v0.1b \ncontext.dayOfWeek = context.dayOfWeek || null; \ncontext.scheduledState = context.scheduledState || [];\n//console.log(\"len:\"+context.scheduledState.length); \nif(context.scheduledState.length==0){\n\tfor(var i = 0; i < 21; i++) {\n\t   context.scheduledState[i]=null;\n\t}\n}\nvar d = new Date();\nvar _tm = \"d:\"+d.getDay()+\" h:\"+d.getHours()+\" m:\"+ d.getMinutes()+\" s:\"+ d.getSeconds();\nmsg.payload = \"Scheduled run\";\n\nfunction getEvents(){\n\t\n\tconsole.log(\"schedule run at:\"+_tm);\n\t\n\tfor (var item in context.global.schedule.items) {\n\t\tvar itemI =  parseInt(item);\n\t\tvar event = context.global.schedule.items[item];\n\t\t//console.log(\"id:\"+event.id+\" dow:\"+event.dofWeek[d.getDay()]+\" state:\"+ context.scheduledState[itemI]+\" type:\"+ typeof  itemI);\n\t\t\n\t\t// Check for scheduled Start event\t\t\n\t\tvar hrmin=event.startTime.split(\":\");\n\t\tif(parseInt(hrmin[0]) ==d.getHours() &&  parseInt(hrmin[1]) ==d.getMinutes() &&  context.scheduledState[itemI]==null &&  event.dofWeek[d.getDay()] ==1){\n\t\t\tmsg.payload = {id: event.id, v:event.startValue};\n\t\t\tcontext.scheduledState[itemI]=1;\n\t\t\tconsole.log(\"id:\"+event.id+\" start scheduled state:\"+context.scheduledState[itemI]);\n\t\t\treturn\n\t\t}\n\t\t// Check for scheduled End event\n\t\thrmin=event.endTime.split(\":\");\n\t\tif(parseInt(hrmin[0]) ==d.getHours() &&  parseInt(hrmin[1]) ==d.getMinutes() &&  context.scheduledState[itemI]==1 &&  event.dofWeek[d.getDay()] ==1){\n\t\t\tmsg.payload = {id: event.id, v:event.endValue};\n\t\t\tcontext.scheduledState[itemI]= null;\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunction scheduleReset(){\n\tif(context.dayOfWeek != d.getDay()){\n\t\t\n\t\tif(context.dayOfWeek == null){\n\t\t\tconsole.log( \"reset scheduel due to node-red restart\");\t\n\t\t} else {\n\t\t\tconsole.log( \"reset scheduel due to change of day:\"+d.getDay());\t\t\n\t\t}\n\t\t\n\t\tcontext.dayOfWeek = d.getDay();\n\t\tfor (var item in context.global.schedule.items) {\n\t\t\tvar itemI =  parseInt(item);\n\t\t\tif(context.scheduledState[itemI]==1 && context.global.schedule.items[item].noEndTime==true ){\n\t\t\t\tcontext.scheduledState[itemI]=null;\n\t\t\t\tconsole.log(\"schedule item:\"+itemI+\" reset\");\n\t\t\t}\n\t\t}\n\t\tmsg.payload = \"schedule reset\";\n\t}\n}\n\nscheduleReset();\ngetEvents();\nreturn msg;",
+        "outputs": 1,
+        "x": 652.5872344970703,
+        "y": 973.2063446044922,
+        "wires": [
+            [
+                "edb601f3.bfbac",
+                "605551b0.71a12"
+            ]
+        ]
+    },
+    {
+        "id": "605551b0.71a12",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 840.5872344970703,
+        "y": 1032.095199584961,
+        "wires": []
+    },
+    {
+        "id": "5787b8a7.bd9308",
+        "type": "template",
+        "z": "91ed2633.b1ca88",
+        "name": "mobi UI Controls, Chart & Schedule: v1.2",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE HTML>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta HTTP-EQUIV=\"CACHE-CONTROL\" CONTENT=\"NO-CACHE\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> \n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />\n  <title>Node-RED mobi ui</title>\n  <link rel=\"stylesheet\" href=\"//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css\" />\n  <script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n  <script src=\"//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js\"></script>\n  <script src=\"//cdnjs.cloudflare.com/ajax/libs/highcharts/4.0.4/highcharts.js\"></script>\n  <script>//Node-Red mobi ui - LHG industrialinternet.co.uk\n\tconsole.log(\"NR mobi UI Controls, Chart & Schedule: v1.2\");\n\tvar  schedule = null;\t\t\t\t// schedule Obj \n\tvar itemLookup = null;  \t\t\t// pointer to current schedule event\n\tvar statusMsgDisplayed= false;\t// flag to stop msg disco effect\n\tvar prioritySet =false;\t\t  \t// flag showing if high prio msg being displayed\n\tvar  daiableWidgets = false;  \n\tvar connected = false;\n\tif(location.protocol==\"https:\"){\n\t\tvar wsUri=\"wss://\"+window.location.hostname+\":1880/ws/mobiui\";\n\t} else {\n\t\tvar wsUri=\"ws://\"+window.location.hostname+\":1880/ws/mobiui\";\n\t}\n\tvar ws=null;\n\tfunction appInit(){\n\t\tif  ( schedule == null && localStorage[\"schedule\"]) {\n\t\t\tschedule = localStorage[\"schedule\"];\n\t\t\tconsole.log(\"loaded schedule from local.\");\n\t\t}  \n\t}\n\tappInit();\n\tfunction wsConn() {\n\t\tws = new WebSocket(wsUri);\n\t\tws.onmessage = function(m) {\n\t\t\t//console.log('< from-node-red:',m.data);\n\t\t\tif (typeof(m.data) === \"string\" && m. data !== null){\n\t\t\t\tvar msg =JSON.parse(m.data);\n\t\t\t\tvar ftc = msg.id.substring(0, 3);\n\t\t\t\t//console.log(\"id:\"+msg.id+\" fct:\"+ftc);\n\t\t\t\tif(ftc== \"ini\") {uiInit(msg.v);}\n\t\t\t\tif(ftc==\"tsw\"){setFlip(msg.id,msg.v);}\n\t\t\t\tif(ftc==\"sld\"){setSlider(msg.id,msg.v);}\n\t\t\t\tif(ftc==\"val\"){setValue(msg.id,msg.v);}\n\t\t\t\t//if(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,.msg.v.yTitle)};\n\t\t\t\tif(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,msg.v.xtitle,msg.v.ytitle)};\n\t\t\t\tif(ftc==\"shd\"){setSchedule(msg.v);}\n\t\t\t\tif(ftc==\"sta\"){statusMsgDisplayed= false;setStatus(msg.v.stMsg,msg.v.dur,msg.v.pri);}\n\t\t\t\tif(ftc==\"ack\"){clearReq();}\n\t\t\t}\n\t\t}\n\t\tws.onopen = function() { \n\t\t\tstatusMsgDisplayed=false;\n\t\t\tif(daiableWidgets==true){enablePage();}\n\t\t\tsetStatus(\"Connected\",5,0); \n\t\t\tconnected = true;\n\t\t\tvar obj = {\"id\":\"init\",\"v\":document.cookie};\n\t\t\tgetRequest = JSON.stringify(obj); \t\n\t\t\tws.send(getRequest);\t\t\t// Request ui status from NR\n\t\t\tconsole.log(\"sent init requeset\");\n\t\t}\n\t\tws.onclose   = function()  {\n\t\t\tconsole.log('Node-RED connection closed: '+new Date().toUTCString()); \n\t\t\tconnected = false; \n\t\t\tws = null;\n\t\t\tsetStatus(\"No connection to server!\",0,1);\n\t\t\tif(daiableWidgets==false){disablePage();}\n\t\t\tsetTimeout(wsConn, 10000);\n\t\t}\t\n\t\tws.onerror  = function(){\n\t\t\tconsole.log(\"connection error\");\n\t\t}\n\t}\n\twsConn(); \t\t\t\t\t// connect to Node-RED server\n\t\n\tfunction uiInit(values){ \t\t// initialise UI controls\n\t\tvar ui = values; // JSON.parse(values);\n\t\t for (var item in ui) {\n\t\t\tconsole.log(\"init id:\"+item.toString()+\" v:\"+ui[item].v);\n\t\t\tvar  m = {\"id\" : item.toString(), \"v\": ui[item].v};\n\t\t\t//console.log(\"m: \"+m);\n\t\t\tinitSetters(m);\n\t\t}\n\t}\n\tfunction initSetters(msg){  \t// update UI widgets on connect \n\t\t//console.log(\"init item id:\"+msg.id+\" value:\"+ msg.v);\n\t\tvar ftc = msg.id.substring(0, 3);\n\t\tif(ftc==\"tsw\"){setFlip(msg.id,msg.v);}\n\t\tif(ftc==\"sld\"){setSlider(msg.id,msg.v);}\n\t\tif(ftc==\"val\"){setValue(msg.id,msg.v);}\n\t\tif(ftc==\"cha\"){showCharts( msg.v.values,msg.v.colors,msg.v.engs,msg.v.tags,msg.v.names,msg.v.nos,msg.v.title,msg.v.xTitle.msg.v.yTitle)};\n\t\tif(ftc==\"shd\"){setSchedule(msg.v);}\n\t\tif(ftc==\"sta\"){setStatus(msg.v);}\n\t}\n\tfunction setFlip(_id,_v){ \t// update flip \n\t\tmyselect = $(\"#\"+_id);\n\t\t//console.log(\"flip id:\"+_id+\" value:\"+_v+\" tyepof:\"+ typeof _v +\" state:\"+myselect.data('state')+\" req:\"+myselect.data('req'));\n\t\t//if(myselect.data('req')==1) return; // request on progress stops flip UI chatter \n\t\tif(myselect.data('state')!=_v){\n\t\t\tif(_v== true || _v=='true'){\n\t\t\t\tmyselect[0].selectedIndex=1; \n\t\t\t\tmyselect.data('state',1)\n\t\t\t} \n\t\t\telse { \n\t\t\t\tmyselect[0].selectedIndex=0;\n\t\t\t\tmyselect.data('state',0);\n\t\t\t}\n\t\t\tmyselect.flipswitch(\"refresh\");\n\t\t\t//myselect.stopImmediatePropagation();\n\t\t\t//console.log(\"jq:\"+myselect[0].selectedIndex+\" flip id:\"+_id+\" v:\"+value+\" data-state:\"+myselect.data('state'));\n\t\t}\n\t}\n\tfunction setSlider(_id,_v){\t// update slider\n\t\tmyselect = $(\"#\"+_id);\n\t\t myselect.val(_v);\n\t\t myselect.slider('refresh');\n\t}\n\tfunction setValue(_id,_v){\t// update value display\n\t\tmyselect = $(\"#\"+_id);\n\t\tmyselect.val(_v);\n\t}\n\tfunction showCharts(_data,colors,engs,tags,names,nos,cTitle,xTitle,yTitle){ // render chart\n\t\tvar seriesNo = [];\n\t\tfor (i=0; i<nos; i++){\n\t\t\tseriesNo.push({});  \n\t\t}\n\t\tconsole.log(\"seriesNo:\"+seriesNo);\n\t\tvar options = {\n\t\t\tchart: {\n\t\t\t\tmarginRight: 30,\n\t\t\t\trenderTo: 'container',\n\t\t\t\ttype: 'spline',\n\t\t\t\t},\n\t\t\t\t  title: {\n\t\t\t\t\t\ttext: cTitle\n\t\t\t\t},\n\t\t\t\t  xAxis: {\n\t\t\t\t\t type: 'datetime',\n\t\t\t\t\tdateTimeLabelFormats: {\n\t\t\t\t\t\thour: '%H',\n\t\t\t\t\t\tday: '%H <br/>%a %d %b'            \n\t\t\t\t\t},\n\t\t\t\t\tgridLineColor: '#C0C0C0',\n\t\t\t\t\ttickInterval: 1 * 3600 * 1000,\n\t\t\t\t\ttitle: {\n\t\t\t\t\t\ttext: xTitle\n\t\t\t\t\t},\n\t\t\t\t},\n\t\t\t\t yAxis: {\n\t\t\t\t\ttitle: {\n\t\t\t\t\t\ttext: yTitle\n\t\t\t\t\t},\n\t\t\t\t\tmin: 0,\n\t\t\t\t\tgridLineWidth: 0.5\t\t\t\n\t\t\t\t},\n\t\t\t\ttooltip: {\n\t\t\t\t\tformatter: function() {\n\t\t\t\t\t\teng=engs[this.series.options.id];\n\t\t\t\t\t\ttag=tags[this.series.options.id]; \n\t\t\t\t\t\treturn \"<strong>\"+ Highcharts.numberFormat(this.y, 1) +\"</strong>\"+eng+\" \"+tag+\"<br/>\"+ Highcharts.dateFormat('%a %d %b %H:%M:%S', this.x) +'<br/>';\t\t\t   \n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\tseries: seriesNo\n\t\t};\n\t\tfor (i=0; i<nos; i++){\n\t\t\toptions.series[i].id=i;\n\t\t\toptions.series[i].color=colors[i];\n\t\t\toptions.series[i].lineWidth=1;\n\t\t\toptions.series[i].name= names[i];\n\t\t\toptions.series[i].data =  JSON.parse(_data[i]);\n\t\t}\n\t\tvar chart = new Highcharts.Chart(options);\n\t}\n\tfunction setSchedule(_v){\t// update schedule \n\t\tconsole.log(\"shed:\"+typeof _v);\n\t\tif(typeof _v == \"string\") {  // update from NR\n\t\t\tschedule  = JSON.parse(_v);\n\t\t\tlocalStorage[\"schedule\"] = schedule;\n\t\t}\n\t\tconsole.log(\"shed:\"+schedule.items[0].id);\n\t\t$(\"#shd-1\").prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\titemLookup = 0;\n\t\t$('#shd-tag').val(schedule.items[0].tag);\n\t\t$('#shd-st').val(schedule.items[0].startTime);\n\t\t$('#shd-st-v').val(schedule.items[0].startValue);\n\t\t$('#shd-et').val(schedule.items[0].endTime);\n\t\t$('#shd-et-v').val(schedule.items[0].endValue);\n\t\t$(\"checkbox\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\tif (schedule.items[0].dofWeek[dow]==1){\n\t\t\t\t$(dowUI).prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\t} else {\n\t\t\t\t$(dowUI).prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t\t}\n\t\t}\t\n\t\tif(schedule.items[0].noEndTime == true){\n\t\t\t$(\"#shd-noet\").prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\t$('#shd-et').textinput( \"disable\" );\n\t\t\t$('#shd-et-v').textinput( \"disable\" );\n\t\t}else {\n\t\t\t$(\"#shd-noet\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t}\n\t}\n\tfunction setStatus(msg,dur,pri){\t // show msg on status bar\n\t\tconsole.log(\"statusMsgDisplayed:\"+statusMsgDisplayed);\n\t\tif(statusMsgDisplayed== true){return};\n\t\tstatusMsgDisplayed=true;\n\t\tif(pri>0 && prioritySet == false  ){\n\t\t\tprioritySet = true;\t\t\t\n\t\t\t$(\"#statusView\").toggleClass(\"statusViewAlert\"); // toggle ON\n\t\t}  else if ( pri==0 && prioritySet == true) {\n\t\t\tprioritySet  = false;\n\t\t\t$(\"#statusView\").toggleClass(\"statusViewAlert\"); // toggle Off\n\t\t}\n\t\t$(\"#statusView\").show();\n\t\t$(\"#statusView\").html(msg);\n\t\tdur = dur*1000;\n\t\tif(dur >0){\n\t\t\tsetTimeout(function(){$(\"#statusView\").hide(200);$(\"#statusView\").html(\"\"); statusMsgDisplayed= false;prioritySet=false;},dur)\n\t\t}\n\t}\n\tfunction disablePage(){\t\t\n\t\t$(\"[data-role=flipswitch]\").flipswitch( \"disable\" );\n\t\t//$(\"[data-role=range]\").disabled = true;\n\t\t$(\"[data-role=range]\").slider( \"option\", \"disabled\", true );\n\t\t$(\"[data-rel=popup]\").toggleClass(\"ui-disabled\");\n\t\tdaiableWidgets = true;\n\t}\n\tfunction enablePage(){\n\t\t$(\"[data-role=flipswitch]\").flipswitch( \"enable\" );\n\t\t$(\"[data-role=range]\").slider( \"option\", \"enabled\", true );\n\t\t$(\"[data-role=range]\").slider( \"enable\" );\n\t\t$(\"[data-rel=popup]\").toggleClass(\"ui-disabled\");\n\t\tdaiableWidgets = false;\n\t}\t\n\t$(function() { \t\t\t\t// UI event handlers           \n\t\t// Flip-switch change\n\t\t$(\"[data-role=flipswitch]\").bind( \"change\", function(event, ui) {\n\t\t\t//console.log(\"id:\"+this.id+\" val:\"+$(this).flipswitch().val()+\" state:\"+$(this).data('state')+\" req:\"+$(this).data('reqstate'));\n\t\t\tvar _value =  $(this).flipswitch().val();\n\t\t\tif($(this).data('state') != _value){\n\t\t\t\t$(this).data('state',_value);        \n\t\t\t\tvar obj = {\"id\":\"\"+this.id+\"\",\"v\":_value};\n\t\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\t\tws.send(setActions);\n\t\t\t}\n\t\t});\n\t\t// Slider end\n\t\t$(\".ui-slider\").bind( \"slidestop\", function(event, ui) {\n\t\t\tvar obj = {\"id\":\"\"+event.target.id+\"\",\"v\":event.target.value};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t// Popup send\n\t\t$(\"[data-ui-type=pop-save]\").bind( \"click\", function(event, ui) {\n\t\t\tbid = this.id.split(\"_\");\n\t\t\twid =\"#\"+bid[0]+\"-pop\";\n\t\t\t$(wid ).popup( \"close\" );\n\t\t\ttid=\"#\"+bid[0];\n\t\t\tvar obj = {\"id\":\"\"+bid[0]+\"\",\"v\":$(tid ).val()};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t$( document ).on( \"vmouseout\", \"textarea\", function() {\n\t\t\tconsole.log(\"text id: \"+this.id+\" v:\"+$(this ).val());\n\t\t\tvar obj = {\"id\":\"\"+this.id+\"\",\"v\":$(this ).val()};\n\t\t\tsetActions = JSON.stringify(obj); \t\n\t\t\tws.send(setActions);\n\t\t});\n\t\t// Grouped Radio buttons click\n\t\t$(\"[data-ui-type=shd-sel]\").bind( \"click\", function(event, ui) {\n\t\t\t$(\"[data-ui-type=shd-sel]\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t\t$(this ).prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\tvar  item = this.id.split(\"-\");\n\t\t\tif( itemLookup == null){\n\t\t\t\t itemLookup =  item[1]-1;\n\t\t\t } else {\n\t\t\t\t// Copy current item edits back schedule in memory obj\n\t\t\t\tschedule.items[itemLookup].tag\t\t =  $('#shd-tag').val();\n\t\t\t\tschedule.items[itemLookup].startTime =   $('#shd-st').val();\n\t\t\t\tschedule.items[itemLookup].startValue = $('#shd-st-v').val();\n\t\t\t\tschedule.items[itemLookup].endTime\t    = $('#shd-et').val();\n\t\t\t\tschedule.items[itemLookup].endValue\t    = $('#shd-et-v').val();\n\t\t\t\tschedule.items[itemLookup].noEndTime  = $('#shd-noet').prop( \"checked\");\n\t\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\t\tif( $(dowUI).prop( \"checked\")){\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 1 ;\n\t\t\t\t\t} else {\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 0 ;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t\titemLookup =  item[1]-1;\n\t\t\t }\n\t\t\t // now update UI widgets with next item values\n\t\t\tconsole.log(\"shed item\"+item[1]+\" lookup tag:\"+schedule.items[itemLookup].tag);\n\t\t\t$('#shd-tag').val(schedule.items[itemLookup].tag);\n\t\t\t$('#shd-st').val(schedule.items[itemLookup].startTime);\n\t\t\t$('#shd-st-v').val(schedule.items[itemLookup].startValue);\n\t\t\t$('#shd-et').val(schedule.items[itemLookup].endTime);\n\t\t\t$('#shd-et-v').val(schedule.items[itemLookup].endValue);\n\t\t\t\n\t\t\tif(schedule.items[itemLookup].noEndTime == true){\n\t\t\t\t$(\"#shd-noet\").prop( \"checked\", true ).checkboxradio( \"refresh\" );\n\t\t\t\t$('#shd-et').textinput( \"disable\" );\n\t\t\t\t$('#shd-et-v').textinput( \"disable\" );\n\t\t\t}else {\n\t\t\t\t$(\"#shd-noet\").prop( \"checked\", false ).checkboxradio( \"refresh\" );\n\t\t\t\t$('#shd-et').textinput( \"enable\" );\n\t\t\t\t$('#shd-et-v').textinput( \"enable\" );\n\t\t\t}\n\t\t\t\n\t\t\t//console.log(\"group radio - id:\"+ this.id+\" val:\"+$(this).val());\n\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\tif (schedule.items[itemLookup].dofWeek[dow]==1){\n\t\t\t\t\t$(dowUI).prop( \"checked\", true ).checkboxradio( \"refresh\" )\n\t\t\t\t} else {\n\t\t\t\t\t$(dowUI).prop( \"checked\", false ).checkboxradio( \"refresh\" )\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t\t// Schedule save\n\t\t$( \"#shd-save\" ).bind( \"click\", function(event, ui) {\n\t\t\tconsole.log(\"shd-save\");\n\t\t\tif( itemLookup != null){\n\t\t\t\tschedule.items[itemLookup].tag\t\t =  $('#shd-tag').val();\n\t\t\t\tschedule.items[itemLookup].startTime =   $('#shd-st').val();\n\t\t\t\tschedule.items[itemLookup].startValue = $('#shd-st-v').val();\n\t\t\t\tschedule.items[itemLookup].endTime\t    = $('#shd-et').val();\n\t\t\t\tschedule.items[itemLookup].endValue\t    = $('#shd-et-v').val();\n\t\t\t\tschedule.items[itemLookup].noEndTime  = $('#shd-noet').prop( \"checked\");\n\t\t\t\tfor (dow = 0; dow< 7; dow++) {\n\t\t\t\t\tvar  dowUI = '#shd-dow-'+dow;\n\t\t\t\t\tif( $(dowUI).prop( \"checked\")){\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 1 ;\n\t\t\t\t\t} else {\n\t\t\t\t\t\tschedule.items[itemLookup].dofWeek[dow] = 0 ;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\t\tlocalStorage[\"schedule\"] = schedule;\n\t\t\t\tvar obj = {\"id\":\"shd-save\",\"v\":schedule};\n\t\t\t\tgetRequest = JSON.stringify(obj); \t\n\t\t\t\tws.send(getRequest);\n\t\t\t}\n\t\t});\n\t\t// Schedule noEndTime\n\t\t$( \"#shd-noet\" ).bind( \"click\", function(event, ui) {\t\n\t\t\tvar isChecked = $('#shd-noet').prop( \"checked\");\n\t\t\t//console.log(\" isChecked :\"+ isChecked );\n\t\t\tif(isChecked ==true){\n\t\t\t\t$('#shd-et').textinput( \"disable\" );\n\t\t\t\t$('#shd-et-v').textinput( \"disable\" );\n\t\t\t} else {\n\t\t\t\t$('#shd-et').textinput( \"enable\" );\n\t\t\t\t$('#shd-et-v').textinput( \"enable\" );\n\t\t\t}\n\t\t});\n\t\t// Utills\n\t\tvar showHide=0;\n\t\t$(window).keydown(function(event) {\n\t\t\tif(event.shiftKey && event.keyCode == 68 ) { \n\t\t\t\t//console.log(event.keyCode);\n\t\t\t\tif(showHide==0){$(\"#foo\").show('slow');showHide=1;}else{$(\"#foo\").hide();showHide=0;}\n\t\t\t\tevent.preventDefault(); \n\t\t\t}\n\t\t});  \n\t\t$( document ).on( \"vclick\", \"#b1\", function() {\n\t\t\tlocation.reload();\n\t\t\tconsole.log(\"reload button\");\n\t\t});\t\n\t});\n      </script>\n  <style>\n\t\t#c1, #c2 {background-color: #FFF !important;}\n  \t\tdiv .ui-input-text {padding:0 .4em;} \n\t\t.valLable {float: left !important; min-width: 85px !important; margin-top:4px !important; padding: 0;}\n\t\t.valLableEnd {float: left !important; min-width: 85px !important; margin-top:14px !important;  padding: 0;}\n\t\t.valSmall {width:70px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valMedium {width:156px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valLarge {width:220px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valHour {width:100px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t.valHourEnd {width:100px; height: 40px !important; float: left !important; margin-top:0 !important; margin-left:12px !important; }\n\t\t.flipLable {float: left !important; min-width: 140px !important;}\n\t\t@media only screen and (min-width: 521px){\n\t\t\t#header1 {width: 507px !important;  margin:auto auto !important; position: relative !important; border:1px solid #cccccc;}\n\t\t\t#c1 {width: 475px !important; min-height:500px !important; margin:auto auto !important; position: relative !important; border:1px solid #cccccc; border-top:0px;}\n\t\t\t#c2 {width: 475px !important; min-height:500px !important; margin:auto auto !important; position: relative !important; border:1px solid #cccccc; border-top:0px;}\n\t\t\t.t1 {width: 506px !important; margin:auto auto !important; position: relative !important; padding-right: 4px !important;}\n\t\t\t.flipLable {float: left !important; min-width: 320px !important;}\n\t\t\t.valMedium {width:330px; height: 40px !important; float: left !important; margin-top:-12px !important;}\n\t\t\t.sep {display: none !important;}\n\t\t}\t\n\t\t.alert {font-weight: bold; color: #FF6C01;}\n\t\t.smallin .ui-input-text {width: 200px !important; color:red;}\n\t\tlegend.h1lb {padding:0 0 0 0;}\n\t\t.statusView {width: 100% !important;  margin:0px; position: relative !important; height:28px; padding:10px 0 0 0; background-color:#E9E9E9; font-weight:bold; -webkit-border-radius: 0.7em !important; border-radius: 0.7em; text-align:center; }\n\t\t.statusViewAlert {width: 100% !important;  margin:0px; position: relative !important; height:28px; padding:10px 0 0 0; background-color:#F8B584 !important; font-weight:bold; -webkit-border-radius: 0.7em !important; border-radius: 0.7em; display:none; text-align:center; }\n\t\t.ui-flipswitch {\"border-radius: 2em !important; -webkit-border-radius: 2em !important; -moz-border-radius: 2em !important;}\n\t\t/* Active button */\n\t\t.ui-page-theme-a .ui-btn.ui-btn-active,html .ui-bar-a .ui-btn.ui-btn-active,html .ui-body-a .ui-btn.ui-btn-active,html body .ui-group-theme-a .ui-btn.ui-btn-active,html head + body .ui-btn.ui-btn-a.ui-btn-active,\n\t\t/* Active checkbox icon */\n\t\t.ui-page-theme-a .ui-checkbox-on:after,html .ui-bar-a .ui-checkbox-on:after,html .ui-body-a .ui-checkbox-on:after,html body .ui-group-theme-a .ui-checkbox-on:after,.ui-btn.ui-checkbox-on.ui-btn-a:after,\n\t\t/* Active flipswitch background */.ui-page-theme-a .ui-flipswitch-active,html .ui-bar-a .ui-flipswitch-active,html .ui-body-a .ui-flipswitch-active,html body .ui-group-theme-a .ui-flipswitch-active,\n\t\thtml body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,\n\t\t/* Active slider track */\n\t\t.ui-page-theme-a .ui-slider-track .ui-btn-active,html .ui-bar-a .ui-slider-track .ui-btn-active,html .ui-body-a .ui-slider-track .ui-btn-active,html body .ui-group-theme-a .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-a .ui-btn-active {\n\t\t\tbackground-color: \t\t#FF6C01 !important;\n\t\t\tborder-color:\t \t\t#FF6C01 !important;\n\t\t\tcolor: \t\t\t\t\t#fff /*{a-active-color}*/;\n\t\t\ttext-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;\n\t\t}\n   </style>\n</head>\n<body>\n  <!-- Home -->\n  <div data-role=\"page\" id=\"noderedmobiui\">\n    <div id=\"header1\" data-role=\"header\">\n        <h3 style=\"color:#FF6C01\">mobi ui v1.1</h3>\n\t\t<a href=\"#\" title=\"reload\" class=\"ui-btn ui-shadow ui-corner-all ui-icon-refresh ui-btn-icon-notext ui-btn-inline\" id=\"b1\" >Reload</a>\t\n\t</div>\n\t<div data-role=\"tabs\" style=\"margin-top: -5px;\">\n\t\t<div data-role=\"navbar\">\n\t\t\t<ul class=\"t1\">\n\t\t\t  <li><a id=\"c1tab\" href=\"#c1\" data-theme=\"a\" data-ajax=\"false\">Controls</a></li>\n\t\t\t  <li><a id=\"c2tab\" href=\"#c2\" data-theme=\"a\" data-ajax=\"false\" style=\"border-right: 1px solid #D8D8D8;\">Schedule</a></li>\n\t\t\t</ul>\n\t\t</div>\n\t\t<div id=\"c1\" class=\"ui-content\">\n\t\t\t<div id=\"statusView\" class=\"statusView\" style=\"display:none;\"></div>\t\t\n\t\t\t<ul data-role=\"listview\" data-inset=\"true\">\n\t\t\t\t<li class=\"ui-field-contain\" >\n\t\t\t\t\t<label for=\"tsw-1\" class=\"flipLable\">tsw-1</label>\n\t\t\t\t\t<select id=\"tsw-1\" data-role=\"flipswitch\" data-state=\"0\" data-req=\"\">\n\t\t\t\t\t  <option value=\"0\">Off</option>\n\t\t\t\t\t  <option value=\"1\">On</option>\n\t\t\t\t\t</select>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"tsw-2\" class=\"flipLable\">tsw-2</label>\n\t\t\t\t\t<select id=\"tsw-2\" data-role=\"flipswitch\" data-state=\"0\" data-req=\"\">\n\t\t\t\t\t  <option value=\"0\">Off</option>\n\t\t\t\t\t  <option value=\"1\">On</option>\n\t\t\t\t\t</select>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"sld-1\">sld-1</label>\n\t\t\t\t\t<input id=\"sld-1\" type=\"range\" data-role=\"range\" value=\"0\" min=\"0\" max=\"100\" step=\"1\" data-highlight=\"true\" />\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"val-1\" class=\"valLable\">val-1</label>\n\t\t\t\t\t<div class=\"valSmall\"><input type=\"text\" id=\"val-1\" placeholder=\"\" value=\"\" readonly=\"readonly\"></div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">   \n\t\t\t\t\t<label for=\"txt-1\">txt-1</label>\t\n\t\t\t\t   <textarea id=\"txt-1\" cols=\"30\" rows=\"60\" maxlength=\"140\"></textarea>\n\t\t\t\t</li>\n\t\t\t </ul>\n\t\t\t<div id=\"container\" style=\"width: 100%; margin-left:-5px;\"></div>\t\t\n\t\t</div>\n\t\t<div id=\"c2\" data-role=\"content\">\n\t\t\t<ul data-role=\"listview\" data-inset=\"true\" style=\"padding:10px;\">\n\t\t\t\t<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">\n\t\t\t\t\t<legend>Event</legend>\n\t\t\t\t\t<label for=\"shd-1\">1</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-1\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-2\">2</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-2\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-3\">3</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-3\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-4\">4</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-4\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-5\">5</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-5\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-6\">6</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-6\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-7\">07</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-7\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-8\">08</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-8\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-9\">09</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-9\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-10\">10</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-10\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-11\">11</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-11\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-12\">12</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-12\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-13\">13</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-13\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-14\">14</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-14\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-15\">15</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-15\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-16\">16</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-16\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-17\">17</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-17\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-18\">18</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-18\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-19\">19</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-19\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-20\">20</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-20\" data-ui-type=\"shd-sel\">\n\t\t\t\t\t<label for=\"shd-21\">21</label>\t\n\t\t\t\t\t<input type=\"checkbox\" id=\"shd-21\" data-ui-type=\"shd-sel\">\n\t\t\t\t</fieldset>\n\t\t\t\t</ul>\t\n\t\t\t\t<ul data-role=\"listview\" data-inset=\"true\">\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"shd-tag\" class=\"valLable\">Tag:</label>\n\t\t\t\t\t<div class=\"valMedium\"><input type=\"text\" data-clear-btn=\"\" id=\"shd-tag\" value=\"\"></div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\">\n\t\t\t\t\t<label for=\"shd-st\" class=\"valLable\">Start time</label>\n\t\t\t\t\t<div class=\"valHour\"><input type=\"time\" data-clear-btn=\"\" id=\"shd-st\" value=\"\"></div><br /><br />\n\t\t\t\t\t<label for=\"shd-st-v\" class=\"valLable\">Value</label>\n\t\t\t\t\t<div class=\"valMedium\"><input type=\"text\" data-clear-btn=\"false\" id=\"shd-st-v\" value=\"\"></div>\n\t\t\t\t</li>\n\t\t\t\t<li class=\"ui-field-contain\" id=\"endTime\">\t\t\t\t\n\t\t\t\t\t<div class=\"ui-grid-a\">\n\t\t\t\t\t<div class=\"ui-block-a\"><label for=\"shd-et\" class=\"valLableEnd\">End time</label><div class=\"valHourEnd\">\n\t\t\t\t\t<input type=\"time\" data-clear-btn=\"\" name=\"shd-et\" id=\"shd-et\" value=\"\"></div></div>\n\t\t\t\t\t<div class=\"ui-block-b\" style=\"width:100px\"><label for=\"shd-noet\">No</label><input type=\"checkbox\" id=\"shd-noet\" data-inset=\"true\"></div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<label for=\"shd-et-v\" class=\"valLable\">Value</label><div class=\"valMedium\"><input type=\"text\" data-clear-btn=\"false\" name=\"shd-et-v\" id=\"shd-et-v\" value=\"\"></div>\t\t\t\t\n\t\t\t\t</li>\t\t\n\t\t\t\t<li class=\"ui-field-contain\" class=\"flab\">\n\t\t\t\t\t<fieldset data-role=\"controlgroup\" data-type=\"horizontal\" data-mini=\"true\">\n\t\t\t\t\t\t<legend>Days</legend>\n\t\t\t\t\t\t<label for=\"shd-dow-1\">Mn</label>\t\n\t\t\t\t\t\t<input type=\"checkbox\" name=\"\" id=\"shd-dow-1\">\n\t\t\t\t\t\t<label for=\"shd-dow-2\">Tu</label>\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"shd-dow-2\">\n\t\t\t\t\t\t<label for=\"shd-dow-3\">Wd</label>\n\t\t\t\t\t\t<input type=\"checkbox\" name=\"\" id=\"shd-dow-3\">\n\t\t\t\t\t\t<label for=\"shd-dow-4\">Th</label>\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"shd-dow-4\">\n\t\t\t\t\t\t<label for=\"shd-dow-5\" >Fr</label>\n\t\t\t\t\t\t<input type=\"checkbox\" name=\"\" id=\"shd-dow-5\"><br class=\"sep\" />\n\t\t\t\t\t\t<label for=\"shd-dow-6\" >St</label>\n\t\t\t\t\t\t<input type=\"checkbox\" id=\"shd-dow-6\">\n\t\t\t\t\t\t<label for=\"shd-dow-0\" >Sn</label> \n\t\t\t\t\t\t<input type=\"checkbox\" id=\"shd-dow-0\">\n\t\t\t\t\t</fieldset>\n\t\t\t\t\t<button id=\"shd-save\" type=\"submit\" data-theme=\"a\" value=\"submit-value\" >Save</button>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div><!-- eof c2 content -->\n\t  </div><!-- eof tabs -->\n\t</div><!-- eof page -->\n  </body>\n</html>",
+        "x": 473.14283752441406,
+        "y": 240.42857360839844,
+        "wires": [
+            [
+                "95bd1840.5111f8"
+            ]
+        ]
+    },
+    {
+        "id": "ee177f76.ac249",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 633.5872955322266,
+        "y": 1008.6508026123047,
+        "wires": []
+    },
+    {
+        "id": "c5869443.f07b18",
+        "type": "ui_switch",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Switch",
+        "topic": "Roll on",
+        "group": "754318df.725bd8",
+        "order": "1",
+        "onvalue": "1",
+        "offvalue": "0",
+        "x": 130,
+        "y": 960,
+        "wires": [
+            [
+                "c425256c.5ab558",
+                "a08904ff.631878",
+                "97c9696e.02f618",
+                "5ba51554.14b4bc"
+            ]
+        ]
+    },
+    {
+        "id": "c425256c.5ab558",
+        "type": "ui_chart",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Plot Data",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "removeOlder": "30",
+        "removeOlderUnit": "1",
+        "x": 340,
+        "y": 900,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a08904ff.631878",
+        "type": "ui_text",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Text",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "format": "{{msg.payload}}",
+        "x": 330,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "2c973759.52a108",
+        "type": "ui_text_input",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "mode": "text",
+        "delay": 300,
+        "name": "",
+        "topic": "",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "x": 140,
+        "y": 1120,
+        "wires": [
+            [
+                "a08904ff.631878"
+            ]
+        ]
+    },
+    {
+        "id": "d6486b79.1e1038",
+        "type": "ui_numeric",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Numeric",
+        "topic": "",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "x": 140,
+        "y": 1060,
+        "wires": [
+            [
+                "a08904ff.631878"
+            ]
+        ]
+    },
+    {
+        "id": "97c9696e.02f618",
+        "type": "ui_gauge",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Gauge",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "x": 330,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "5ba51554.14b4bc",
+        "type": "ui_gauge",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Sensor Temperature",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2",
+        "x": 380,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "9b51ff71.86f09",
+        "type": "ui_slider",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Slider",
+        "topic": "",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "min": 0,
+        "max": 10,
+        "x": 130,
+        "y": 1180,
+        "wires": [
+            [
+                "97c9696e.02f618"
+            ]
+        ]
+    },
+    {
+        "id": "f5b47989.37f1d8",
+        "type": "catch",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "scope": null,
+        "x": 160,
+        "y": 1820,
+        "wires": [
+            [
+                "4e7e76c9.23d898"
+            ]
+        ]
+    },
+    {
+        "id": "4e7e76c9.23d898",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 330,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "655744f2.32665c",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "4d7f7be6.a24e04"
+            ]
+        ]
+    },
+    {
+        "id": "4d7f7be6.a24e04",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "findOne",
+        "func": "\nvar options = {\n    'tools_id': 1,\n    '_id': 0\n};\n\nvar newMsg = {};\nnewMsg.collection = 'serviceinstructions';\nnewMsg.operation  = 'findOne';\nnewMsg.payload    =  [{_id:2},options];\nnewMsg.options    =  options;\n\n// newMsg.payload    =  {('_id':1),('tools_id': 1,'_id': 0)};\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 700,
+        "wires": [
+            [
+                "6b489350.32d52c",
+                "90d33e19.9c596"
+            ]
+        ]
+    },
+    {
+        "id": "6b489350.32d52c",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "2fed4c4.88a2db4",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "10d700a4.44cc1f",
+                "76bc537d.6e992c"
+            ]
+        ]
+    },
+    {
+        "id": "10d700a4.44cc1f",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "76bc537d.6e992c",
+        "type": "file",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "filename": "plate.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 820,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "8df98252.f71a3",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "insert ",
+        "func": "var insert = {\n    '_id': 6,\n    'name': ['Smurfy', 'Smurf'],\n    'base':'ball'\n};\n\nvar newMsg = {};\nnewMsg.collection = 'tool';\n//newMsg.operation  = 'deleteOne';\nnewMsg.operation  = 'insert';\nnewMsg.payload    = insert;\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 820,
+        "wires": [
+            [
+                "84ed6275.37719"
+            ]
+        ]
+    },
+    {
+        "id": "84ed6275.37719",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "2fed4c4.88a2db4",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 570,
+        "y": 820,
+        "wires": [
+            [
+                "db6a34ab.237148",
+                "2136be56.12dc82"
+            ]
+        ]
+    },
+    {
+        "id": "db6a34ab.237148",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "2136be56.12dc82",
+        "type": "file",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "filename": "plate.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "a8c2f71f.4a3d78",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 820,
+        "wires": [
+            [
+                "8df98252.f71a3"
+            ]
+        ]
+    },
+    {
+        "id": "afd154f7.b9a598",
+        "type": "comment",
+        "z": "998a20d8.29e7b",
+        "name": "Find One with Options",
+        "info": "",
+        "x": 200,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "837af07a.1a4ab",
+        "type": "comment",
+        "z": "998a20d8.29e7b",
+        "name": "Insert with _id",
+        "info": "",
+        "x": 170,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "58d4a39e.7a15fc",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "insert ",
+        "func": "var insert = {\n    'name': ['Smurfy', 'Smurf'],\n    'base':'ball',\n    'mental': foo\n};\n\nvar newMsg = {};\nnewMsg.collection = 'tool';\n//newMsg.operation  = 'deleteOne';\nnewMsg.operation  = 'insert';\nnewMsg.payload    = insert;\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "1ad5acaa.e642e3"
+            ]
+        ]
+    },
+    {
+        "id": "1ad5acaa.e642e3",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "2fed4c4.88a2db4",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "f304fed5.084ca",
+                "a3d84bd9.43da78"
+            ]
+        ]
+    },
+    {
+        "id": "f304fed5.084ca",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a3d84bd9.43da78",
+        "type": "file",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "filename": "plate.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 820,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "6863e9be.c1f598",
+        "type": "comment",
+        "z": "998a20d8.29e7b",
+        "name": "Insert without _id ",
+        "info": "",
+        "x": 180,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "fd357090.4c44a",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "58d4a39e.7a15fc"
+            ]
+        ]
+    },
+    {
+        "id": "c9228341.89a42",
+        "type": "subflow:274a5836.6dcbe8",
+        "z": "998a20d8.29e7b",
+        "x": 370,
+        "y": 1100,
+        "wires": [
+            [
+                "2fd54f4.c85fdb",
+                "35ff272f.521bc8"
+            ]
+        ]
+    },
+    {
+        "id": "2fd54f4.c85fdb",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "35ff272f.521bc8",
+        "type": "file",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "filename": "plate.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 820,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "d0cf51c4.eff5f",
+        "type": "comment",
+        "z": "998a20d8.29e7b",
+        "name": "Insert without _id ",
+        "info": "",
+        "x": 180,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5fa93e03.e3c3f",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 1100,
+        "wires": [
+            [
+                "c9228341.89a42"
+            ]
+        ]
+    },
+    {
+        "id": "70585390.b2349c",
+        "type": "function",
+        "z": "274a5836.6dcbe8",
+        "name": "insert ",
+        "func": "var insert = {\n    'name': ['Smurfy', 'Smurf'],\n    'base':'ball'\n};\n\nvar newMsg = {};\nnewMsg.collection = 'tool';\n//newMsg.operation  = 'deleteOne';\nnewMsg.operation  = 'insert';\nnewMsg.payload    = insert;\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "10759926.12f047"
+            ]
+        ]
+    },
+    {
+        "id": "10759926.12f047",
+        "type": "mongodb2 in",
+        "z": "274a5836.6dcbe8",
+        "service": "_ext_",
+        "configNode": "2fed4c4.88a2db4",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 350,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9422568f.ea76d8",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "Get some nuts",
+        "func": "global.set(\"foo\",\"bar\"); \nmsg.payload = {'says':'get some nuts'};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 1240,
+        "wires": [
+            [
+                "410cbde7.089824"
+            ]
+        ]
+    },
+    {
+        "id": "410cbde7.089824",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 830,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "f1b6125a.ffe26",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "Start",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "9422568f.ea76d8"
+            ]
+        ]
+    },
+    {
+        "id": "ba3b0759.2eec48",
+        "type": "comment",
+        "z": "998a20d8.29e7b",
+        "name": "CONTINUE HERE",
+        "info": "to implement a global variable or function",
+        "x": 490,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "90d33e19.9c596",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 590,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "83291e69.8d45a",
+        "type": "mongodb2 in",
+        "z": "43090ef1.e760f",
+        "service": "_ext_",
+        "configNode": "3d56f9f5.8ee6e6",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 630,
+        "y": 140,
+        "wires": [
+            [
+                "bedf534d.1b5cb"
+            ]
+        ]
+    },
+    {
+        "id": "8286605e.e0715",
+        "type": "subflow:43090ef1.e760f",
+        "z": "6116e21.a38b21c",
+        "x": 210,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "626144c9.f4dc3c",
+        "type": "http in",
+        "z": "43090ef1.e760f",
+        "name": "GET by _id and return tools_id",
+        "url": "/serviceinstruction/get/:_id/:options",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "2a1d3337.24cb1c"
+            ]
+        ]
+    },
+    {
+        "id": "ff0a6745.363d08",
+        "type": "http in",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "url": "/chat",
+        "method": "post",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "e236a357.0ddb3"
+            ]
+        ]
+    },
+    {
+        "id": "6b21a4c8.56a76c",
+        "type": "http response",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "x": 711,
+        "y": 179,
+        "wires": []
+    },
+    {
+        "id": "e697a224.e7748",
+        "type": "template",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "\n  <iframe src=\"http://localhost:1880/dialog\" name=\"iframe_a\" height=\"70%\"></iframe>\n  <form name=\"frm\" action=\"http://localhost:1880/chat\" method=\"post\">\n  <b>Message from {{payload}}</b><br>\n  <input type=\"text\" name=\"message\" size=\"90%\"/>\n  <input type=\"hidden\" name=\"user\" value=\"{{payload}}\"><br>\n  <button type=\"submit\">Submit</button>\n  </form>\n  \n  <SCRIPT language=\"JavaScript\">\n  window.setInterval(\"reloadIFrame();\", 1000);\n  function reloadIFrame() { window.frames[\"iframe_a\"].location.reload(); }\n  </SCRIPT>\n",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "6b21a4c8.56a76c"
+            ]
+        ]
+    },
+    {
+        "id": "bf1ac06b.74246",
+        "type": "http in",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "url": "/dialog",
+        "method": "get",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "fd6aa428.e02708"
+            ]
+        ]
+    },
+    {
+        "id": "403d9337.10acdc",
+        "type": "http response",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "x": 708,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cbcc96c3.d14068",
+        "type": "template",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "field": "payload",
+        "template": "{{{payload}}}",
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "403d9337.10acdc"
+            ]
+        ]
+    },
+    {
+        "id": "e236a357.0ddb3",
+        "type": "function",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "func": "  if (msg.req.body[\"user\"] != \"\") {\n    msg.payload = msg.req.body[\"user\"]\n  }\n  if (msg.req.body[\"message\"] != undefined) {\n    context.global.dialog += \n    msg.req.body[\"user\"]+': '+msg.req.body[\"message\"]+\"<BR>\";\n  }\ncontext.global.dialog = context.global.dialog || \"\";\nreturn msg;",
+        "outputs": 1,
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "e697a224.e7748"
+            ]
+        ]
+    },
+    {
+        "id": "fd6aa428.e02708",
+        "type": "function",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "func": "msg.payload = context.global.dialog;\nreturn msg;",
+        "outputs": 1,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "cbcc96c3.d14068"
+            ]
+        ]
+    },
+    {
+        "id": "6f2909ca.a5dcd8",
+        "type": "http in",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "url": "/login",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "48dc356f.f9d16c"
+            ]
+        ]
+    },
+    {
+        "id": "48dc356f.f9d16c",
+        "type": "template",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "\n  <form action=\"http://localhost:1880/chat\" method=\"post\">\n  <b>User</b><br> <input type=\"text\" name=\"user\"/><br>\n  <button type=\"submit\">Submit</button>\n  </form>",
+        "x": 370,
+        "y": 120,
+        "wires": [
+            [
+                "c4480aef.dbd968"
+            ]
+        ]
+    },
+    {
+        "id": "c4480aef.dbd968",
+        "type": "http response",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "x": 550,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b5bacbd6.4019c8",
+        "type": "http in",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "url": "/mypage",
+        "method": "get",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "2ea80b4c.8945b4"
+            ]
+        ]
+    },
+    {
+        "id": "6511ba12.112014",
+        "type": "http response",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "x": 767,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "9c2073c8.ffdf5",
+        "type": "template",
+        "z": "c03f2f97.e900d",
+        "name": "template",
+        "field": "payload",
+        "template": "This is the <b>message</b>: {{payload}}",
+        "x": 619,
+        "y": 400,
+        "wires": [
+            [
+                "6511ba12.112014"
+            ]
+        ]
+    },
+    {
+        "id": "2ea80b4c.8945b4",
+        "type": "function",
+        "z": "c03f2f97.e900d",
+        "name": "where things happen",
+        "func": "if (msg.topic === \"new message\") {\n  context.value = msg.payload;\n  return null;\n} else {\n  msg.payload = context.value || \"never got anything\";\n  return msg;\n}",
+        "outputs": 1,
+        "x": 421,
+        "y": 400,
+        "wires": [
+            [
+                "9c2073c8.ffdf5"
+            ]
+        ]
+    },
+    {
+        "id": "b498c99d.574348",
+        "type": "inject",
+        "z": "c03f2f97.e900d",
+        "name": "",
+        "topic": "new message",
+        "payload": "Have a nice day",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "2ea80b4c.8945b4"
+            ]
+        ]
+    },
+    {
+        "id": "bedf534d.1b5cb",
+        "type": "http response",
+        "z": "43090ef1.e760f",
+        "name": "",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2a1d3337.24cb1c",
+        "type": "function",
+        "z": "43090ef1.e760f",
+        "name": "findOne",
+        "func": "// Prepare Query and Options\nvar _id = parseInt(msg.req.params._id);\nvar query = {'_id':_id};\nvar options = {};\nif(msg.req.params.options==='1')\n{\n    options = {'tools_id': 1,'_id': 0};\n}\n\n\n// Prepare Query and Options\n\n// Extract the collection name from the URL\nvar backslash = msg.req.url.indexOf(\"/\",1);\nmsg.collection  = msg.req.url.substring(1, backslash);\n\nmsg.operation  = 'findOne';\nmsg.payload = [query,options];\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "83291e69.8d45a"
+            ]
+        ]
+    },
+    {
+        "id": "8b034d41.b46a3",
+        "type": "http in",
+        "z": "43090ef1.e760f",
+        "name": "GET by _id",
+        "url": "/serviceinstruction/get/:_id",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "2a1d3337.24cb1c"
+            ]
+        ]
+    },
+    {
+        "id": "fb6cfec2.1918e",
+        "type": "subflow:9ce9d0c7.6658f",
+        "z": "6116e21.a38b21c",
+        "x": 160,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d936052d.2e2ea8",
+        "type": "http response",
+        "z": "9ce9d0c7.6658f",
+        "name": "",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "dafe254e.d2c468",
+        "type": "mongodb2 in",
+        "z": "9ce9d0c7.6658f",
+        "service": "_ext_",
+        "configNode": "b1c76b41.2f6198",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "d936052d.2e2ea8"
+            ]
+        ]
+    },
+    {
+        "id": "1aec5ac6.a70ef5",
+        "type": "http in",
+        "z": "9ce9d0c7.6658f",
+        "name": "GET all",
+        "url": "/tool/get",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "e7d1b88b.3f0928"
+            ]
+        ]
+    },
+    {
+        "id": "e7d1b88b.3f0928",
+        "type": "function",
+        "z": "9ce9d0c7.6658f",
+        "name": "find.toArray",
+        "func": "// Prepare Query and Options\n\n// Extract the collection name from the URL\nvar backslash = msg.req.url.indexOf(\"/\",1);\nmsg.collection  = msg.req.url.substring(1, backslash);\n\nmsg.operation  = 'find.toArray';\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "dafe254e.d2c468"
+            ]
+        ]
+    },
+    {
+        "id": "93c04faf.dd51",
+        "type": "comment",
+        "z": "91ed2633.b1ca88",
+        "name": "Simple Webpage with Websocket",
+        "info": "Open with /simple",
+        "x": 230,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "b5e460dd.bfe5a",
+        "type": "comment",
+        "z": "c03f2f97.e900d",
+        "name": "Open with /login",
+        "info": "",
+        "x": 200,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7bcad167.de995",
+        "type": "ui_chart",
+        "z": "151ad1e2.707ebe",
+        "tab": "27816068.068b2",
+        "name": "Plot Data",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "removeOlder": "30",
+        "removeOlderUnit": "1",
+        "x": 460,
+        "y": 1260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "44e6529c.0a939c",
+        "type": "function",
+        "z": "151ad1e2.707ebe",
+        "name": "",
+        "func": "msg.payload = Math.random()*100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 1260,
+        "wires": [
+            [
+                "7bcad167.de995"
+            ]
+        ]
+    },
+    {
+        "id": "fa4e605e.971f7",
+        "type": "inject",
+        "z": "151ad1e2.707ebe",
+        "name": "",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 1260,
+        "wires": [
+            [
+                "44e6529c.0a939c"
+            ]
+        ]
+    },
+    {
+        "id": "755a10d6.dfc6c",
+        "type": "comment",
+        "z": "151ad1e2.707ebe",
+        "name": "Home2",
+        "info": "",
+        "x": 130,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "7435f13a.256bb",
+        "type": "comment",
+        "z": "151ad1e2.707ebe",
+        "name": "Home",
+        "info": "",
+        "x": 90,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "54bd17e1.af3118",
+        "type": "mongodb2 in",
+        "z": "151ad1e2.707ebe",
+        "service": "_ext_",
+        "configNode": "e0015a7b.fa1da8",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "21ecba54.74e976",
+                "52d9905b.d9c77"
+            ]
+        ]
+    },
+    {
+        "id": "ae3d9ea1.9352f",
+        "type": "ui_text",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Answer: ",
+        "group": "7a6472e3.8ffebc",
+        "order": 1,
+        "format": "{{msg.payload}}",
+        "x": 1000,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9e1d56c5.ff97f8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Tools",
+        "payload": "{}",
+        "topic": "tool",
+        "group": "754318df.725bd8",
+        "order": "2",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "1ca3e168.7ba5cf",
+        "type": "function",
+        "z": "151ad1e2.707ebe",
+        "name": "findOne",
+        "func": "msg.collection = msg.topic;\nmsg.operation = 'find.toArray';\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "54bd17e1.af3118"
+            ]
+        ]
+    },
+    {
+        "id": "d1db39ed.2724f8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show ServiceInstructions",
+        "payload": "{}",
+        "topic": "serviceinstruction",
+        "group": "754318df.725bd8",
+        "order": 1,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "f0a57f2d.58ebf",
+        "type": "ui_toast",
+        "z": "151ad1e2.707ebe",
+        "name": "show toast",
+        "x": 1010,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "21ecba54.74e976",
+        "type": "function",
+        "z": "151ad1e2.707ebe",
+        "name": "json stringify",
+        "func": "msg.payload = JSON.stringify(msg.payload,null, '\\t');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "ae3d9ea1.9352f",
+                "f0a57f2d.58ebf"
+            ]
+        ]
+    },
+    {
+        "id": "52d9905b.d9c77",
+        "type": "json",
+        "z": "151ad1e2.707ebe",
+        "name": "",
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [
+                "6008a687.18be28"
+            ]
+        ]
+    },
+    {
+        "id": "6008a687.18be28",
+        "type": "ui_text",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Answer: 2",
+        "group": "7a6472e3.8ffebc",
+        "order": 1,
+        "format": "{{msg.payload}}",
+        "x": 1000,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "246785cb.62638a",
+        "type": "inject",
+        "z": "91ed2633.b1ca88",
+        "name": "Tick every 5 secs",
+        "topic": "test",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "x": 200,
+        "y": 1300,
+        "wires": [
+            [
+                "b9270321.2fcb9"
+            ]
+        ]
+    },
+    {
+        "id": "261ad019.87d92",
+        "type": "websocket out",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "server": "9d0d6b4a.418bd8",
+        "client": "",
+        "x": 600,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "636f4bdd.2fd994",
+        "type": "http response",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "x": 571,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "3bbcae05.1b3a52",
+        "type": "http in",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "url": "/simple",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 202,
+        "y": 1240,
+        "wires": [
+            [
+                "eb1ca7fa.ab71c8"
+            ]
+        ]
+    },
+    {
+        "id": "eb1ca7fa.ab71c8",
+        "type": "template",
+        "z": "91ed2633.b1ca88",
+        "name": "Simple Web Page",
+        "field": "payload",
+        "format": "html",
+        "template": "<!DOCTYPE HTML>\n<html>\n    <head>\n    <title>Simple Live Display</title>\n    <script type=\"text/javascript\">\n        var ws;\n        var wsUri = \"ws:\";\n        var loc = window.location;\n        console.log(loc);\n        if (loc.protocol === \"https:\") { wsUri = \"wss:\"; }\n        // This needs to point to the web socket in the Node-RED flow\n        // ... in this case it's ws/simple\n        wsUri += \"//\" + loc.host + loc.pathname.replace(\"simple\",\"ws/simple\");\n\n        function wsConnect() {\n            console.log(\"connect\",wsUri);\n            ws = new WebSocket(wsUri);\n            //var line = \"\";    // either uncomment this for a building list of messages\n            ws.onmessage = function(msg) {\n                var line = \"\";  // or uncomment this to overwrite the existing message\n                // parse the incoming message as a JSON object\n                var data = msg.data;\n                //console.log(data);\n                // build the output from the topic and payload parts of the object\n                line += \"<p>\"+data+\"</p>\";\n                // replace the messages div with the new \"line\"\n                document.getElementById('messages').innerHTML = line;\n                //ws.send(JSON.stringify({data:data}));\n            }\n            ws.onopen = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"connected\";\n                //ws.send(\"Open for data\");\n                console.log(\"connected\");\n            }\n            ws.onclose = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"not connected\";\n                // in case of lost connection tries to reconnect every 3 secs\n                setTimeout(wsConnect,3000);\n            }\n        }\n        \n        function doit(m) {\n            if (ws) { ws.send(m); }\n        }\n    </script>\n    </head>\n    <body onload=\"wsConnect();\" onunload=\"ws.disconnect();\">\n        <font face=\"Arial\">\n        <h1>Simple Live Display</h1>\n        <div id=\"messages\"></div>\n        <button type=\"button\" onclick='doit(\"click\");'>Click to send message</button>\n        <hr/>\n        <div id=\"status\">unknown</div>\n        </font>\n    </body>\n</html>\n",
+        "x": 399,
+        "y": 1240,
+        "wires": [
+            [
+                "636f4bdd.2fd994"
+            ]
+        ]
+    },
+    {
+        "id": "b9270321.2fcb9",
+        "type": "function",
+        "z": "91ed2633.b1ca88",
+        "name": "format time nicely",
+        "func": "msg.payload = Date(msg.payload).toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 388,
+        "y": 1300,
+        "wires": [
+            [
+                "261ad019.87d92"
+            ]
+        ]
+    },
+    {
+        "id": "cf222917.fb1eb8",
+        "type": "websocket in",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "server": "9d0d6b4a.418bd8",
+        "client": "",
+        "x": 387,
+        "y": 1352,
+        "wires": [
+            [
+                "a45dedb4.ca35b"
+            ]
+        ]
+    },
+    {
+        "id": "a45dedb4.ca35b",
+        "type": "debug",
+        "z": "91ed2633.b1ca88",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 577,
+        "y": 1352,
+        "wires": []
+    },
+    {
+        "id": "3b6e9235.8ac31e",
+        "type": "comment",
+        "z": "6116e21.a38b21c",
+        "name": "EXPLAIN FLOW",
+        "info": "**This Flow is here to deploy the webservices subflows**",
+        "x": 160,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "22e6336.f23d1cc",
+        "type": "function",
+        "z": "9ce9d0c7.6658f",
+        "name": "insert with seq _id",
+        "func": "// A simple query using findOne\n\n\n// Parse Body into JSON Format\nvar query = JSON.parse(msg.req.body);\n\nvar MongoClient = global.get('mongodb').MongoClient,\n    test = global.get('assert');\n\ntry {\n    MongoClient.connect('mongodb://localhost:27017/batest', function (err, db) {\n\n        // Load saved mongodb Scripts\n        try {\n            db.eval('db.loadServerScripts()', function (err, result) {\n                //...crash if failed\n            });\n        }\n        catch (e) {}\n\n        // Get next Sequence\n        try {\n            db.eval(get_id, msg.collection, function (err, seq) {\n\n                // assign seq number to the _id\n                query._id = seq;\n                msg.payload._id = seq;\n\n                // Connect to collection\n                var collection = db.collection(msg.collection);\n                // Insert the Query\n                collection.insert(query, function (err, result) {\n                    test.equal(null, err);\n                    db.close();\n                });\n            });\n        }\n        catch (e) {}\n\n    });\n}\ncatch (e) {}\n\n// Extract the collection name from the URL\nvar backslash = msg.req.url.indexOf(\"/\", 1);\nmsg.collection = msg.req.url.substring(1, backslash);\n\n// Answer\nmsg.operation = 'findOne';\nmsg.payload = query;\n\n// Declare the sequence _id function\nvar get_id = function (name) {\n    var ret = db.counters.findAndModify(\n        {\n            query: {_id: name},\n            update: {$inc: {seq: 1}},\n            new: true\n        }\n    );\n\n    return ret.seq;\n};\n\n// Delay return msg so the there is time for the new values\nsetTimeout(function () {node.send(msg);}, 100);\n",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "dafe254e.d2c468"
+            ]
+        ]
+    },
+    {
+        "id": "897de4a3.a90ce8",
+        "type": "http in",
+        "z": "9ce9d0c7.6658f",
+        "name": "Post Tool",
+        "url": "/tool/post",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "22e6336.f23d1cc"
+            ]
+        ]
+    },
+    {
+        "id": "988cd414.3c2618",
+        "type": "comment",
+        "z": "9ce9d0c7.6658f",
+        "name": "TODO",
+        "info": "Maybe change the /tool/ to :coll for to be more generic",
+        "x": 130,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fdf3d795.acd5a8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Machines",
+        "payload": "{}",
+        "topic": "machine",
+        "group": "754318df.725bd8",
+        "order": "6",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "8d966c2.5c5149",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Error Codes",
+        "payload": "{}",
+        "topic": "errorcode",
+        "group": "754318df.725bd8",
+        "order": "3",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "145fd4a2.3fc04b",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Errors",
+        "payload": "{}",
+        "topic": "error",
+        "group": "754318df.725bd8",
+        "order": "4",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "72021c58.d22d54",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Service Case",
+        "payload": "{}",
+        "topic": "servicecase",
+        "group": "754318df.725bd8",
+        "order": "5",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "2a84646f.66eaec",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Parts",
+        "payload": "{}",
+        "topic": "part",
+        "group": "754318df.725bd8",
+        "order": "7",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "bb7337ea.f1aea8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Data Sets",
+        "payload": "{}",
+        "topic": "dataset",
+        "group": "754318df.725bd8",
+        "order": "8",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "dee07b15.d5b0b8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show Data Records",
+        "payload": "{}",
+        "topic": "datarecord",
+        "group": "754318df.725bd8",
+        "order": "8",
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "26821851.1383e8",
+        "type": "ui_button",
+        "z": "151ad1e2.707ebe",
+        "tab": "38b0dc80.25dbb4",
+        "name": "Show PLM Items",
+        "payload": "{}",
+        "topic": "plmitem",
+        "group": "754318df.725bd8",
+        "order": "9",
+        "x": 180,
+        "y": 640,
+        "wires": [
+            [
+                "1ca3e168.7ba5cf"
+            ]
+        ]
+    },
+    {
+        "id": "5fc4d175.309d8",
+        "type": "http in",
+        "z": "6116e21.a38b21c",
+        "name": "Error GET",
+        "url": "/error/get/:text",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "a8c7a042.dbbff",
+                "143beddf.662ba2",
+                "f6f29ad7.5ef9e8"
+            ]
+        ]
+    },
+    {
+        "id": "1ff7dd27.219363",
+        "type": "mongodb2 in",
+        "z": "6116e21.a38b21c",
+        "service": "_ext_",
+        "configNode": "d1193ffc.f1197",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "f066a4e.2416358",
+                "f0adbff4.051ab",
+                "1372543c.4fbc2c"
+            ]
+        ]
+    },
+    {
+        "id": "9688c104.aaa26",
+        "type": "function",
+        "z": "6116e21.a38b21c",
+        "name": "insert with seq _id",
+        "func": "// ADD QUERY TO MONGDB WITH SEQUENCED _ID\n\n/**\n * PREPARING VARS AND LOAD MODULES\n */\n\n//var colle = context.get('colle')||0;\ncolle = msg.req.params.coll;\n\n\n// Load Modules\nvar MongoClient = global.get('mongodb').MongoClient,\n    test = global.get('assert');\n\n// Prep Vars\nmsg.collection = msg.req.params.coll;   // get coll name\nflow.set('flow',msg.collection);        // set collection to flow\nmsg.operation = 'findOne';              // operation for the next node\nvar query = {};                         // query get posted here\nmsg.payload = query;                    // add the payload to the query\n\n\n\n/**\n * CONNECT TO MONGODB AND START WITH INSERT OPERATION\n */\n\ntry {\n    MongoClient.connect('mongodb://localhost:27017/batest', function (err, db) {\n\n        // Parse Body into JSON Format, if it's not an object\n        if (typeof msg.req.body !== 'object') {\n            node.warn('inside json parse');\n            query = JSON.parse(msg.req.body);\n        }\n        else {\n            query = msg.req.body;\n            // If the query comes from the machine and is error, the numbers need\n            // to be prase to int, otherwhise they are saved as string\n            if(msg.collection === 'error')\n            {\n                query.errorCode_id = parseFloat(query.errorCode_id);\n                query.machine_id = parseFloat(query.machine_id);\n            }\n        }\n\n        // Load saved mongodb Scripts\n        try {\n            db.eval('db.loadServerScripts()', function (err, result) {\n                //...crash if failed\n            });\n        }\n        catch (e) {\n            print(e);\n        }\n\n        // Get next Sequence\n        try {\n            db.eval(get_id, msg.collection, function (err, seq) {\n\n                // assign seq number to the _id\n                query._id = seq;\n                msg.payload._id = seq;\n                node.warn('id ' + seq);\n\n                // Connect to collection\n                var collection = db.collection(msg.collection);\n                // Insert the Query\n\n                db.eval(getIsoDate, function (err, date) {\n                    // Assign ISO DATE if the collection is error or datarecord\n                    if (msg.collection === 'error') {\n                        query.errorDate = date;\n                    }\n\n                    try {\n                        collection.insert(query, function (err, result) {\n                            test.equal(null, err);\n                            db.close();\n                            node.send(msg); // Passed msg to the next node\n                        });\n                    } catch (e) {\n                        print(e);\n                    }\n                });\n            });\n        }\n        catch (e) {\n            print(e);\n        }\n    });\n} catch (e) {\n    print(e);\n}\n\n\n/**\n * DECLARE FUNCTIONS WITCH WILL BE USED INSIDE MONGODB\n */\n\n// Declare the sequence _id function\nvar get_id = function (name) {\n    var ret;\n    try {\n        ret = db.counters.findAndModify(\n            {\n                query: {_id: name},\n                update: {$inc: {seq: 1}},\n                new: true\n            }\n        );\n    }\n    catch (e) {\n        print(e);\n    }\n\n    return ret.seq;\n};\n\n// Get ISO Date\nvar getIsoDate = function () {\n    return ISODate();\n};\n\n\n",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "1ff7dd27.219363",
+                "226b03ea.ca118c"
+            ]
+        ]
+    },
+    {
+        "id": "656f1b79.e7d304",
+        "type": "http in",
+        "z": "6116e21.a38b21c",
+        "name": "All Collections POST",
+        "url": "/:coll/post/:text",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "9688c104.aaa26",
+                "143beddf.662ba2",
+                "f6f29ad7.5ef9e8"
+            ]
+        ]
+    },
+    {
+        "id": "f066a4e.2416358",
+        "type": "http response",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a8c7a042.dbbff",
+        "type": "http response",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "x": 330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "50e6ace6.471364",
+        "type": "e-mail",
+        "z": "6116e21.a38b21c",
+        "server": "mail.gmx.net",
+        "port": "465",
+        "name": "gkioupli@hsr.ch",
+        "dname": "mail to gkioupli",
+        "x": 1240,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ebe3be6.8b1d04",
+        "type": "switch",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "property": "collection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            [
+                "50e6ace6.471364"
+            ]
+        ]
+    },
+    {
+        "id": "143beddf.662ba2",
+        "type": "debug",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 350,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f6f29ad7.5ef9e8",
+        "type": "debug",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "req.params.text",
+        "x": 380,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f0adbff4.051ab",
+        "type": "debug",
+        "z": "6116e21.a38b21c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 730,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1372543c.4fbc2c",
+        "type": "function",
+        "z": "6116e21.a38b21c",
+        "name": "Get and Assign orignal Collection",
+        "func": "// Get collection Name from flow\nmsg.collection = flow.get(\"flow\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "226b03ea.ca118c",
+        "type": "bigmongo in",
+        "z": "6116e21.a38b21c",
+        "service": "_ext_",
+        "configNode": "4dbf280b.393038",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "1f73fba3.457b84"
+            ],
+            [
+                "c53970dc.dd5cc"
+            ]
+        ]
+    },
+    {
+        "id": "1f73fba3.457b84",
+        "type": "debug",
+        "z": "6116e21.a38b21c",
+        "name": "up",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 670,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "c53970dc.dd5cc",
+        "type": "debug",
+        "z": "6116e21.a38b21c",
+        "name": "down",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 670,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "ab67535.1ca9ab",
+        "type": "mongodb2 in",
+        "z": "998a20d8.29e7b",
+        "service": "_ext_",
+        "configNode": "ab338f1d.070e4",
+        "name": "",
+        "collection": "random",
+        "operation": "find.toArray",
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "b723627a.1c7e1",
+                "201e1b31.3baeb4"
+            ]
+        ]
+    },
+    {
+        "id": "d07335b9.1b55a8",
+        "type": "inject",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "topic": "",
+        "payload": " {}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "b8b09cbe.665f5"
+            ]
+        ]
+    },
+    {
+        "id": "6663bf0e.a06e7",
+        "type": "debug",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1010,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "b8b09cbe.665f5",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "gt 98",
+        "func": "msg.payload = {num: {$lt:98}}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "ab67535.1ca9ab"
+            ]
+        ]
+    },
+    {
+        "id": "b723627a.1c7e1",
+        "type": "function",
+        "z": "998a20d8.29e7b",
+        "name": "map num",
+        "func": "var newArr = [];\nmsg.payload.map(function(val,ind){\n    newArr.push(val.num);\n});\nmsg.payload = newArr;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 600,
+        "wires": [
+            [
+                "6663bf0e.a06e7"
+            ]
+        ]
+    },
+    {
+        "id": "201e1b31.3baeb4",
+        "type": "iot-datasource",
+        "z": "998a20d8.29e7b",
+        "name": "rand",
+        "tstampField": "ts",
+        "dataField": "num",
+        "disableDiscover": false,
+        "x": 550,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f3c9af9.429774",
+        "type": "freeboard",
+        "z": "998a20d8.29e7b",
+        "name": "",
+        "x": 530,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "4c77f71a.a50be8",
+        "type": "worldmap",
+        "z": "bfa44fb4.20fce",
+        "name": "",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "aba3c0d4.2a0a",
+        "type": "inject",
+        "z": "bfa44fb4.20fce",
+        "name": "Add test POI",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 93.00001525878906,
+        "y": 425.99998474121094,
+        "wires": [
+            [
+                "168cdfc1.5fc6b"
+            ]
+        ]
+    },
+    {
+        "id": "de0d1afc.e59638",
+        "type": "websocket out",
+        "z": "bfa44fb4.20fce",
+        "name": "",
+        "server": "336ca3f5.8b39dc",
+        "client": "",
+        "x": 702,
+        "y": 423.99998474121094,
+        "wires": []
+    },
+    {
+        "id": "168cdfc1.5fc6b",
+        "type": "function",
+        "z": "bfa44fb4.20fce",
+        "name": "Add test POI",
+        "func": "var thing = {\n    name:\"Test POI: car\", \n    lat:61.45, \n    lon:23.859,\n    icon:\"university\",\n    iconColor:\"red\",\n    extrainfo:\"Some extra information\"\n};\nmsg.payload = thing;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 283.00001525878906,
+        "y": 425.99998474121094,
+        "wires": [
+            [
+                "de0d1afc.e59638",
+                "4c77f71a.a50be8"
+            ]
+        ]
+    },
+    {
+        "id": "134122f1.c687fd",
+        "type": "comment",
+        "z": "bfa44fb4.20fce",
+        "name": "Simple map - localhost:1880/worldmap",
+        "info": "Adds a map at http://(your-server-ip):1880/worldmap. \n\nThe `function` node creates an object with some basic properties required to add to a map.",
+        "x": 209.00001525878906,
+        "y": 382.99998474121094,
+        "wires": []
+    },
+    {
+        "id": "e113b4f0.ad27c8",
+        "type": "function",
+        "z": "bfa44fb4.20fce",
+        "name": "Hervanta",
+        "func": "msg.payload={};\nmsg.payload.command =  {\n     layer:\"OSM\",  \n     lat:61.45, \n     lon:23.85,\n     zoom:16\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 521.8958129882812,
+        "y": 322.8888702392578,
+        "wires": [
+            [
+                "de0d1afc.e59638"
+            ]
+        ]
+    },
+    {
+        "id": "3d87e8d.2085818",
+        "type": "inject",
+        "z": "bfa44fb4.20fce",
+        "name": "Map center to Hervanta",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 340.8958282470703,
+        "y": 324.8888702392578,
+        "wires": [
+            [
+                "e113b4f0.ad27c8"
+            ]
+        ]
+    },
+    {
+        "id": "ebd5b090.77e96",
+        "type": "ui_button",
+        "z": "bfa44fb4.20fce",
+        "tab": "7ce04416.e01fdc",
+        "name": "Add POI (edit each field, add 0)",
+        "payload": "\"add\"",
+        "topic": "add",
+        "group": "Location",
+        "order": "4",
+        "x": 130.8957977294922,
+        "y": 673.8889465332031,
+        "wires": [
+            [
+                "80b2a23e.d3d56"
+            ]
+        ]
+    },
+    {
+        "id": "6fc32734.2ac548",
+        "type": "ui_text_input",
+        "z": "bfa44fb4.20fce",
+        "tab": "7ce04416.e01fdc",
+        "mode": "text",
+        "delay": 300,
+        "name": "lat",
+        "topic": "lat",
+        "group": "Location",
+        "order": "3",
+        "x": 234.8957977294922,
+        "y": 541.888916015625,
+        "wires": [
+            [
+                "80b2a23e.d3d56"
+            ]
+        ]
+    },
+    {
+        "id": "715f8bdd.b6fdc4",
+        "type": "ui_text_input",
+        "z": "bfa44fb4.20fce",
+        "tab": "7ce04416.e01fdc",
+        "mode": "text",
+        "delay": 300,
+        "name": "lon",
+        "topic": "lon",
+        "group": "Location",
+        "order": "2",
+        "x": 232.89581298828125,
+        "y": 581.888916015625,
+        "wires": [
+            [
+                "80b2a23e.d3d56"
+            ]
+        ]
+    },
+    {
+        "id": "804efb03.cf4008",
+        "type": "ui_text_input",
+        "z": "bfa44fb4.20fce",
+        "tab": "7ce04416.e01fdc",
+        "mode": "text",
+        "delay": 300,
+        "name": "name",
+        "topic": "name",
+        "group": "Location",
+        "order": 1,
+        "x": 232.89581298828125,
+        "y": 617.888916015625,
+        "wires": [
+            [
+                "80b2a23e.d3d56"
+            ]
+        ]
+    },
+    {
+        "id": "6ef1cd43.242a54",
+        "type": "inject",
+        "z": "bfa44fb4.20fce",
+        "name": "",
+        "topic": "",
+        "payload": "POI",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 77.89582824707031,
+        "y": 622.8888913260568,
+        "wires": [
+            [
+                "804efb03.cf4008"
+            ]
+        ]
+    },
+    {
+        "id": "14f825a7.67cc8a",
+        "type": "inject",
+        "z": "bfa44fb4.20fce",
+        "name": "",
+        "topic": "",
+        "payload": "61.45",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 70.89582824707031,
+        "y": 539.8889312744141,
+        "wires": [
+            [
+                "6fc32734.2ac548"
+            ]
+        ]
+    },
+    {
+        "id": "b6f6121d.d0b53",
+        "type": "inject",
+        "z": "bfa44fb4.20fce",
+        "name": "",
+        "topic": "",
+        "payload": "23.8555",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 70.89582824707031,
+        "y": 584.8889312744141,
+        "wires": [
+            [
+                "715f8bdd.b6fdc4"
+            ]
+        ]
+    },
+    {
+        "id": "80b2a23e.d3d56",
+        "type": "function",
+        "z": "bfa44fb4.20fce",
+        "name": "Add POI",
+        "func": "if (msg.topic==\"name\") {\n    context.name=msg.payload;\n}\nif (msg.topic==\"lon\") {\n    context.lon=msg.payload;\n}\nif (msg.topic==\"lat\") {\n    context.lat=msg.payload;\n}\nif (msg.topic==\"add\") {\n    var thing = {\n        name:context.name, \n        lat:context.lat, \n        lon:context.lon,\n        icon:\"star\",\n        iconColor:\"yellow\",\n        extrainfo:\"User POI\"\n    };\n    msg.payload = thing;\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 506.89581298828125,
+        "y": 612.4444580078125,
+        "wires": [
+            [
+                "de0d1afc.e59638",
+                "f270adb1.0db52",
+                "4c77f71a.a50be8"
+            ]
+        ]
+    },
+    {
+        "id": "f270adb1.0db52",
+        "type": "debug",
+        "z": "bfa44fb4.20fce",
+        "name": "Debug info",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 668.8958129882812,
+        "y": 610.4444885253906,
+        "wires": []
+    },
+    {
+        "id": "9eaec832.1a7b18",
+        "type": "comment",
+        "z": "bfa44fb4.20fce",
+        "name": "Add POI - localhost:1880/ui",
+        "info": "NOTE:\nnpm install node-red-contrib-ui\n",
+        "x": 166.89584350585938,
+        "y": 496.44444274902344,
+        "wires": []
+    },
+    {
+        "id": "ee516d76.88fcf",
+        "type": "comment",
+        "z": "bfa44fb4.20fce",
+        "name": "Auto center",
+        "info": "",
+        "x": 385.8958282470703,
+        "y": 283.4444274902344,
+        "wires": []
+    },
+    {
+        "id": "ea7ac5cc.9138a8",
+        "type": "vis in",
+        "z": "342f5ecb.af3e42",
+        "language": "en",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    }
+]

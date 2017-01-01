@@ -1,0 +1,161 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Node-RED-batest-local",
+		"_postman_id": "e8ee9a1c-06bc-1840-12c7-18813bfc9ed0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET  All Tool",
+			"request": {
+				"url": "http://localhost:1880/tool/get/all",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET ServiceInstruction by _id ",
+			"request": {
+				"url": "http://localhost:1880/serviceinstruction/get/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET ServiceInstruction by _id  with filter",
+			"request": {
+				"url": "http://localhost:1880/serviceinstruction/get/1?filter=tools_id",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST Tool",
+			"request": {
+				"url": "http://localhost:1880/tool/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"Screwdriver Torx 1\",\n    \"weight\": 0.01,\n    \"unit\":\"kg\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST Error",
+			"request": {
+				"url": "http://localhost:1880/error/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"Hammer Times = Good Times\",\n    \"errorCode_id\": 200,\n    \"machine_id\": 2,\n    \"serviceCase_id\" : 8,\n    \"part_id\" : 6\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update ServiceReport",
+			"request": {
+				"url": "http://localhost:1880/servicecase/update/1/servicereport",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Hans Ueli\",\n    \"report\": \"Changed the Bearings\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Servicecases from Servicecase",
+			"request": {
+				"url": "http://localhost:1880/servicecase/get/1/servicecases",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Tools from Servicecase",
+			"request": {
+				"url": "http://localhost:1880/servicecase/get/1/tools",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST PLM ITEM",
+			"request": {
+				"url": "http://localhost:1880/plmitem/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"_id\" : 5,\n    \"plmNumber\" : 282382,\n    \"revision\" : \"A\"\n}\n"
+				},
+				"description": "only for testing"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,2858 @@
+[
+    {
+        "type": "tab",
+        "id": "3b30d1ad.a3760e",
+        "label": "UI"
+    },
+    {
+        "type": "tab",
+        "id": "5053e1eb.90317",
+        "label": "Webservice"
+    },
+    {
+        "type": "tab",
+        "id": "a3396274.ec7e9",
+        "label": "Global"
+    },
+    {
+        "type": "tab",
+        "id": "c5b1b270.26a75",
+        "label": "Test_Tab"
+    },
+    {
+        "id": "dd4693c7.2d30d",
+        "type": "subflow",
+        "name": "ARAS soap2json",
+        "info": "# Start an ARAS request and parse the answer",
+        "in": [
+            {
+                "x": 104,
+                "y": 270,
+                "wires": [
+                    {
+                        "id": "7aae6ad5.69deb4"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 741,
+                "y": 245,
+                "wires": [
+                    {
+                        "id": "e3eee7ef.0bc4d8",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "fc90211b.47c2a",
+        "type": "subflow",
+        "name": "General POST",
+        "info": "# Handles Requests with Auto-Inc _id or without Auto-Inc_id\n\n\nhttp://localhost:1880/tool/post\n\nhttp://localhost:1880/errorCode/post",
+        "in": [
+            {
+                "x": 80,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "33bb4a77.b41576"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1520,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "eeab4655.fcf078",
+                        "port": 0
+                    },
+                    {
+                        "id": "cc53515.78577b",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "88a2f11c.3fd45",
+        "type": "subflow",
+        "name": "General GET",
+        "info": "# Handles Basic GET Requests\n\n",
+        "in": [
+            {
+                "x": 80,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "36e0cb9a.ba8264"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1500,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "a202c5c8.e91668",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "25f67fd3.3e8fc",
+        "type": "subflow",
+        "name": "ServiceCase Subquery",
+        "info": "# Subquerys starting from ServiceCase",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "6be00580.57238c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "c7addd3.523cc2",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "e4b8107c.e168d",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 620,
+                "wires": [
+                    {
+                        "id": "bb81dfce.7cf7c",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1300,
+                "y": 740,
+                "wires": [
+                    {
+                        "id": "b8b0cb65.740e18",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "d7290a17.a3a718",
+        "type": "subflow",
+        "name": "UPDATE servicereport From servicecase",
+        "info": "# Update the ServiceReport from ServiceCase",
+        "in": [
+            {
+                "x": 100,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "1ed92d93.7f7f32"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1440,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "af5075c0.40e748",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "dfd6769c.a9dca8",
+        "type": "ui_tab",
+        "z": "3b30d1ad.a3760e",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "a1ea80f3.10f47",
+        "type": "bigmongo",
+        "z": "5053e1eb.90317",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "f636bb43.a9bae8",
+        "type": "bigmongo",
+        "z": "3b30d1ad.a3760e",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "b85920ac.d2014",
+        "type": "ui_tab",
+        "z": "3b30d1ad.a3760e",
+        "name": "Add Tool",
+        "icon": "dashboard",
+        "order": "2"
+    },
+    {
+        "id": "ec939753.235ee8",
+        "type": "ui_tab",
+        "z": "3b30d1ad.a3760e",
+        "name": "Arduino",
+        "icon": "dashboard",
+        "order": "3"
+    },
+    {
+        "id": "e0c93ac2.eea9f8",
+        "type": "ui_tab",
+        "z": "3b30d1ad.a3760e",
+        "name": "PLM",
+        "icon": "dashboard",
+        "order": "4"
+    },
+    {
+        "id": "25ab98a2.ea6c88",
+        "type": "bigmongo",
+        "z": "fc90211b.47c2a",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "a634ad47.82868",
+        "type": "bigmongo",
+        "z": "88a2f11c.3fd45",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "b1ca1ced.19f7a",
+        "type": "bigmongo",
+        "z": "25f67fd3.3e8fc",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "aa0b1fb0.8396c",
+        "type": "bigmongo",
+        "z": "d7290a17.a3a718",
+        "uri": "mongodb://127.0.0.1:27017/batest",
+        "name": "batest",
+        "options": "",
+        "parallelism": "-1",
+        "warncodes": "",
+        "ignoredcodes": ""
+    },
+    {
+        "id": "d3fd75d5.7836d8",
+        "type": "ui_tab",
+        "z": "c5b1b270.26a75",
+        "name": "Fun",
+        "icon": "dashboard",
+        "order": "5"
+    },
+    {
+        "id": "1fd95bad.ce2504",
+        "type": "ui_tab",
+        "z": "c5b1b270.26a75",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": "1"
+    },
+    {
+        "id": "b61ecc81.064fc",
+        "type": "mqtt-broker",
+        "z": "c5b1b270.26a75",
+        "broker": "iot.eclipse.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "verifyservercert": true,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": null,
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": null,
+        "birthPayload": ""
+    },
+    {
+        "id": "5e428116.c6656",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "Home",
+        "info": "",
+        "x": 230,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "83a96884.a2b9d8",
+        "type": "ui_text",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Answer 1: ",
+        "group": "Answer",
+        "order": "2",
+        "format": "{{msg.payload}}",
+        "x": 1020,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8730c10d.1a017",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Tools",
+        "payload": "{}",
+        "topic": "tool",
+        "group": "Buttons",
+        "order": "2",
+        "x": 206,
+        "y": 260,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "bf3377f1.c38868",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "findOne",
+        "func": "msg.collection = msg.topic;\nmsg.operation = 'find.toArray';\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 456,
+        "y": 480,
+        "wires": [
+            [
+                "a3c069db.751a18"
+            ]
+        ]
+    },
+    {
+        "id": "aa24b2ed.be506",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show ServiceInstructions",
+        "payload": "{}",
+        "topic": "serviceinstruction",
+        "group": "Buttons",
+        "order": 1,
+        "x": 166,
+        "y": 200,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "11897870.f8ecc8",
+        "type": "ui_toast",
+        "z": "3b30d1ad.a3760e",
+        "name": "show toast",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b8a78be4.c19fc8",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "json stringify",
+        "func": "msg.payload = JSON.stringify(msg.payload,null, '\\t');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 803,
+        "y": 474,
+        "wires": [
+            [
+                "83a96884.a2b9d8",
+                "11897870.f8ecc8"
+            ]
+        ]
+    },
+    {
+        "id": "ebe4ac3e.b372f",
+        "type": "json",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "x": 790,
+        "y": 540,
+        "wires": [
+            [
+                "5fa78b89.87fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "5fa78b89.87fcb4",
+        "type": "ui_text",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Answer 2:",
+        "group": "Answer",
+        "order": "2",
+        "format": "{{msg.payload}}",
+        "x": 1020,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9120b147.0516a",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Machines",
+        "payload": "{}",
+        "topic": "machine",
+        "group": "Buttons",
+        "order": "6",
+        "x": 196,
+        "y": 500,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "6a522870.c98a28",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Error Codes",
+        "payload": "{}",
+        "topic": "errorcode",
+        "group": "Buttons",
+        "order": "3",
+        "x": 186,
+        "y": 320,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "7f15234f.e4d80c",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Errors",
+        "payload": "{}",
+        "topic": "error",
+        "group": "Buttons",
+        "order": "4",
+        "x": 206,
+        "y": 380,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "dd95f820.af74f8",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Service Case",
+        "payload": "{}",
+        "topic": "servicecase",
+        "group": "Buttons",
+        "order": "5",
+        "x": 186,
+        "y": 440,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "f95b8ac5.3b94c8",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Parts",
+        "payload": "{}",
+        "topic": "part",
+        "group": "Buttons",
+        "order": "7",
+        "x": 206,
+        "y": 560,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "aa1ffbc.b5d1d08",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Data Sets",
+        "payload": "{}",
+        "topic": "dataset",
+        "group": "Buttons",
+        "order": "8",
+        "x": 196,
+        "y": 620,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "6de34ca1.858e34",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show Data Records",
+        "payload": "{}",
+        "topic": "datarecord",
+        "group": "Buttons",
+        "order": "8",
+        "x": 186,
+        "y": 680,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "84c78547.5c6228",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "dfd6769c.a9dca8",
+        "name": "Show PLM Items",
+        "payload": "{}",
+        "topic": "plmitem",
+        "group": "Buttons",
+        "order": "9",
+        "x": 196,
+        "y": 740,
+        "wires": [
+            [
+                "bf3377f1.c38868"
+            ]
+        ]
+    },
+    {
+        "id": "478131ae.8586e",
+        "type": "http in",
+        "z": "5053e1eb.90317",
+        "name": "All Collections GET by _id",
+        "url": "/:collection/get/:_id",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "c57392e0.9f56a"
+            ]
+        ]
+    },
+    {
+        "id": "57b3b09e.9a325",
+        "type": "http in",
+        "z": "5053e1eb.90317",
+        "name": "All Collections POST One",
+        "url": "/:collection/post",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "8d8889f4.fdbf38"
+            ]
+        ]
+    },
+    {
+        "id": "9b08e028.2d52",
+        "type": "http response",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "43e611bc.405f2",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "General GET",
+        "info": "Handle General GET Request\n\n_id can be all, so every entry gets returned\n\nif query filter is provided, the results gets\nfiltered with this property.\n\n1) Find One by _id\nhttp://localhost:1880/serviceinstruction/get/1 \n\n2) Find All to Array\nhttp://localhost:1880/serviceinstruction/get/all\n\n3) Find One by _id or ALL and Display only _id and Property\nhttp://localhost:1880/serviceinstruction/get/all?filter=tools_id",
+        "x": 150,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3a3fcfc9.2456e",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "General POST",
+        "info": "General POST Command for every collection.\n\nChecks if the Collection has an auto incremented _id field\n\nIf not an _id can be provided to insert\n\nIf no _id is provided, MongoDB will create one",
+        "x": 160,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "85313a40.649798",
+        "type": "function",
+        "z": "a3396274.ec7e9",
+        "name": "Set global.('mongodbAddress') AND Get Counter Names and Set to global.('counterNames')",
+        "func": "// Setting Global Variables\n\n/**\n * Set global mongodbAddress\n */ \nglobal.set('mongodbAddress','mongodb://127.0.0.1/batest');\n/* An Example\nglobal.set('mongodbAddress','mongodb://127.0.0.1/iotplatform');\n*/\n\n/**\n * Sets the global var 'counterNames' from the db collection counters\n * Goal is for Node-RED to know, which DB is has an Autoincremented _id\n */\n \n// Load Modules\nvar MongoClient = global.get('mongodb').MongoClient;\n\n// Connect to DB\nMongoClient.connect(global.get('mongodbAddress'), function (err, db) {\n    if (err) node.error(err);\n\n    // Load saved mongodb Scripts\n    db.eval('db.loadServerScripts()', function (err, result) {\n        if (err) node.error(err);\n\n    });\n    \n    // Get cunter names and set to global var\n    db.eval('getCounterNames()', function (err, res) {\n        if (err) node.error(err);\n\n        // array for the answer\n        var _arr = [];\n\n        // map the _id name to the array\n        res.map(function (val, ind) {\n            _arr.push(val._id);\n        });\n\n        // set global var\n        global.set('counterNames', _arr);\n\n        // close db\n        db.close();\n    });\n});\n",
+        "outputs": "0",
+        "noerr": 0,
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "97f08b35.b294a8",
+        "type": "inject",
+        "z": "a3396274.ec7e9",
+        "name": "",
+        "topic": "inject at start",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "85313a40.649798"
+            ]
+        ]
+    },
+    {
+        "id": "3e3d3b57.005a44",
+        "type": "comment",
+        "z": "a3396274.ec7e9",
+        "name": "Inject Global variables at the start",
+        "info": "- GET Counter Names and Set to global.('counterNames')\n- SET global.('mongodbAddress')",
+        "x": 170,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9dec9d6e.ed646",
+        "type": "catch",
+        "z": "a3396274.ec7e9",
+        "name": "",
+        "scope": null,
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "480f3744.3240a8"
+            ]
+        ]
+    },
+    {
+        "id": "480f3744.3240a8",
+        "type": "debug",
+        "z": "a3396274.ec7e9",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 300,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "60d0cbe7.756b14",
+        "type": "catch",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "scope": null,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "b4afa864.bae908",
+                "44b33f28.e517c"
+            ]
+        ]
+    },
+    {
+        "id": "b4afa864.bae908",
+        "type": "debug",
+        "z": "5053e1eb.90317",
+        "name": "Catched Error",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e773676d.b1d2a8",
+        "type": "catch",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "scope": null,
+        "x": 220,
+        "y": 60,
+        "wires": [
+            [
+                "23293237.5cf93e"
+            ]
+        ]
+    },
+    {
+        "id": "23293237.5cf93e",
+        "type": "debug",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 420,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3c215ffe.a0239",
+        "type": "http in",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "url": "/servicecase/get/:_id/:targetCollection",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 680,
+        "wires": [
+            [
+                "806ea415.be9e68"
+            ]
+        ]
+    },
+    {
+        "id": "ef551a57.e672a8",
+        "type": "http in",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "url": "/servicecase/update/:_id/servicereport",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 920,
+        "wires": [
+            [
+                "9e8dd453.a84e08"
+            ]
+        ]
+    },
+    {
+        "id": "56f89630.f4ade8",
+        "type": "http response",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 970,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "728e1be7.f991b4",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "UPDATE servicereport From servicecase",
+        "info": "Updates the Servicerepot from a Servicase\n\nex: \nhttp://localhost:1880/servicecase/update/1/servicereport\n\nFill JSON Object with data\n`\n{\n    \"name\": \"Hans Ueli\",\n    \"report\": \"Changed the Bearings\"\n}\n`\n\n",
+        "x": 240,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "a54380a3.3b69a",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "GET various collections from servicecase",
+        "info": "Starts with an _id from ServiceCasse and can get to\n\n1. Error http://localhost:1880/servicecase/get/1/error\n2. ErrorCode http://localhost:1880/servicecase/get/1/errorcode\n3. ServiceInstruction http://localhost:1880/servicecase/get/1/serviceinstruction\n4. Tools http://localhost:1880/servicecase/get/1/tools\n5. Servicecases http://localhost:1880/servicecase/get/1/servicecases\n\nThe desired collection is passed in :targetCollection",
+        "x": 240,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "44b33f28.e517c",
+        "type": "http response",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 370,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "dfe2f8cf.b626b8",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "Catch all Errors",
+        "info": "",
+        "x": 160,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e3c3fcf9.c8ae6",
+        "type": "catch",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "scope": null,
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "f05c8e18.3a517",
+                "5df73ecf.3a8f8"
+            ]
+        ]
+    },
+    {
+        "id": "f05c8e18.3a517",
+        "type": "debug",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 350,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "813408f4.a8a868",
+        "type": "switch",
+        "z": "5053e1eb.90317",
+        "name": "if collection = error",
+        "property": "req.params.collection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 670,
+        "y": 460,
+        "wires": [
+            [
+                "62d04299.c6bb2c"
+            ]
+        ]
+    },
+    {
+        "id": "b7958006.5c46a",
+        "type": "http response",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 630,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a3c069db.751a18",
+        "type": "bigmongo in",
+        "z": "3b30d1ad.a3760e",
+        "service": "_ext_",
+        "configNode": "f636bb43.a9bae8",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "b8a78be4.c19fc8",
+                "ebe4ac3e.b372f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3d7b3a3d.ace796",
+        "type": "comment",
+        "z": "dd4693c7.2d30d",
+        "name": "Convert SOAP Answer from Aras",
+        "info": "",
+        "x": 293,
+        "y": 174,
+        "wires": []
+    },
+    {
+        "id": "dd13b939.051638",
+        "type": "xml",
+        "z": "dd4693c7.2d30d",
+        "name": "xml2json",
+        "attr": "",
+        "chr": "",
+        "x": 372,
+        "y": 235,
+        "wires": [
+            [
+                "3d518c86.5ae9f4"
+            ]
+        ]
+    },
+    {
+        "id": "3d518c86.5ae9f4",
+        "type": "function",
+        "z": "dd4693c7.2d30d",
+        "name": "Resultsfilter",
+        "func": "var plmitem = msg.payload[\"SOAP-ENV:Envelope\"][\"SOAP-ENV:Body\"].Result.Item;\n\nmsg.payload = plmitem;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 472,
+        "y": 309,
+        "wires": [
+            [
+                "e3eee7ef.0bc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "7aae6ad5.69deb4",
+        "type": "function",
+        "z": "dd4693c7.2d30d",
+        "name": "ParserSettings",
+        "func": "msg.options = {\n    explicitArray : false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 267,
+        "y": 311,
+        "wires": [
+            [
+                "dd13b939.051638"
+            ]
+        ]
+    },
+    {
+        "id": "15ae84d.a70f07b",
+        "type": "file",
+        "z": "dd4693c7.2d30d",
+        "name": "soap2json.json",
+        "filename": "soap2json.json",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 711,
+        "y": 303,
+        "wires": []
+    },
+    {
+        "id": "39f7fd80.8a85b2",
+        "type": "comment",
+        "z": "5053e1eb.90317",
+        "name": "If Collection = error Send en Email",
+        "info": "",
+        "x": 720,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e3eee7ef.0bc4d8",
+        "type": "function",
+        "z": "dd4693c7.2d30d",
+        "name": "json stringify",
+        "func": "msg.payload = JSON.stringify(msg.payload,null, '\\t');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 588,
+        "y": 237,
+        "wires": [
+            [
+                "15ae84d.a70f07b"
+            ]
+        ]
+    },
+    {
+        "id": "62d04299.c6bb2c",
+        "type": "e-mail",
+        "z": "5053e1eb.90317",
+        "server": "mail.gmx.com",
+        "port": "465",
+        "name": "service.app@gmx.ch",
+        "dname": "",
+        "x": 900,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "86cfc8a8.f393c8",
+        "type": "ui_text_input",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "mode": "text",
+        "delay": 300,
+        "name": "Description",
+        "topic": "Description:",
+        "group": "Insert",
+        "order": 1,
+        "x": 190,
+        "y": 960,
+        "wires": [
+            [
+                "5f3651d4.563c"
+            ]
+        ]
+    },
+    {
+        "id": "5f3651d4.563c",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "set flow property",
+        "func": "flow.set('description',msg.payload);",
+        "outputs": "0",
+        "noerr": 0,
+        "x": 450,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4726d096.0da37",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "insert with seq _id",
+        "func": "// ADD QUERY TO MONGDB WITH SEQUENCED _ID\n\n// THIS IS JUST AN OLDER EXPERIMNTAL NODE\n// TODO: REMOVE OR ADJUSST\n\n/**\n * PREPARING VARS AND LOAD MODULES\n */\n\n// Load Modules\nvar MongoClient = global.get('mongodb').MongoClient;\n\n// Prep Vars TODO: Make collection generic\nmsg.collection = 'tool';   // get coll name\nflow.set('origin_collection',msg.collection);        // set collection to flow\nmsg.operation = 'findOne';              // operation for the next node\nvar query = {};                         // query get posted here\nquery = msg.payload;\n\n\n/**\n * CONNECT TO MONGODB AND START WITH INSERT OPERATION\n */\n\ntry {\n    MongoClient.connect('mongodb://127.0.0.1:27017/batest', function (err, db) {\n        /*\n        // Parse Body into JSON Format, if it's not an object\n        if (typeof msg.req.body !== 'object') {\n            query = JSON.parse(msg.req.body);\n        }\n        else {\n            query = msg.req.body;\n            // If the query comes from the machine and is error, the numbers need\n            // to be prase to int, otherwhise they are saved as string\n            if(msg.collection === 'error')\n            {\n                query.errorCode_id = parseFloat(query.errorCode_id);\n                query.machine_id = parseFloat(query.machine_id);\n            }\n        }\n        */\n        // Load saved mongodb Scripts\n        try {\n            db.eval('db.loadServerScripts()', function (err, result) {\n                //...crash if failed\n            });\n        }\n        catch (e) {\n            print(e);\n        }\n\n        // Get next Sequence\n        try {\n            db.eval(get_id, msg.collection, function (err, seq) {\n\n                // assign seq number to the _id\n                query._id = seq;\n                msg.payload._id = seq;\n\n                // Connect to collection\n                var collection = db.collection(msg.collection);\n                // Insert the Query\n\n                db.eval(getIsoDate, function (err, date) {\n                    // Assign ISO DATE if the collection is error or datarecord\n                    if (msg.collection === 'error') {\n                        query.errorDate = date;\n                    }\n\n                    try {\n                        collection.insert(query, function (err, result) {\n                        if(err) node.error(err);\n                                db.close();\n                            node.send(msg); // Passed msg to the next node\n                        });\n                    } catch (e) {\n                        print(e);\n                    }\n                });\n            });\n        }\n        catch (e) {\n            print(e);\n        }\n    });\n} catch (e) {\n    print(e);\n}\n\n\n/**\n * DECLARE FUNCTIONS WITCH WILL BE USED INSIDE MONGODB\n */\n\n// Declare the sequence _id function\nvar get_id = function (name) {\n    var ret;\n    try {\n        ret = db.counters.findAndModify(\n            {\n                query: {_id: name},\n                update: {$inc: {seq: 1}},\n                new: true\n            }\n        );\n    }\n    catch (e) {\n        print(e);\n    }\n\n    return ret.seq;\n};\n\n// Get ISO Date\nvar getIsoDate = function () {\n    return ISODate();\n};\n\n\n",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 450,
+        "y": 1140,
+        "wires": [
+            [
+                "8114740c.fdc8a8"
+            ]
+        ]
+    },
+    {
+        "id": "eba09644.668528",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "Insert Values into Payload",
+        "func": "msg.payload = {\n    description: flow.get('description'),\n    weight: parseFloat(flow.get('weight')),\n    unit: flow.get('unit'),\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 1200,
+        "wires": [
+            [
+                "4726d096.0da37"
+            ]
+        ]
+    },
+    {
+        "id": "8114740c.fdc8a8",
+        "type": "bigmongo in",
+        "z": "3b30d1ad.a3760e",
+        "service": "_ext_",
+        "configNode": "f636bb43.a9bae8",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 570,
+        "y": 1200,
+        "wires": [
+            [
+                "75c217d5.ba47f8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "75c217d5.ba47f8",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "json stringify",
+        "func": "msg.payload = JSON.stringify(msg.payload,null, '\\t');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 670,
+        "y": 1140,
+        "wires": [
+            [
+                "e64235e6.7f92c8",
+                "8e625f3a.54ba1"
+            ]
+        ]
+    },
+    {
+        "id": "e64235e6.7f92c8",
+        "type": "ui_text",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "name": "Value: ",
+        "group": "Response",
+        "order": "2",
+        "format": "{{msg.payload}}",
+        "x": 770,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "9bb943de.1c4c9",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "Test insert Tools",
+        "info": "",
+        "x": 200,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8a3e32c8.2bd38",
+        "type": "ui_text_input",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "mode": "text",
+        "delay": 300,
+        "name": "Weight:",
+        "topic": "Weigth:",
+        "group": "Insert",
+        "order": 1,
+        "x": 180,
+        "y": 1020,
+        "wires": [
+            [
+                "fa89463e.d34ec8"
+            ]
+        ]
+    },
+    {
+        "id": "fa89463e.d34ec8",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "set flow property",
+        "func": "flow.set('weight',msg.payload);",
+        "outputs": "0",
+        "noerr": 0,
+        "x": 450,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "1988942c.f61f1c",
+        "type": "ui_text_input",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "mode": "text",
+        "delay": 300,
+        "name": "Unit:",
+        "topic": "Unit",
+        "group": "Insert",
+        "order": 1,
+        "x": 170,
+        "y": 1080,
+        "wires": [
+            [
+                "c5012dab.acbff"
+            ]
+        ]
+    },
+    {
+        "id": "c5012dab.acbff",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "set flow property",
+        "func": "flow.set('unit',msg.payload);",
+        "outputs": "0",
+        "noerr": 0,
+        "x": 450,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "161d9839.4aceb8",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "name": "Submit",
+        "payload": "",
+        "topic": "",
+        "group": "Insert",
+        "order": 1,
+        "x": 170,
+        "y": 1152,
+        "wires": [
+            [
+                "eba09644.668528"
+            ]
+        ]
+    },
+    {
+        "id": "7a4b5a4d.f41ec4",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "Arduino Test Tab",
+        "info": "Example to show Basic Arduino Communication\n\nSetting Digital Pin 13 ON / OFF",
+        "x": 200,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "82499328.fcf5a",
+        "type": "http request",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://152.96.42.181/arduino/digital/13/1",
+        "x": 363,
+        "y": 1429,
+        "wires": [
+            [
+                "820a8f5d.cb22c"
+            ]
+        ]
+    },
+    {
+        "id": "e97be15d.368ca",
+        "type": "debug",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 745.9999771118164,
+        "y": 1505,
+        "wires": []
+    },
+    {
+        "id": "f9e9cb8a.3eaa18",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "LED13 ON",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 179,
+        "y": 1408,
+        "wires": [
+            [
+                "82499328.fcf5a"
+            ]
+        ]
+    },
+    {
+        "id": "66339476.263f9c",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "LED13 OFF",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 190,
+        "y": 1500,
+        "wires": [
+            [
+                "9ef23c0a.1cb66"
+            ]
+        ]
+    },
+    {
+        "id": "9ef23c0a.1cb66",
+        "type": "http request",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://152.96.42.181/arduino/digital/13/0",
+        "x": 364,
+        "y": 1482,
+        "wires": [
+            [
+                "820a8f5d.cb22c"
+            ]
+        ]
+    },
+    {
+        "id": "820a8f5d.cb22c",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "collector",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 573.9999694824219,
+        "y": 1530,
+        "wires": [
+            [
+                "e97be15d.368ca",
+                "e6de422e.de118"
+            ]
+        ]
+    },
+    {
+        "id": "e6de422e.de118",
+        "type": "ui_text",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "Value: ",
+        "group": "Response",
+        "order": "2",
+        "format": "{{msg.payload}}",
+        "x": 728.9999771118164,
+        "y": 1574,
+        "wires": []
+    },
+    {
+        "id": "eb8d5d0.be213a",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "PLM TAB",
+        "info": "Example to Show how to get Data from PLM/Aras\n\nRetrieves the Item with id = 3276857531FC4A9F8068F5C5148B6732",
+        "x": 192,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "2d204c2d.720294",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "1 - DB + Admin PW definieren",
+        "info": "",
+        "x": 739,
+        "y": 1978,
+        "wires": []
+    },
+    {
+        "id": "f738dad2.380158",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "Login Headers",
+        "func": "// Prepare Aras specifig msg.headers\nmsg.headers = {\n    \"Database\" : \"Sandbox\",\n    \"SOAPaction\" : \"ApplyAML\",\n    \"Authorization\" : \"Basic YWRtaW46aW5ub3ZhdG9y\",\n    \"authuser\" : \"admin\",\n    \"authpassword\" : \"607920b64fe136f9ab2389e371852af2\"\n     }\n\n// innovator = 607920b64fe136f9ab2389e371852af2\n\n// Prepare URL and Method\nmsg.url = \"http://dt-ma-118930/ArasPLM/Server/InnovatorServer.aspx\";\nmsg.method = \"POST\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 701,
+        "y": 2015,
+        "wires": [
+            [
+                "bfa7fc2d.dda05"
+            ]
+        ]
+    },
+    {
+        "id": "bfa7fc2d.dda05",
+        "type": "http request",
+        "z": "3b30d1ad.a3760e",
+        "name": "Aras AML Post",
+        "method": "use",
+        "ret": "txt",
+        "url": "",
+        "x": 908,
+        "y": 2014,
+        "wires": [
+            [
+                "69d17b9.dff5484"
+            ]
+        ]
+    },
+    {
+        "id": "dcb6c541.00d348",
+        "type": "comment",
+        "z": "3b30d1ad.a3760e",
+        "name": "2 - Server definieren",
+        "info": "\n\nhttp://dt-ma-118930/ArasPLM/Server/InnovatorServer.aspx\nhttp://smbpdm11.hsr.ch/ArasPLM/Server/InnovatorServer.aspx\nhttp://smbpdm12.hsr.ch/ArasPLM/Server/InnovatorServer.aspx",
+        "x": 994,
+        "y": 1976,
+        "wires": []
+    },
+    {
+        "id": "69d17b9.dff5484",
+        "type": "subflow:dd4693c7.2d30d",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "x": 1139,
+        "y": 2015,
+        "wires": [
+            [
+                "7069dc8b.712814"
+            ]
+        ]
+    },
+    {
+        "id": "c6a8d268.e0ee4",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "AML Statement Part",
+        "func": "msg.payload = \"<AML><Item action=\\\"get\\\" type=\\\"Part\\\" id=\\\"3276857531FC4A9F8068F5C5148B6732\\\"></Item></AML>\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 486,
+        "y": 1949,
+        "wires": [
+            [
+                "f738dad2.380158"
+            ]
+        ]
+    },
+    {
+        "id": "95c683a7.add83",
+        "type": "function",
+        "z": "3b30d1ad.a3760e",
+        "name": "AML Statement Part with 2 BOMs down",
+        "func": "msg.payload = \"<AML><Item action=\\\"get\\\" type=\\\"Part\\\" id=\\\"3276857531FC4A9F8068F5C5148B6732\\\"><Relationships><Item action=\\\"get\\\" type=\\\"Part BOM\\\"><related_id><Item type=\\\"Part\\\" action=\\\"get\\\"><Relationships><Item action=\\\"get\\\" type=\\\"Part BOM\\\"><related_id><Item type=\\\"Part\\\" action=\\\"get\\\"></Item></related_id></Item></Relationships></Item></related_id></Item></Relationships></Item></AML>\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 432,
+        "y": 2094,
+        "wires": [
+            [
+                "f738dad2.380158"
+            ]
+        ]
+    },
+    {
+        "id": "dd93bc33.4f9e3",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "e0c93ac2.eea9f8",
+        "name": "Show Item",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 193,
+        "y": 1970,
+        "wires": [
+            [
+                "c6a8d268.e0ee4"
+            ]
+        ]
+    },
+    {
+        "id": "7368e70f.4f36c8",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "e0c93ac2.eea9f8",
+        "name": "Show Item with two subpart Structure",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 279,
+        "y": 2035,
+        "wires": [
+            [
+                "95c683a7.add83"
+            ]
+        ]
+    },
+    {
+        "id": "7069dc8b.712814",
+        "type": "ui_text",
+        "z": "3b30d1ad.a3760e",
+        "tab": "e0c93ac2.eea9f8",
+        "name": "Text",
+        "group": "Response",
+        "order": "2",
+        "format": "{{msg.payload}}",
+        "x": 1374,
+        "y": 2014,
+        "wires": []
+    },
+    {
+        "id": "5269298f.0ad878",
+        "type": "ui_button_row",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "Control",
+        "topic": "Control",
+        "group": "Button",
+        "order": 1,
+        "toggle": true,
+        "buttons": [
+            {
+                "payload": "yes",
+                "icon": "play_arrow",
+                "color": "green",
+                "on_icon": "stop",
+                "on_color": "red"
+            }
+        ],
+        "inputs": 1,
+        "x": 570,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e625f3a.54ba1",
+        "type": "ui_template",
+        "z": "3b30d1ad.a3760e",
+        "tab": "b85920ac.d2014",
+        "name": "",
+        "group": "Template",
+        "order": "3",
+        "format": "<h1>Tools added:</h1>\n{{msg.payload}}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "x": 856,
+        "y": 1141,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9062bfbe.b604f",
+        "type": "http request",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://152.96.42.181/arduino/1/",
+        "x": 370,
+        "y": 1580,
+        "wires": [
+            [
+                "820a8f5d.cb22c"
+            ]
+        ]
+    },
+    {
+        "id": "56530cea.e1d7c4",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "Start",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 180,
+        "y": 1560,
+        "wires": [
+            [
+                "9062bfbe.b604f"
+            ]
+        ]
+    },
+    {
+        "id": "26238799.564d68",
+        "type": "ui_button",
+        "z": "3b30d1ad.a3760e",
+        "tab": "ec939753.235ee8",
+        "name": "Stop",
+        "payload": "",
+        "topic": "",
+        "group": "Button",
+        "order": 1,
+        "x": 170,
+        "y": 1660,
+        "wires": [
+            [
+                "43b9288a.303fa8"
+            ]
+        ]
+    },
+    {
+        "id": "43b9288a.303fa8",
+        "type": "http request",
+        "z": "3b30d1ad.a3760e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "url": "http://152.96.42.181/arduino/0/",
+        "x": 370,
+        "y": 1640,
+        "wires": [
+            [
+                "820a8f5d.cb22c"
+            ]
+        ]
+    },
+    {
+        "id": "fbc9ad2a.cc0d9",
+        "type": "function",
+        "z": "fc90211b.47c2a",
+        "name": "Check if requested Collection is an auto incremented collection",
+        "func": "msg.collection = msg.req.params.collection;             // assign coll name\nvar autoIncCollections = global.get('counterNames');    // assign collections with auto inc _id\n\nmsg.autoinc_id = false; // default value of auto inc is false\n\n// iterates through global counterNames and sets msg.autoinc_id true\n// when the requested collection has an auto incremented _id\nautoIncCollections.every(function (element) {\n        if (element === msg.collection) {\n            msg.autoinc_id = true;\n            return false;\n        }\n        else return true;\n    });\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "1b0c31bd.c7dcce"
+            ]
+        ]
+    },
+    {
+        "id": "1b0c31bd.c7dcce",
+        "type": "switch",
+        "z": "fc90211b.47c2a",
+        "name": "check if autoinc_id",
+        "property": "autoinc_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "outputs": 2,
+        "x": 790,
+        "y": 340,
+        "wires": [
+            [
+                "b757896c.229ca8"
+            ],
+            [
+                "7a02202c.a2e46"
+            ]
+        ]
+    },
+    {
+        "id": "b757896c.229ca8",
+        "type": "function",
+        "z": "fc90211b.47c2a",
+        "name": "insert with seq _id",
+        "func": "// ADD QUERY TO MONGDB WITH SEQUENCED _ID\n\n\n/**\n * PREPARING VARS AND LOAD MODULES\n */\n\n// Load Modules\nvar MongoClient = global.get('mongodb').MongoClient;\n\n// Prep Vars\nmsg.collection = msg.req.params.collection;             // set the coll name\nflow.set('origin_collection', msg.collection);          // set collection to flow\nmsg.operation = 'findOne';                              // operation for the next node\n\n// Query is the Object that will be filled with the data to insert into the DB\nvar query = {};                                         // query get posted here\n\nmsg.payload = {};                                    // empty the msg.payload\n\n\n/**\n * CONNECT TO MONGODB AND START WITH INSERT OPERATION\n */\n\nMongoClient.connect(global.get('mongodbAddress'), function (err, db) {\n    if (err) node.error(err);\n\n    // Parse Body into JSON Format, if it's not an object\n    if (typeof msg.req.body !== 'object') {\n        query = JSON.parse(msg.req.body);\n    }\n    else {\n        // assign the body from the msg to the query\n        query = msg.req.body;\n\n   \n        // TODO: When Arduino sends correct JSON this can be removed\n        if (msg.collection === 'error') {\n            query.errorCode_id = parseFloat(query.errorCode_id);\n            query.machine_id = parseFloat(query.machine_id);\n        }\n    }\n\n    // Load saved mongodb Scripts\n    db.eval('db.loadServerScripts()', function (err, result) {\n        if (err) node.error(err);\n    });\n\n\n    // Get next Sequence\n    db.eval(get_id, msg.collection, function (err, seq) {\n        if (err) node.error(err);\n\n\n        // assign seq number to the _id\n        query._id = seq;\n        msg.payload._id = seq;\n\n\n        // Get collection Data from DB\n        var collection = db.collection(msg.collection);\n\n\n        db.eval(getIsoDate, function (err, date) {\n            if (err) node.error(err);\n\n            // Assign ISO DATE if the collection is error or datarecord\n            if (msg.collection === 'error') query.errorDate = date;\n            if (msg.collection === 'datarecord') query.timestamp = date;\n\n            // Insert the Query\n            collection.insert(query, function (err, result) {\n                if (err) node.error(err);\n\n                db.close();\n                node.send(msg); // Passed msg to the next node\n            });\n        });\n    });\n});\n\n\n/**\n * DECLARE FUNCTIONS WITCH WILL BE USED INSIDE MONGODB\n */\n\n// Declare the sequence _id function\nfunction get_id(collection) {\n\n    // ret = return value\n    var ret;\n\n    // get and increment\n    ret = db.counters.findAndModify(\n        {\n            query: {_id: collection},\n            update: {$inc: {seq: 1}},\n            new: true\n        }\n    );\n    // return acutal _id to set\n    return ret.seq;\n}\n\n// Get ISO Date\nfunction getIsoDate() {\n    return ISODate();\n}",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 1010,
+        "y": 300,
+        "wires": [
+            [
+                "cc53515.78577b"
+            ]
+        ]
+    },
+    {
+        "id": "7a02202c.a2e46",
+        "type": "function",
+        "z": "fc90211b.47c2a",
+        "name": "prepare insert without seq_id",
+        "func": "// set collection name\nmsg.collection = msg.req.params.collection;\n\n// operation for the next node\nmsg.operation = 'insertOne';                              \n\n\n// payload may be a string and need to be parsed to a JSON\nif (typeof msg.payload !== 'object') {\n        msg.payload = JSON.parse(msg.payload);\n    }\n\n// Checks if an _id is provided.\nif(msg.payload._id !== undefined)\n{\n    // _id may have to be parsed into a number\n    msg.payload._id = parseFloat(msg.payload._id);\n}\n\nreturn(msg);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "b6f99b0c.18f138"
+            ]
+        ]
+    },
+    {
+        "id": "cc53515.78577b",
+        "type": "bigmongo in",
+        "z": "fc90211b.47c2a",
+        "service": "_ext_",
+        "configNode": "25ab98a2.ea6c88",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 1250,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b6f99b0c.18f138",
+        "type": "bigmongo in",
+        "z": "fc90211b.47c2a",
+        "service": "_ext_",
+        "configNode": "25ab98a2.ea6c88",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 1250,
+        "y": 380,
+        "wires": [
+            [
+                "eeab4655.fcf078"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "eeab4655.fcf078",
+        "type": "function",
+        "z": "fc90211b.47c2a",
+        "name": "GET req with the new _id",
+        "func": "msg.payload = msg.req.body;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1310,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b734d567.20f1a8",
+        "type": "comment",
+        "z": "fc90211b.47c2a",
+        "name": "Different Paths for Auto Incremented Collection and others who aren't",
+        "info": "",
+        "x": 1160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2ce78f24.bee08",
+        "type": "comment",
+        "z": "fc90211b.47c2a",
+        "name": "Inside msg.req.body is the new _id",
+        "info": "",
+        "x": 1340,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a5d849d6.0e9088",
+        "type": "comment",
+        "z": "fc90211b.47c2a",
+        "name": "Iterates through global('counterNames')",
+        "info": "",
+        "x": 580,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8d8889f4.fdbf38",
+        "type": "subflow:fc90211b.47c2a",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "813408f4.a8a868",
+                "b7958006.5c46a"
+            ]
+        ]
+    },
+    {
+        "id": "1325cab5.448ca5",
+        "type": "catch",
+        "z": "fc90211b.47c2a",
+        "name": "",
+        "scope": null,
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "82968fc2.84b0a",
+                "f3d51dc.7ff90e"
+            ]
+        ]
+    },
+    {
+        "id": "82968fc2.84b0a",
+        "type": "debug",
+        "z": "fc90211b.47c2a",
+        "name": "Catched Error",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 320,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f3d51dc.7ff90e",
+        "type": "http response",
+        "z": "fc90211b.47c2a",
+        "name": "",
+        "x": 290,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "841b447b.b98c58",
+        "type": "comment",
+        "z": "fc90211b.47c2a",
+        "name": "Catch all Errors",
+        "info": "",
+        "x": 140,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c57392e0.9f56a",
+        "type": "subflow:88a2f11c.3fd45",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "9b08e028.2d52"
+            ]
+        ]
+    },
+    {
+        "id": "47cb54f6.7ef21c",
+        "type": "switch",
+        "z": "88a2f11c.3fd45",
+        "name": "Checks _id",
+        "property": "req.params._id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "all",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "outputs": 2,
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "5a2a4dea.901d24"
+            ],
+            [
+                "2790a4e8.b87b6c"
+            ]
+        ]
+    },
+    {
+        "id": "2790a4e8.b87b6c",
+        "type": "function",
+        "z": "88a2f11c.3fd45",
+        "name": "find one",
+        "func": "// prepare mongodb statement\nmsg.collection = msg.req.params.collection;\nmsg.operation = 'findOne';\n\n// parse _id to int\nmsg.payload = {_id: parseInt(msg.req.params._id)};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 340,
+        "wires": [
+            [
+                "596e6c74.802614"
+            ]
+        ]
+    },
+    {
+        "id": "596e6c74.802614",
+        "type": "switch",
+        "z": "88a2f11c.3fd45",
+        "name": "Check for filter",
+        "property": "req.query.filter",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "outputs": 2,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "bab3f6fc.50fd48"
+            ],
+            [
+                "a202c5c8.e91668"
+            ]
+        ]
+    },
+    {
+        "id": "bab3f6fc.50fd48",
+        "type": "function",
+        "z": "88a2f11c.3fd45",
+        "name": "assign the filter value",
+        "func": "// Prepare Query and Options\nvar query = msg.payload;\n\n// options are additional options for the mongodb call\n// fills the name of the filter object in options\n// ex: options = { \"weight\" : 1 } 1 means, mongodb will display this item\n// all other items, except _id which has implicit 1, won't be displayed\nvar options = {};\noptions[msg.req.query.filter] = 1;\n\n// Prepare Query and Options Statement for mongodb\nmsg.payload = [query,options];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1180,
+        "y": 240,
+        "wires": [
+            [
+                "a202c5c8.e91668"
+            ]
+        ]
+    },
+    {
+        "id": "a202c5c8.e91668",
+        "type": "bigmongo in",
+        "z": "88a2f11c.3fd45",
+        "service": "_ext_",
+        "configNode": "a634ad47.82868",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 1310,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5a2a4dea.901d24",
+        "type": "function",
+        "z": "88a2f11c.3fd45",
+        "name": "find all to Array",
+        "func": "// prepare mongodb statement\nmsg.collection = msg.req.params.collection;\nmsg.operation = 'find.toArray';\n\n// payload empty for find.toArray\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "596e6c74.802614"
+            ]
+        ]
+    },
+    {
+        "id": "925bf4fa.a99608",
+        "type": "catch",
+        "z": "88a2f11c.3fd45",
+        "name": "",
+        "scope": null,
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "2274f6dd.9526aa",
+                "e9cc0ff6.a95d"
+            ]
+        ]
+    },
+    {
+        "id": "2274f6dd.9526aa",
+        "type": "debug",
+        "z": "88a2f11c.3fd45",
+        "name": "Catched Error",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 320,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e9cc0ff6.a95d",
+        "type": "http response",
+        "z": "88a2f11c.3fd45",
+        "name": "",
+        "x": 290,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "133d3454.32f08c",
+        "type": "comment",
+        "z": "88a2f11c.3fd45",
+        "name": "Catch all Errors",
+        "info": "",
+        "x": 140,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "6be00580.57238c",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "extract _id from req.params",
+        "func": "// _id may has to be parsed to an Int\nmsg.payload._id = parseInt(msg.req.params._id);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 60,
+        "wires": [
+            [
+                "5830a6e.7053d58"
+            ]
+        ]
+    },
+    {
+        "id": "5830a6e.7053d58",
+        "type": "bigmongo in",
+        "z": "25f67fd3.3e8fc",
+        "service": "_ext_",
+        "configNode": "b1ca1ced.19f7a",
+        "name": "",
+        "collection": "servicecase",
+        "operation": "findOne",
+        "x": 280,
+        "y": 120,
+        "wires": [
+            [
+                "d921ce35.bac7a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d921ce35.bac7a",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "subquery with error_id",
+        "func": "// empty payload and insert only the _id\nvar temp = msg.payload;\nmsg.payload = {};\nmsg.payload._id = temp.error_id;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "11013607.708f4a"
+            ]
+        ]
+    },
+    {
+        "id": "11013607.708f4a",
+        "type": "bigmongo in",
+        "z": "25f67fd3.3e8fc",
+        "service": "_ext_",
+        "configNode": "b1ca1ced.19f7a",
+        "name": "",
+        "collection": "error",
+        "operation": "findOne",
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "c7addd3.523cc2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "20c31921.901ba6",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "subquery with errorCode_id",
+        "func": "// empty payload and insert only the _id\nvar temp = msg.payload;\nmsg.payload = {};\nmsg.payload._id = temp.errorCode_id;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 360,
+        "wires": [
+            [
+                "7fe46442.f5b75c"
+            ]
+        ]
+    },
+    {
+        "id": "c7addd3.523cc2",
+        "type": "switch",
+        "z": "25f67fd3.3e8fc",
+        "name": "if targetCollection == error",
+        "property": "req.params.targetCollection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "error",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "20c31921.901ba6"
+            ]
+        ]
+    },
+    {
+        "id": "7fe46442.f5b75c",
+        "type": "bigmongo in",
+        "z": "25f67fd3.3e8fc",
+        "service": "_ext_",
+        "configNode": "a1ea80f3.10f47",
+        "name": "",
+        "collection": "errorcode",
+        "operation": "findOne",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "e4b8107c.e168d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "868e01f4.e0608",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "subquery with serviceinstruction_id",
+        "func": "// empty payload and insert only the _id\nvar temp = msg.payload;\nmsg.payload = {};\nmsg.payload._id = temp.serviceInstruction_id;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 540,
+        "wires": [
+            [
+                "6268a3a1.266e2c"
+            ]
+        ]
+    },
+    {
+        "id": "e4b8107c.e168d",
+        "type": "switch",
+        "z": "25f67fd3.3e8fc",
+        "name": "if targetCollection == errorcode",
+        "property": "req.params.targetCollection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "errorcode",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [],
+            [
+                "868e01f4.e0608"
+            ]
+        ]
+    },
+    {
+        "id": "6268a3a1.266e2c",
+        "type": "bigmongo in",
+        "z": "25f67fd3.3e8fc",
+        "service": "_ext_",
+        "configNode": "b1ca1ced.19f7a",
+        "name": "",
+        "collection": "serviceinstruction",
+        "operation": "findOne",
+        "x": 300,
+        "y": 600,
+        "wires": [
+            [
+                "bb81dfce.7cf7c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bb81dfce.7cf7c",
+        "type": "switch",
+        "z": "25f67fd3.3e8fc",
+        "name": "Check targetCollection and assign path",
+        "property": "req.params.targetCollection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "serviceinstruction",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "servicecases",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tools",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 3,
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [],
+            [
+                "87d530d1.9f70c"
+            ],
+            [
+                "b850155a.2ea5a8"
+            ]
+        ]
+    },
+    {
+        "id": "87d530d1.9f70c",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "Source : serviceinstruction, Target : servicecase",
+        "func": "// store attached serviceinstruction _id\nvar _id = msg.payload._id\n// empty old payload\nmsg.payload = {};\n// prepare payload\nmsg.payload.source_id = _id;\nmsg.payload.sourceCollection = 'serviceinstruction';\nmsg.payload.target_id = 'serviceCases_id';\nmsg.payload.targetCollection = 'servicecase';\n\nreturn(msg);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 680,
+        "wires": [
+            [
+                "b8b0cb65.740e18"
+            ]
+        ]
+    },
+    {
+        "id": "b850155a.2ea5a8",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "Source : serviceinstruction, Target : tool",
+        "func": "// store attached serviceinstruction _id\nvar _id = msg.payload._id\n// empty old payload\nmsg.payload = {};\n// prepare payload\nmsg.payload.source_id = _id;\nmsg.payload.sourceCollection = 'serviceinstruction';\nmsg.payload.target_id = 'tools_id';\nmsg.payload.targetCollection = 'tool';\n\nreturn(msg);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 740,
+        "wires": [
+            [
+                "b8b0cb65.740e18"
+            ]
+        ]
+    },
+    {
+        "id": "b8b0cb65.740e18",
+        "type": "function",
+        "z": "25f67fd3.3e8fc",
+        "name": "GET Referenced Collection",
+        "func": "// Get Objects from references Collection and return\n\n// Load Modules\nvar MongoClient = global.get('mongodb').MongoClient;\n\n// Set the Vars from payload\nvar s_id = parseInt(msg.payload.source_id);\nvar sColl = msg.payload.sourceCollection;\nvar tar_id = msg.payload.target_id;\nvar tarColl = msg.payload.targetCollection;\n\n\n// Connect to mongodb\nMongoClient.connect(global.get('mongodbAddress'), function (err, db) {\n    if (err) node.error(err);\n\n    // Load saved mongodb Scripts\n    db.eval('db.loadServerScripts()', function (err, result) {\n        if (err) node.error(err);\n    });\n\n    // Use function getReferencedDocs\n    db.eval(getReferencedDocs, [s_id,sColl,tar_id,tarColl], function (err, res) {\n        if (err) node.error(err);\n        \n        // parse data to the payload\n        msg.payload = res.data;\n        \n        // close db and send result\n        db.close();\n        node.send(msg);\n    });\n});\n\n// The Get Linked Docs Function\nfunction getReferencedDocs(source_id, sourceCollection, target_id, targetCollection) {\n\n    var iArray = db[sourceCollection].findOne({_id: source_id}); // get iterrationArray\n    var res = {data: []};               // result JSON Object\n    var val;                    // Readed value of other collection\n\n    // functions iterates all indexes and returns all objects from other collection\n    iArray[target_id].forEach(function (elem, index) {\n        val = db[targetCollection].findOne({'_id': elem});\n        res.data[index] = val;\n    });\n\n    return (res);\n}\n",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 1120,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d150b53a.5ad318",
+        "type": "comment",
+        "z": "25f67fd3.3e8fc",
+        "name": "Exit here if targetCollection = error",
+        "info": "",
+        "x": 740,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c3d346b5.49d208",
+        "type": "comment",
+        "z": "25f67fd3.3e8fc",
+        "name": "Exit here if targetCollection = errorCode",
+        "info": "",
+        "x": 760,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d027dddf.52f1e",
+        "type": "catch",
+        "z": "25f67fd3.3e8fc",
+        "name": "",
+        "scope": null,
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "757993e1.9ef55c",
+                "94a40df3.2a9ab"
+            ]
+        ]
+    },
+    {
+        "id": "757993e1.9ef55c",
+        "type": "debug",
+        "z": "25f67fd3.3e8fc",
+        "name": "Catched Error",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 340,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "94a40df3.2a9ab",
+        "type": "http response",
+        "z": "25f67fd3.3e8fc",
+        "name": "",
+        "x": 310,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "12496b46.5fd6b5",
+        "type": "comment",
+        "z": "25f67fd3.3e8fc",
+        "name": "Catch all Errors",
+        "info": "",
+        "x": 160,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "806ea415.be9e68",
+        "type": "subflow:25f67fd3.3e8fc",
+        "z": "5053e1eb.90317",
+        "x": 600,
+        "y": 680,
+        "wires": [
+            [
+                "befb261a.1fc518"
+            ],
+            [
+                "befb261a.1fc518"
+            ],
+            [
+                "befb261a.1fc518"
+            ],
+            [
+                "befb261a.1fc518"
+            ]
+        ]
+    },
+    {
+        "id": "befb261a.1fc518",
+        "type": "http response",
+        "z": "5053e1eb.90317",
+        "name": "",
+        "x": 870,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2d6f7077.a23ca",
+        "type": "comment",
+        "z": "25f67fd3.3e8fc",
+        "name": "Exit here if targetCollection = serviceInstruction",
+        "info": "",
+        "x": 780,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1ed92d93.7f7f32",
+        "type": "function",
+        "z": "d7290a17.a3a718",
+        "name": "extract _id from req.params",
+        "func": "// _id may has to be parsed to an Int\nvar req_id = parseFloat(msg.req.params._id);\n\n// payload may be a string and need to be parsed to a JSON\nif (typeof msg.payload !== 'object') {\n        msg.payload = JSON.parse(msg.payload);\n    }\n\n// Fill the update JSON into an MongoDB command $set\nmsg.payload = {$set: {serviceReport: msg.payload}};\n\n// prepare request query\nmsg.payload = [{'_id': req_id},msg.payload];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "43be8fe6.89bde"
+            ]
+        ]
+    },
+    {
+        "id": "43be8fe6.89bde",
+        "type": "bigmongo in",
+        "z": "d7290a17.a3a718",
+        "service": "_ext_",
+        "configNode": "aa0b1fb0.8396c",
+        "name": "",
+        "collection": "servicecase",
+        "operation": "findOneAndUpdate",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "dec04c87.6612f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "dec04c87.6612f",
+        "type": "function",
+        "z": "d7290a17.a3a718",
+        "name": "subquery with _id",
+        "func": "// empty payload and insert _id\nvar temp = msg.payload;\nmsg.payload = {};\nmsg.payload._id = temp.value._id;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 930,
+        "y": 300,
+        "wires": [
+            [
+                "af5075c0.40e748"
+            ]
+        ]
+    },
+    {
+        "id": "af5075c0.40e748",
+        "type": "bigmongo in",
+        "z": "d7290a17.a3a718",
+        "service": "_ext_",
+        "configNode": "a1ea80f3.10f47",
+        "name": "",
+        "collection": "servicecase",
+        "operation": "findOne",
+        "x": 1200,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "13190b35.93d205",
+        "type": "catch",
+        "z": "d7290a17.a3a718",
+        "name": "",
+        "scope": null,
+        "x": 120,
+        "y": 800,
+        "wires": [
+            [
+                "86ba5325.21284",
+                "d05f8646.b3da88"
+            ]
+        ]
+    },
+    {
+        "id": "86ba5325.21284",
+        "type": "debug",
+        "z": "d7290a17.a3a718",
+        "name": "Catched Error",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 320,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "d05f8646.b3da88",
+        "type": "http response",
+        "z": "d7290a17.a3a718",
+        "name": "",
+        "x": 290,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "d9dbbba8.ba0468",
+        "type": "comment",
+        "z": "d7290a17.a3a718",
+        "name": "Catch all Errors",
+        "info": "",
+        "x": 140,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9e8dd453.a84e08",
+        "type": "subflow:d7290a17.a3a718",
+        "z": "5053e1eb.90317",
+        "x": 660,
+        "y": 920,
+        "wires": [
+            [
+                "56f89630.f4ade8"
+            ]
+        ]
+    },
+    {
+        "id": "36e0cb9a.ba8264",
+        "type": "switch",
+        "z": "88a2f11c.3fd45",
+        "name": "if collection = connection abort",
+        "property": "req.params.collection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "connection",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "47cb54f6.7ef21c"
+            ],
+            [
+                "a632f309.c7e14"
+            ]
+        ]
+    },
+    {
+        "id": "1b6d3f93.33553",
+        "type": "http response",
+        "z": "88a2f11c.3fd45",
+        "name": "",
+        "x": 370,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a632f309.c7e14",
+        "type": "template",
+        "z": "88a2f11c.3fd45",
+        "name": "forbidden",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<h1>You've requested a forbidden collection</h1>",
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "1b6d3f93.33553"
+            ]
+        ]
+    },
+    {
+        "id": "33bb4a77.b41576",
+        "type": "switch",
+        "z": "fc90211b.47c2a",
+        "name": "if collection = connection abort",
+        "property": "req.params.collection",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "connection",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "fbc9ad2a.cc0d9"
+            ],
+            [
+                "be9fff11.e9dc6"
+            ]
+        ]
+    },
+    {
+        "id": "7f9a83de.c5e6ac",
+        "type": "http response",
+        "z": "fc90211b.47c2a",
+        "name": "",
+        "x": 110,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "be9fff11.e9dc6",
+        "type": "template",
+        "z": "fc90211b.47c2a",
+        "name": "forbidden",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<h1>You've requested a forbidden collection</h1>",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "7f9a83de.c5e6ac"
+            ]
+        ]
+    },
+    {
+        "id": "195ec1e6.d4794e",
+        "type": "http in",
+        "z": "c5b1b270.26a75",
+        "name": "px5 test",
+        "url": "/px5",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "b70d10a1.d1e5c",
+                "53fa3398.61386c"
+            ]
+        ]
+    },
+    {
+        "id": "b70d10a1.d1e5c",
+        "type": "file",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "filename": "px.md",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 330,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "53fa3398.61386c",
+        "type": "function",
+        "z": "c5b1b270.26a75",
+        "name": "String parsing and formating",
+        "func": "msg.payload = msg.payload.toString('utf8');\nmsg.payload = msg.payload.substring(msg.payload.indexOf(\"<?xml version=\"), (msg.payload.search(\"</articles>\")+11));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "be7689ca.166378"
+            ]
+        ]
+    },
+    {
+        "id": "f1fac3a7.aa5ca",
+        "type": "file",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "filename": "px2.md",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 1000,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "be7689ca.166378",
+        "type": "function",
+        "z": "c5b1b270.26a75",
+        "name": "ParserSettings",
+        "func": "msg.options = {\n    explicitArray : false\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "740541b7.85ee1"
+            ]
+        ]
+    },
+    {
+        "id": "740541b7.85ee1",
+        "type": "xml",
+        "z": "c5b1b270.26a75",
+        "name": "xml2json",
+        "attr": "",
+        "chr": "",
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "f1fac3a7.aa5ca"
+            ]
+        ]
+    },
+    {
+        "id": "5df73ecf.3a8f8",
+        "type": "http response",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "x": 330,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "17bb4458.908c5c",
+        "type": "inject",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "x": 250,
+        "y": 480,
+        "wires": [
+            [
+                "2d1c8966.06d066"
+            ]
+        ]
+    },
+    {
+        "id": "2d1c8966.06d066",
+        "type": "function",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "func": "msg.payload = 100*Math.random();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "58db9487.117a2c"
+            ]
+        ]
+    },
+    {
+        "id": "58db9487.117a2c",
+        "type": "ui_chart",
+        "z": "c5b1b270.26a75",
+        "tab": "d3fd75d5.7836d8",
+        "name": "",
+        "group": "Gras",
+        "order": 1,
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "removeOlder": "10",
+        "removeOlderUnit": "1",
+        "x": 630,
+        "y": 480,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e5ffd31.1edd73",
+        "type": "bigmongo in",
+        "z": "c5b1b270.26a75",
+        "service": "",
+        "name": "",
+        "collection": "",
+        "operation": "",
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "45f73b5.03242c4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f2e42877.161968",
+        "type": "function",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "func": "msg.payload = 100*Math.random();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "e5ffd31.1edd73"
+            ]
+        ]
+    },
+    {
+        "id": "45f73b5.03242c4",
+        "type": "function",
+        "z": "c5b1b270.26a75",
+        "name": "",
+        "func": "msg.payload = 100*Math.random();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    }
+]
