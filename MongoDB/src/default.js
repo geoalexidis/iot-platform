@@ -163,6 +163,13 @@ db.serviceinstruction.insertMany([
             'Contact second level support'],
         serviceCases_id: [],
         tools_id: []
+    },
+    {
+        _id: getNextSequence('serviceinstruction'),
+        instructions: [
+            'Scream for help'],
+        serviceCases_id: [],
+        tools_id: []
     }
 ]);
 
